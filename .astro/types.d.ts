@@ -126,44 +126,23 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
-"best-laptops-for-developers.md": {
-	id: "best-laptops-for-developers.md";
-  slug: "the-best-laptops-for-developers-in-2024";
+"if.md": {
+	id: "if.md";
+  slug: "if";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"cannon-excellence.md": {
-	id: "cannon-excellence.md";
-  slug: "capturing-lifes-moments-with-canon-excellence";
+"inside-out-2.md": {
+	id: "inside-out-2.md";
+  slug: "inside-out-2";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"cutting-edge-tablets.md": {
-	id: "cutting-edge-tablets.md";
-  slug: "unleash-creativity-with-these-cutting-edge-tablets";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"elevate-your-mobile-experience.md": {
-	id: "elevate-your-mobile-experience.md";
-  slug: "elevate-your-mobile-experience-with-samsung";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"guardian-of-the-digital-realm.md": {
-	id: "guardian-of-the-digital-realm.md";
-  slug: "guardian-of-the-digital-realm-web-security";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"immerse-in-the-virtual-world.md": {
-	id: "immerse-in-the-virtual-world.md";
-  slug: "immerse-in-the-virtual-world-vr-development";
+"island-of-lost-souls.md": {
+	id: "island-of-lost-souls.md";
+  slug: "island-of-lost-souls";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -171,6 +150,27 @@ declare module 'astro:content' {
 "journey-to-the-center-of-the-earth.md": {
 	id: "journey-to-the-center-of-the-earth.md";
   slug: "journey-to-the-center-of-the-earth";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"shin-godzilla.md": {
+	id: "shin-godzilla.md";
+  slug: "shin-godzilla";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"the-boys-s4.md": {
+	id: "the-boys-s4.md";
+  slug: "the-boys-s4";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"the-thorn-trilogy.md": {
+	id: "the-thorn-trilogy.md";
+  slug: "the-thorn-trilogy";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

@@ -1,10 +1,10 @@
 ---
-title: 'Unleash Creativity With These Cutting-Edge Tablets'
-pubDate: 2024-01-24
-author: 'Ralph Johnson'
+title: 'Inside Out 2 Review'
+pubDate: 2024-06-29
+author: 'Rohan Nandan'
 image: 'image7.png'
-tags: ['tablets', 'gadgets']
-slug: unleash-creativity-with-these-cutting-edge-tablets
+tags: ['review', 'film']
+slug: inside-out-2
 ---
 
 In the world of digital creativity, tablets have become indispensable tools for artists, designers, and anyone seeking to unleash their artistic potential. In 2024, the market is brimming with cutting-edge tablets that offer new dimensions of creativity. Let's dive into the exciting realm of tablet technology and discover the tools that can help you bring your artistic visions to life.

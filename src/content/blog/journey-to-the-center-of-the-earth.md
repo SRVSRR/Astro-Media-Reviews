@@ -1,9 +1,9 @@
 ---
-title: 'Journey to the Center of the Earth'
+title: 'Journey to the Center of the Earth (2008) Review'
 pubDate: 2024-06-25
 author: 'Rohan Nandan'
 image: 'image5.png'
-tags: ['2008', 'film', 'review']
+tags: ['review', 'film']
 slug: journey-to-the-center-of-the-earth
 ---
 

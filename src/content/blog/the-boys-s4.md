@@ -1,10 +1,10 @@
 ---
-title: "Capturing Life's Moments with Canon Excellence"
+title: "The Boys Season 4 (2024) Review"
 pubDate: 2024-01-15
 author: 'David Mitchell'
 image: 'image6.png'
-tags: ['photography', 'canon', 'tech']
-slug: capturing-lifes-moments-with-canon-excellence
+tags: ['review', 'show']
+slug: the-boys-s4
 ---
 
 For photographers and enthusiasts alike, Canon has been a symbol of excellence in the world of photography for decades. In 2024, Canon continues to lead the way in innovation, enabling us to capture life's most precious moments with unparalleled quality and precision. Let's explore the world of photography and how Canon's excellence plays a pivotal role.
