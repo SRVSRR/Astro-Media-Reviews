@@ -7,7 +7,7 @@ tags: ['2008', 'film', 'review']
 slug: journey-to-the-center-of-the-earth
 ---
 
-## ** SAME PLANET. DIFFERENT WORLD.**
+## **SAME PLANET. DIFFERENT WORLD.**
 
 On a quest to find out what happened to his missing brother, a scientist, his nephew and their mountain guide discover a fantastic and dangerous lost world in the center of the earth.
 
