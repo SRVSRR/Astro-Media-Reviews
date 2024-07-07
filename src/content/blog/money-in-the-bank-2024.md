@@ -3,14 +3,37 @@ title: 'Money In The Bank 2024 Results'
 pubDate: 2024-07-08
 author: 'Rohan Nandan'
 image: 'image8.png'
-tags: ['review', 'wwe']
+tags: ['review', 'wrestling']
 slug: money-in-the-bank-2024
 ---
 
-## **SAME PLANET. DIFFERENT WORLD.**
+## **Brief**
+It was the 15th annual Money in the Bank event and took place on Saturday, July 6, 2024, at the Scotiabank Arena in Toronto, Ontario, Canada. 
+## **Results**
 
-On a quest to find out what happened to his missing brother, a scientist, his nephew and their mountain guide discover a fantastic and dangerous lost world in the center of the earth.
+## **1.  Men's Money in the Bank Ladder Match**  
+**Drew McIntyre** defeated Andrade, Carmelo Hayes, Chad Gable, Jey Uso, and LA Knight  
+Match Length: 16:30
 
-## **Review**
 
-Journey 2008 tries to bring Jules Verne's classic adventure story into the modern era but falters due to its over reliance on CGI. The film desparately tries to invoke the adventurous, high octane feel of its temporaries but fails to do so due to its poor implimentation of CGI. Every setpiece feels as if it were filmed infront of a green screen with environments completely barren, weightless and effects outdated even for 2008 standards. These visual faults would be only half of the shortcomings of the film. While Brandon Frasier works endearingly as per usual, doing most of the heavy lifting with his dorky yet charming mannerisms, the supporting cast is quite underwhelming and deeply underdeveloped with very little in terms of character dynamics. Moreover, the addition of a love interest and third character to the main cast is completely meaningless and adds nothing of worth to the film, existing to extend its incredibly short runtime to barely over 90 minutes. In summation, between the lacklustre special effects and mediocre character dynamics, Journey 2008 offers very little in regards to excitement or fascination. 
+## **2.	WWE Intercontinental Championship Singles Match**  
+**Sami Zayn (c)** defeated Bron Breakker via pinfall  
+Match Length: 13:15
+
+## **3.	Triple threat match for the World Heavyweight Championship**  
+**Damian Priest (c)** defeated Seth "Freakin" Rollins and Drew McIntyre by pinfall.
+ <br/>
+
+**Stipulation:**  
+Since Priest won, Rollins can never challenge for the title again for as long as Priest is champion.  
+Had Rollins won, Priest would have had to leave The Judgment Day.  
+This was McIntyre's Money in the Bank cash-in match.  
+Match Length: 14:40
+
+## **4. Women's Money in the Bank Ladder Match**  
+**Tiffany Stratton** defeated Chelsea Green, Iyo Sky, Lyra Valkyria, Naomi, and Zoey Stark by retrieving the briefcase  
+Match Length: 16:50
+
+## **5. Six-man tag team match**  
+**The Bloodline (Solo Sikoa, Jacob Fatu, and Tama Tonga) (with Tonga Loa)** defeated Cody Rhodes, Kevin Owens, and Randy Orton via pinfall  
+Match Length: 24:40
