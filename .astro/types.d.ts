@@ -154,6 +154,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"money-in-the-bank-2024.md": {
+	id: "money-in-the-bank-2024.md";
+  slug: "money-in-the-bank-2024";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "shin-godzilla.md": {
 	id: "shin-godzilla.md";
   slug: "shin-godzilla";
