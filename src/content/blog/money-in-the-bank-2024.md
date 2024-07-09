@@ -8,7 +8,7 @@ slug: money-in-the-bank-2024
 ---
 
 ## **Brief**
-It was the 15th annual Money in the Bank event and took place on Saturday, July 6, 2024, at the Scotiabank Arena in Toronto, Ontario, Canada. 
+It was the 15th annual Money in the Bank event and took place on Saturday, July 6, 2024, at the Scotiabank Arena in Toronto, Ontario, Canada. The match card consisted of 5 matches and the return of **John Cena**, who announced his retirement for 2025.
 ## **Results**
 
 ## **1.  Men's Money in the Bank Ladder Match**  
