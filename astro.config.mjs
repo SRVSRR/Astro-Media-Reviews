@@ -1,17 +1,16 @@
 import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
-import vercel from "@astrojs/vercel/serverless";
-
+import vercel from "@astrojs/vercel";
 import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://rohan-reviews.vercel.app",
   integrations: [tailwind(), sitemap()],
-  output: 'server',
+  output: 'server', // Keeps SSR if that's the goal
   adapter: vercel({
     webAnalytics: {
-      enabled: true
+      enabled: true // Keep it enabled if needed, or set it to false if not
     }
   })
 });
