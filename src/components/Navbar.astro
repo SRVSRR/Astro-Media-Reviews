@@ -3,15 +3,24 @@ import { Image } from "astro:assets";
 import logo from '../images/logo.png';
 ---
 <nav class="sticky top-0 z-40 backdrop-blur bg-secondary/80 border-b border-soft/60">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-3">
-    <a href="/" class="flex items-center gap-3 hover:opacity-90 transition">
-      <Image src={logo} class="h-12 w-auto" alt="SRVSRR Logo" width={55} height={55}/>
-      <span class="text-2xl font-semibold tracking-tight text-white">
-        <span class="text-accent">SRV</span>SRR
-      </span>
-    </a>
+  <div class="max-w-screen-xl mx-auto px-4 py-3 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+    <div class="flex items-center justify-between gap-3">
+      <a href="/" class="flex items-center gap-3 hover:opacity-90 transition">
+        <Image src={logo} class="h-12 w-auto" alt="SRVSRR Logo" width={55} height={55}/>
+        <span class="text-2xl font-semibold tracking-tight text-white">
+          <span class="text-accent">SRV</span>SRR
+        </span>
+      </a>
+      <button id="nav-toggle" class="md:hidden inline-flex items-center justify-center rounded-lg border border-soft px-3 py-2 text-white hover:border-accent focus:outline-none focus:ring-2 focus:ring-accent/50" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
 
-    <div class="flex items-center gap-3 text-sm text-muted">
+    <div class="flex items-start sm:items-center gap-3 text-sm text-muted">
       <span class="hidden sm:inline">Curated by interest</span>
       <div class="hidden sm:block h-7 w-px bg-soft" aria-hidden="true"></div>
       <div class="flex items-center gap-1 text-accent font-medium">
@@ -20,12 +29,27 @@ import logo from '../images/logo.png';
       </div>
     </div>
 
-    <div class="w-full mt-4 md:mt-0 md:w-auto">
-      <ul class="flex flex-col md:flex-row md:items-center md:gap-6 text-sm font-medium text-white">
-        <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
-        <li><a href="/articles" class="hover:text-accent transition-colors">All Articles</a></li>
-        <li><a href="/about" class="hover:text-accent transition-colors">About</a></li>
+    <div id="nav-menu" class="hidden md:block w-full md:w-auto">
+      <ul class="flex flex-col md:flex-row md:items-center md:gap-6 text-sm font-medium text-white border border-soft/60 md:border-0 rounded-xl md:rounded-none p-3 md:p-0 bg-secondary/80 md:bg-transparent">
+        <li><a href="/" class="block py-2 md:py-0 hover:text-accent transition-colors">Home</a></li>
+        <li><a href="/articles" class="block py-2 md:py-0 hover:text-accent transition-colors">All Articles</a></li>
+        <li><a href="/about" class="block py-2 md:py-0 hover:text-accent transition-colors">About</a></li>
       </ul>
     </div>
   </div>
 </nav>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('nav-toggle');
+    const menu = document.getElementById('nav-menu');
+    if (!toggle || !menu) return;
+
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      const nowOpen = !expanded;
+      toggle.setAttribute('aria-expanded', String(nowOpen));
+      menu.classList.toggle('hidden', !nowOpen);
+    });
+  });
+</script>
