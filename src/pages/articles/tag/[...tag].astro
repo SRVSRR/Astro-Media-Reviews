@@ -17,10 +17,10 @@ const tagArticles  = allBlogArticles.filter(article => article.data.tags.include
 
 ---
 <MainLayout>
-    <h1 class="text-2xl pb-1" > #{capitalize(tag)}</h1>
-
-    <!-- Main Grid -->
-    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="flex items-center justify-between pb-4">
+      <h1 class="text-3xl font-semibold text-white">#{capitalize(tag)}</h1>
+    </div>
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {tagArticles.map(article =>(
         <ArticleCard article={article}/>
       ))}

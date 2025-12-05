@@ -9,12 +9,13 @@ interface Props {
 }
 ---
 <!-- Pagination -->
-<div class="flex justify-between mt-10">
-    <a href={'/articles?page=' + (currentPage - 1)} class={disablePrevious ? "inline-block bg-gray-100 px-3 py-2 text-gray-400 rounded-lg pointer-events-none" : "inline-block bg-indigo-100 px-3 py-2 hover:bg-indigo-600 hover:text-white rounded-lg"}>
+<div class="flex justify-between items-center mt-10">
+    <a href={'/articles?page=' + (currentPage - 1)} class={disablePrevious ? "inline-block bg-secondary/60 px-4 py-2 text-muted rounded-lg pointer-events-none border border-soft" : "inline-block bg-soft px-4 py-2 text-white rounded-lg border border-soft hover:border-accent hover:text-accent transition"}>
       Previous
     </a>
+    <span class="text-sm text-muted">Page {currentPage}</span>
     <a href={'/articles?page=' + (currentPage + 1)}
-     class={disableNext ? "inline-block bg-gray-100 px-3 py-2 text-gray-400 rounded-lg pointer-events-none" : "inline-block bg-indigo-100 px-3 py-2 hover:bg-indigo-600 hover:text-white rounded-lg"}>
+     class={disableNext ? "inline-block bg-secondary/60 px-4 py-2 text-muted rounded-lg pointer-events-none border border-soft" : "inline-block bg-soft px-4 py-2 text-white rounded-lg border border-soft hover:border-accent hover:text-accent transition"}>
       Next
     </a>
   </div>

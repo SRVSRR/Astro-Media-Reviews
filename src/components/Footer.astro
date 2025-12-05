@@ -10,51 +10,44 @@ const tags: string[] = allBlogArticles.flatMap((article: any) => article.data.ta
 const uniqueTags: string[] = [...new Set(tags)];
 ---
 
-<footer class="bg-indigo-900 text-white">
-  <div class="container mx-auto mt-10 max-w-screen-xl px-8">
-    <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
-      <div class="mt-10">
-        <h3 class="text-xl font-semibold mb-4">About</h3>
-        <p class="text-white text-sm">
-          SRVSRR is a blog for film, tech and sports. I publish articles,
-          stories and reviews about the latest news and
-          leaks.
+<footer class="bg-secondary/80 border-t border-soft mt-16 text-slate-200">
+  <div class="container mx-auto max-w-screen-xl px-6 sm:px-8 py-12">
+    <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="space-y-3">
+        <h3 class="text-xl font-semibold text-white">About</h3>
+        <p class="text-sm text-muted leading-relaxed">
+          SRVSRR is a home for the things I’m into. Expect thoughtful reviews, quick reactions, and the occasional hot take.
         </p>
       </div>
-      <div class="mt-10">
-        <h3 class="text-xl font-semibold mb-4">Categories</h3>
-        <ul class="text-white text-sm">
+      <div>
+        <h3 class="text-xl font-semibold text-white mb-4">Categories</h3>
+        <ul class="text-sm space-y-2 text-muted">
           {uniqueTags.map(tag => (
-            <li class="mb-2">
-              <a href={'/articles/tag/' + tag}>{capitalize(tag)}</a>  
+            <li>
+              <a class="hover:text-accent transition" href={'/articles/tag/' + tag}>{capitalize(tag)}</a>  
             </li>
           ))}
         </ul>
       </div>
-      <div class="mt-10">
-        <h3 class="text-xl font-semibold mb-4">Socials</h3>
-        <ul class="text-white text-sm">
-          <li class="mb-2">
-            <a href="https://www.reddit.com/user/SRVSRR/">Reddit</a>
-          </li>
-          <li class="mb-2">
-            <a href="https://x.com/SRVSRR">Twitter</a>
-          </li>
-          <li class="mb-2">
-            <a href="https://www.linkedin.com/in/rohan-nandan2004/">LinkedIn</a>
-          </li>
-          <li class="mb-2">
-            <a href="https://www.instagram.com/rohan_nandan_/">Instagram</a>
-          </li>
+      <div>
+        <h3 class="text-xl font-semibold text-white mb-4">Socials</h3>
+        <ul class="text-sm space-y-2 text-muted">
+          <li><a class="hover:text-accent transition" href="https://www.reddit.com/user/SRVSRR/">Reddit</a></li>
+          <li><a class="hover:text-accent transition" href="https://x.com/SRVSRR">Twitter</a></li>
+          <li><a class="hover:text-accent transition" href="https://www.linkedin.com/in/rohan-nandan2004/">LinkedIn</a></li>
+          <li><a class="hover:text-accent transition" href="https://www.instagram.com/rohan_nandan_/">Instagram</a></li>
         </ul>
       </div>
-      <div class="mt-10">
-        <h3 class="text-xl font-semibold mb-4">My Other Projects</h3>
-        <ul class="text-white text-sm">
-          <li class="mb-2">
-            <a href="https://main--devportfolio2d.netlify.app">2D Portfolio</a>
-          </li>
+      <div>
+        <h3 class="text-xl font-semibold text-white mb-4">My Other Projects</h3>
+        <ul class="text-sm space-y-2 text-muted">
+          <li><a class="hover:text-accent transition" href="https://main--devportfolio2d.netlify.app">2D Portfolio</a></li>
         </ul>
       </div>
-
+    </div>
+    <div class="mt-10 flex flex-wrap items-center justify-between gap-4 text-xs text-muted">
+      <span>© {new Date().getFullYear()} SRVSRR. All opinions are my own.</span>
+      <span class="text-white">Crafted with Astro · Deployed on Vercel</span>
+    </div>
+  </div>
 </footer>

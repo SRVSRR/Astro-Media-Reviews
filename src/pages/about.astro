@@ -6,43 +6,43 @@ import team1 from "../images/team1.png";
 import team2 from "../images/team2.png";
 ---
 <MainLayout title = "About">
-        <h1 class="text-4xl font-bold mb-5"> About SRVSRR</h1>
+        <h1 class="text-4xl font-bold mb-5 text-white"> About SRVSRR</h1>
         <div class="flex flex-col md:flex-row items-center justify-between gap-6">
           <div class="w-full md:w-1/2 mb-8 md:mb-0">
-              <Image src={about} alt="Tech People Team" class="w-full h-auto rounded-lg shadow-lg"/>
+              <Image src={about} alt="Tech People Team" class="w-full h-auto rounded-lg border border-soft"/>
           </div>
           <div class="w-full md:w-1/2">
-              <h2 class="text-3xl font-extrabold text-gray-900 mb-4">
+            <h2 class="text-3xl font-extrabold text-white mb-4">
                   Hello There 👋
               </h2>
-              <p class="text-gray-700 leading-relaxed mb-6">
+            <p class="text-muted leading-relaxed mb-6">
                   I am Rohan Nandan, a 20 year old currently in my first year of university studying Software Engineering. I made this website using Astro, a JavaScript web framework. 
               </p>
-              <p class="text-gray-700 leading-relaxed mb-6">
-                My mission is to bring you the latest news, in-depth reviews, and engaging insights on different topics such as technology, film and sports. 
+              <p class="text-muted leading-relaxed mb-6">
+                My mission is to share the latest news, in-depth reviews, and engaging insights on whatever I’m exploring—expect the subjects to evolve with my interests.
             </p> 
           </div>
       </div>
       
       <!-- Team -->
       <div class="mt-10">
-        <h2 class="text-3xl font-extrabold text-gray-900 mb-8">
+        <h2 class="text-3xl font-extrabold text-white mb-8">
           Where To Find Me
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           <a href="https://boxd.it/3KY6D">
-          <div class="bg-gray-100 shadow-lg rounded-lg overflow-hidden">
+          <div class="bg-secondary border border-soft rounded-lg overflow-hidden">
               <Image src={team1} alt="Team Member 1" class="w-full h-auto"/>
               <div class="p-6">
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">Letterboxd</h3>
+                <h3 class="text-xl font-semibold text-white mb-2">Letterboxd</h3>
               </div>
           </div>
         </a>
           <a href="https://github.com/SRVSRR">
-          <div class="bg-gray-100 shadow-lg rounded-lg overflow-hidden">
+          <div class="bg-secondary border border-soft rounded-lg overflow-hidden">
               <Image src={team2} alt="Team Member 2" class="w-full h-auto"/>
               <div class="p-6">
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">GitHub</h3>
+                <h3 class="text-xl font-semibold text-white mb-2">GitHub</h3>
               </div>
           </div>
         </a>

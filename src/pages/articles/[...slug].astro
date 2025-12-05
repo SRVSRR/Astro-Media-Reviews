@@ -6,11 +6,13 @@ import { formatDate } from "../../utils";
 
 const { slug } = Astro.params;
 
-if(slug === undefined) {
+const normalizedSlug = Array.isArray(slug) ? slug.join('/') : slug;
+
+if(!normalizedSlug) {
   throw new Error('Slug is required');
 }
 
-const entry = await getEntry('blog', slug);
+const entry = await getEntry('blog', normalizedSlug);
 
 if(entry === undefined) {
   return Astro.redirect('/404');
@@ -20,12 +22,11 @@ const { Content } = await entry.render();
 ---
 
 <MainLayout>
-  <a href="/articles" class="inline-block bg-gray-100 p-2 mb-6 hover:bg-indigo-500 hover:text-white">Back To Articles</a>
   <article>
-    <h1 class="text-4xl font-bold mb-2"> {entry.data.title}</h1>
-    <h3 class="text-lg mb-2">Written by {entry.data.author} on {formatDate(entry.data.pubDate)}</h3>
+    <h1 class="text-4xl font-bold mb-2 text-white"> {entry.data.title}</h1>
+    <h3 class="text-lg mb-2 text-muted">Written by {entry.data.author} on {formatDate(entry.data.pubDate)}</h3>
     <Tags tags={entry.data.tags} />
-    <img src={'/images/' + entry.data.image} alt="Article Image" class="w-full h-auto rounded-xl my-6" />
+    <img src={'/images/' + entry.data.image} alt="Article Image" class="w-full h-auto rounded-xl my-6 border border-soft" />
     <Content />
   </article>
 </MainLayout>

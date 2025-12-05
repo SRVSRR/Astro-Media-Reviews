@@ -7,20 +7,22 @@ import SearchForm from "../../components/SearchForm.astro";
 import Pagination from "../../components/Pagination.astro";
 import { ARTICLES_PER_PAGE } from "../../constants";
 
-const currentPage: number | null = +Astro.url.searchParams.get('page')! || 1;
-
 const allBlogArticles: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort((a: CollectionEntry <'blog'>, b:CollectionEntry<'blog'> )=> b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
+const totalPages: number = Math.max(1, Math.ceil(allBlogArticles.length / ARTICLES_PER_PAGE));
 
-const totalPages: number = Math.ceil(allBlogArticles.length / ARTICLES_PER_PAGE);
+const requestedPage = Number.parseInt(Astro.url.searchParams.get('page') ?? '1', 10);
+const currentPage: number = Math.min(Math.max(Number.isNaN(requestedPage) ? 1 : requestedPage, 1), totalPages);
 
 const articlesForPage: CollectionEntry<'blog'>[] = allBlogArticles.slice((currentPage - 1) * ARTICLES_PER_PAGE, currentPage * ARTICLES_PER_PAGE);
 ---
 <MainLayout>
-    <h1 class="text-2xl pb-3">All Articles</h1>
+    <div class="flex items-center justify-between gap-3 pb-3">
+      <h1 class="text-3xl font-semibold text-white">All Articles</h1>
+      <span class="text-sm text-muted">{allBlogArticles.length} posts</span>
+    </div>
     <SearchForm />
-    <br>
-    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {articlesForPage.map(article =>(
         <ArticleCard article={article}/>
       ))}
