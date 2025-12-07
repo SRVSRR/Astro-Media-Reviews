@@ -5,7 +5,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://rohan-reviews.vercel.app",
+  site: "https://astro-media-reviews.vercel.app",
   integrations: [tailwind(), sitemap()],
   output: 'server', // Keeps SSR if that's the goal
   adapter: vercel({
