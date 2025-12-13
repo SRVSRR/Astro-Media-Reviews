@@ -2,14 +2,16 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import about from "../images/about.jpg";
-import team1 from "../images/team1.png";
+import team1 from "../images/team1.webp";
 import team2 from "../images/team2.png";
 ---
 <MainLayout title = "About">
         <h1 class="text-4xl font-bold mb-5 text-white"> About SRVSRR</h1>
         <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div class="w-full md:w-1/2 mb-8 md:mb-0">
-              <Image src={about} alt="Tech People Team" class="w-full h-auto rounded-lg border border-soft" format="webp"/>
+          <div class="w-full md:w-1/2 mb-8 md:mb-0 max-w-2xl mx-auto">
+            <div class="aspect-[4/3] md:aspect-[16/10] w-full bg-soft/20 rounded-lg border border-soft overflow-hidden">
+              <Image src={about} alt="Tech People Team" class="w-full h-full object-cover" format="webp"/>
+            </div>
           </div>
           <div class="w-full md:w-1/2">
             <h2 class="text-3xl font-extrabold text-white mb-4">
@@ -27,20 +29,24 @@ import team2 from "../images/team2.png";
       <!-- Team -->
       <div class="mt-10">
         <h2 class="text-3xl font-extrabold text-white mb-8">
-          Where To Find Me
+          My Other Projects 
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          <a href="https://boxd.it/3KY6D">
-          <div class="bg-secondary border border-soft rounded-lg overflow-hidden">
-              <Image src={team1} alt="Team Member 1" class="w-full h-auto" format="webp"/>
+          <a href="https://main--devportfolio2d.netlify.app">
+          <div class="bg-secondary border border-soft rounded-lg overflow-hidden transition-transform duration-200 hover:-translate-y-1">
+              <div class="aspect-[4/3] w-full bg-soft/20">
+                <Image src={team1} alt="Team Member 1" class="w-full h-full object-cover" format="webp"/>
+              </div>
               <div class="p-6">
-                <h3 class="text-xl font-semibold text-white mb-2">Letterboxd</h3>
+                <h3 class="text-xl font-semibold text-white mb-2">2D Portfolio</h3>
               </div>
           </div>
         </a>
           <a href="https://github.com/SRVSRR">
-          <div class="bg-secondary border border-soft rounded-lg overflow-hidden">
-              <Image src={team2} alt="Team Member 2" class="w-full h-auto" format="webp"/>
+          <div class="bg-secondary border border-soft rounded-lg overflow-hidden transition-transform duration-200 hover:-translate-y-1">
+              <div class="aspect-[4/3] w-full bg-soft/20">
+                <Image src={team2} alt="Team Member 2" class="w-full h-full object-cover" format="webp"/>
+              </div>
               <div class="p-6">
                 <h3 class="text-xl font-semibold text-white mb-2">GitHub</h3>
               </div>

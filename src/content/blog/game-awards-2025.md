@@ -287,5 +287,3 @@ slug: game-awards-2025
 - • Ghost of Yōtei
 - • Kingdom Come: Deliverance II
 - • Silent Hill f.  
-
-<br>
