@@ -2,7 +2,7 @@
 title: 'The Island Of Lost Souls (1932) Review'
 pubDate: 2024-03-06
 author: 'Rohan Nandan'
-image: 'image1.png'
+image: 'image1.webp'
 tags: ['review', 'film']
 slug: island-of-lost-souls
 ---

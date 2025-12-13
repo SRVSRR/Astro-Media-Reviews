@@ -2,7 +2,7 @@
 title: 'Money In The Bank 2024 Results'
 pubDate: 2024-07-08
 author: 'Rohan Nandan'
-image: 'image8.png'
+image: 'image8.webp'
 tags: ['review', 'wrestling']
 slug: money-in-the-bank-2024
 ---

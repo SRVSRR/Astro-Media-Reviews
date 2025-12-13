@@ -2,7 +2,7 @@
 title: 'The Halloween Thorn Trilogy (1988 - 1995) Review'
 pubDate: 2024-04-17
 author: 'Rohan Nandan'
-image: 'image3.png'
+image: 'image3.webp'
 tags: ['review', 'film']
 slug: the-thorn-trilogy
 ---

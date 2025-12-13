@@ -2,7 +2,7 @@
 title: 'Inside Out 2 Review'
 pubDate: 2024-06-29
 author: 'Rohan Nandan'
-image: 'image7.png'
+image: 'image7.webp'
 tags: ['review', 'film']
 slug: inside-out-2
 ---

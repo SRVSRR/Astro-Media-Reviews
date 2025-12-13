@@ -2,7 +2,7 @@
 title: 'Shin Godzilla (2016) Review'
 pubDate: 2024-06-26
 author: 'Rohan Nandan'
-image: 'image2.png'
+image: 'image2.webp'
 tags: ['review', 'film']
 slug: shin-godzilla
 ---
