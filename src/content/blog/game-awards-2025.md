@@ -6,284 +6,254 @@ image: 'image9.webp'
 tags: ['news', 'gaming']
 slug: game-awards-2025
 ---
+
 ## **Category Breakdown**
 
 ### **Game of the Year**
 
-- • Clair Obscur: Expedition 33 **(Winner)**
-- • Death Stranding 2: On the Beach
-- • Donkey Kong Bananza
-* • Hades II
-+ • Hollow Knight: Silksong
-- • Kingdom Come: Deliverance II
-
-<br>
+- Clair Obscur: Expedition 33 **(Winner)**
+- Death Stranding 2: On the Beach
+- Donkey Kong Bananza
+- Hades II
+- Hollow Knight: Silksong
+- Kingdom Come: Deliverance II
 
 ### **Best Game Direction**
 
-- • Clair Obscur: Expedition 33 **(Winner)**
-- • Death Stranding 2: On the Beach
-- • Ghost of Yōtei
-- • Hades II
-- • Split Fiction
-
-<br>
+- Clair Obscur: Expedition 33 **(Winner)**
+- Death Stranding 2: On the Beach
+- Ghost of Yōtei
+- Hades II
+- Split Fiction
 
 ### **Best Adaptation**
 
-- • The Last of Us: Season 2 **(Winner)**
-- • A Minecraft Movie
-- • Devil May Cry
-- • Splinter Cell: Deathwatch
-- • Until Dawn
-
-<br>
+- The Last of Us: Season 2 **(Winner)**
+- A Minecraft Movie
+- Devil May Cry
+- Splinter Cell: Deathwatch
+- Until Dawn
 
 ### **Best Narrative**
-- • Clair Obscur: Expedition 33 **(Winner)**
-- • Death Stranding 2: On the Beach
-- • Ghost of Yōtei
-- • Kingdom Come: Deliverance II
-- • Silent Hill f
 
-<br>
+- Clair Obscur: Expedition 33 **(Winner)**
+- Death Stranding 2: On the Beach
+- Ghost of Yōtei
+- Kingdom Come: Deliverance II
+- Silent Hill f
 
 ### **Best Art Direction**
-- • Clair Obscur: Expedition 33 **(Winner)**
-- • Death Stranding 2: On the Beach
-- • Ghost of Yōtei
-- • Hades II
-- • Hollow Knight: Silksong
 
-<br>
+- Clair Obscur: Expedition 33 **(Winner)**
+- Death Stranding 2: On the Beach
+- Ghost of Yōtei
+- Hades II
+- Hollow Knight: Silksong
 
 ### **Best Score & Music**
-- • Clair Obscur: Expedition 33 (Lorien Testard) **(Winner)**
-- • Hollow Knight: Silksong
-- • Hades II
-- • Ghost of Yōtei
-- • Death Stranding 2: On the Beach
 
-<br>
+- Clair Obscur: Expedition 33 (Lorien Testard) **(Winner)**
+- Hollow Knight: Silksong
+- Hades II
+- Ghost of Yōtei
+- Death Stranding 2: On the Beach
 
 ### **Best Audio Design**
-- • Battlefield 6 **(Winner)**
-- • Clair Obscur: Expedition 33
-- • Death Stranding 2: On the Beach
-- • Ghost of Yōtei
-- • Silent Hill f
 
-<br>
+- Battlefield 6 **(Winner)**
+- Clair Obscur: Expedition 33
+- Death Stranding 2: On the Beach
+- Ghost of Yōtei
+- Silent Hill f
 
 ### **Best Performance**
-- • Jennifer English (Expedition 33) **(Winner)**
-- • Ben Starr (Expedition 33)
-- • Charlie Cox (Expedition 33)
-- • Erika Ishii (Ghost of Yōtei)
-- • Konatsu Kato (Silent Hill f)
-- • Troy Baker (Indiana Jones and the Great Circle)
 
-<br>
+- Jennifer English (Expedition 33) **(Winner)**
+- Ben Starr (Expedition 33)
+- Charlie Cox (Expedition 33)
+- Erika Ishii (Ghost of Yōtei)
+- Konatsu Kato (Silent Hill f)
+- Troy Baker (Indiana Jones and the Great Circle)
 
 ### **Innovation in Accessibility**
-- • Doom: The Dark Ages **(Winner)**
-- • Assassin’s Creed Shadows
-- • Atomfall
-- • EA Sports FC 26
-- • South of Midnight
 
-<br>
+- Doom: The Dark Ages **(Winner)**
+- Assassin's Creed Shadows
+- Atomfall
+- EA Sports FC 26
+- South of Midnight
 
 ### **Games for Impact**
-- • South of Midnight **(Winner)**
-- • Consume Me
-- • Despelote
-- • Lost Records: Bloom & Rage
-- • Wanderstop
 
-<br>
+- South of Midnight **(Winner)**
+- Consume Me
+- Despelote
+- Lost Records: Bloom & Rage
+- Wanderstop
 
 ### **Best Ongoing Game**
-- • No Man's Sky **(Winner)**
-- • Final Fantasy XIV
-- • Fortnite
-- • Helldivers 2
-- • Marvel Rivals
 
-<br>
+- No Man's Sky **(Winner)**
+- Final Fantasy XIV
+- Fortnite
+- Helldivers 2
+- Marvel Rivals
 
 ### **Best Community Support**
-- • Baldur's Gate 3 **(Winner)**
-- • Final Fantasy XIV
-- • Fortnite
-- • Helldivers 2
-- • No Man's Sky
 
-<br>
+- Baldur's Gate 3 **(Winner)**
+- Final Fantasy XIV
+- Fortnite
+- Helldivers 2
+- No Man's Sky
 
 ### **Best Independent Game**
-- • Clair Obscur: Expedition 33 **(Winner)**
-- • Absolum
-- • Ball x Pit
-- • Blue Prince
-- • Hades II
-- • Hollow Knight: Silksong
 
-<br>
+- Clair Obscur: Expedition 33 **(Winner)**
+- Absolum
+- Ball x Pit
+- Blue Prince
+- Hades II
+- Hollow Knight: Silksong
 
 ### **Best Debut Indie Game**
-- • Clair Obscur: Expedition 33 **(Winner)**
-- • Blue Prince
-- • Despelote
-- • Dispatch
 
-<br>
+- Clair Obscur: Expedition 33 **(Winner)**
+- Blue Prince
+- Despelote
+- Dispatch
 
 ### **Best Mobile Game**
-- • Umamusume: Pretty Derby **(Winner)**
-- • Destiny: Rising
-- • Persona 5: The Phantom X
-- • Sonic Rumble
-- • Wuthering Waves
 
-<br>
+- Umamusume: Pretty Derby **(Winner)**
+- Destiny: Rising
+- Persona 5: The Phantom X
+- Sonic Rumble
+- Wuthering Waves
 
 ### **Best VR/AR Game**
-- • The Midnight Walk **(Winner)**
-- • Alien: Rogue Incursion
-- • Arken Age
-- • Ghost Town
-- • Marvel’s Deadpool VR
 
-<br>
+- The Midnight Walk **(Winner)**
+- Alien: Rogue Incursion
+- Arken Age
+- Ghost Town
+- Marvel's Deadpool VR
 
 ### **Best Action Game**
-- • Hades II **(Winner)**
-- • Battlefield 6
-- • Doom: The Dark Ages
-- • Ninja Gaiden 4
-- • Shinobi: Art of Vengeance
 
-<br>
+- Hades II **(Winner)**
+- Battlefield 6
+- Doom: The Dark Ages
+- Ninja Gaiden 4
+- Shinobi: Art of Vengeance
 
 ### **Best Action-Adventure Game**
-- • Hollow Knight: Silksong **(Winner)**
-- • Death Stranding 2: On the Beach
-- • Ghost of Yōtei
-- • Indiana Jones and the Great Circle
-- • Split Fiction
 
-<br>
+- Hollow Knight: Silksong **(Winner)**
+- Death Stranding 2: On the Beach
+- Ghost of Yōtei
+- Indiana Jones and the Great Circle
+- Split Fiction
 
 ### **Best RPG**
-- • Clair Obscur: Expedition 33 **(Winner)**
-- • Avowed
-- • Kingdom Come: Deliverance II
-- • The Outer Worlds 2
-- • Monster Hunter Wilds
 
-<br>
+- Clair Obscur: Expedition 33 **(Winner)**
+- Avowed
+- Kingdom Come: Deliverance II
+- The Outer Worlds 2
+- Monster Hunter Wilds
 
 ### **Best Fighting Game**
-- • Fatal Fury: City of the Wolves **(Winner)**
-- • 2XKO
-- • Capcom Fighting Collection 2
-- • Mortal Kombat: Legacy Kollection
-- • Virtua Fighter 5 R.E.V.O. World Stage
 
-<br>
+- Fatal Fury: City of the Wolves **(Winner)**
+- 2XKO
+- Capcom Fighting Collection 2
+- Mortal Kombat: Legacy Kollection
+- Virtua Fighter 5 R.E.V.O. World Stage
 
 ### **Best Family Game**
-- • Donkey Kong Bananza **(Winner)**
-- • LEGO Party!
-- • LEGO Voyagers
-- • Mario Kart World
-- • Sonic Racing: CrossWorlds
-- • Split Fiction
 
-<br>
+- Donkey Kong Bananza **(Winner)**
+- LEGO Party!
+- LEGO Voyagers
+- Mario Kart World
+- Sonic Racing: CrossWorlds
+- Split Fiction
 
 ### **Best Sim/Strategy Game**
-- • FINAL FANTASY TACTICS – The Ivalice Chronicles **(Winner)**
-- • The Alters
-- • Jurassic World Evolution 3
-- • Sid Meier's Civilization VII
-- • Tempest Rising
-- • Two Point Museum
 
-<br>
+- FINAL FANTASY TACTICS – The Ivalice Chronicles **(Winner)**
+- The Alters
+- Jurassic World Evolution 3
+- Sid Meier's Civilization VII
+- Tempest Rising
+- Two Point Museum
 
 ### **Best Sports/Racing**
-- • Mario Kart World **(Winner)**
-- • EA Sports FC 26
-- • F1 25
-- • Rematch
-- • Sonic Racing: CrossWorlds
 
-<br>
+- Mario Kart World **(Winner)**
+- EA Sports FC 26
+- F1 25
+- Rematch
+- Sonic Racing: CrossWorlds
 
 ### **Best Multiplayer**
-- • Arc Raiders **(Winner)**
-- • Battlefield 6
-- • Elden Ring Nightreign
-- • Peak
-- • Split Fiction
 
-<br>
+- Arc Raiders **(Winner)**
+- Battlefield 6
+- Elden Ring Nightreign
+- Peak
+- Split Fiction
 
 ### **Most Anticipated Game**
-- • Grand Theft Auto VI **(Winner)**
-- • 007 First Light
-- • Marvel's Wolverine
-- • Resident Evil Requiem
-- • The Witcher IV
 
-<br>
+- Grand Theft Auto VI **(Winner)**
+- 007 First Light
+- Marvel's Wolverine
+- Resident Evil Requiem
+- The Witcher IV
 
 ### **Content Creator of the Year**
-- • MoistCr1TiKaL **(Winner)**
-- • Caedrel
-- • Kai Cenat
-- • Sakura Miko
-- • The Burnt Peanut
 
-<br>
+- MoistCr1TiKaL **(Winner)**
+- Caedrel
+- Kai Cenat
+- Sakura Miko
+- The Burnt Peanut
 
 ### **Best Esports Game**
-- • Counter-Strike 2 **(Winner)**
-- • Dota 2
-- • League of Legends
-- • Mobile Legends: Bang Bang
-- • Valorant
 
-<br>
+- Counter-Strike 2 **(Winner)**
+- Dota 2
+- League of Legends
+- Mobile Legends: Bang Bang
+- Valorant
 
 ### **Best Esports Athlete**
-- • Chovy **(Winner)**
-- • brawk
-- • f0rsakeN
-- • Kakeru
-- • MenaRD
-- • Zyw0o
 
-<br>
+- Chovy **(Winner)**
+- brawk
+- f0rsakeN
+- Kakeru
+- MenaRD
+- Zyw0o
 
 ### **Best Esports Team**
-- • Team Vitality (Counter-Strike 2) **(Winner)**
-- • Gen.G (League of Legends)
-- • NRG (Valorant)
-- • Team Falcons (DOTA 2)
-- • Team Liquid PH (Mobile Legends: Bang Bang)
 
-<br>
+- Team Vitality (Counter-Strike 2) **(Winner)**
+- Gen.G (League of Legends)
+- NRG (Valorant)
+- Team Falcons (DOTA 2)
+- Team Liquid PH (Mobile Legends: Bang Bang)
 
-### **Player’s Voice**
-- • Wuthering Waves **(Winner)**
-- • Expedition 33
-- • Dispatch
-- • Genshin Impact
-- • Hollow Knight: Silksong
-- • Death Stranding 2: On the Beach
-- • Ghost of Yōtei
-- • Kingdom Come: Deliverance II
-- • Silent Hill f.  
+### **Player's Voice**
+
+- Wuthering Waves **(Winner)**
+- Expedition 33
+- Dispatch
+- Genshin Impact
+- Hollow Knight: Silksong
+- Death Stranding 2: On the Beach
+- Ghost of Yōtei
+- Kingdom Come: Deliverance II
+- Silent Hill f

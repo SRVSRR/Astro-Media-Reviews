@@ -32,12 +32,53 @@ const { Content } = await entry.render();
 </MainLayout>
 
 <style is:global>
-  p {
+  article p {
     margin: 20px 0;
   }
 
-  h2 {
+  article h2 {
     margin: 20px 0;
     font-size: 1.8rem;
+  }
+
+  article h3 {
+    margin-top: 32px;
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+  }
+
+  article ul {
+    list-style-type: disc;
+    margin: 16px 0;
+    padding-left: 24px;
+  }
+
+  article ol {
+    list-style-type: decimal;
+    margin: 16px 0;
+    padding-left: 24px;
+  }
+
+  article li {
+    margin: 8px 0;
+  }
+
+  article strong {
+    font-weight: 700;
+  }
+
+  article code {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+  }
+
+  article blockquote {
+    border-left: 4px solid #6366f1;
+    padding-left: 16px;
+    margin: 20px 0;
+    font-style: italic;
+    color: #a1a1aa;
   }
 </style>
