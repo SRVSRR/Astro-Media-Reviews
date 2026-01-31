@@ -1,5 +1,5 @@
 ---
-import { formatDate } from "../utils";
+import { formatDate, calculateReadTime } from "../utils";
 import type { CollectionEntry } from "astro:content";
 import Tags from "./Tags.astro";
 
@@ -8,6 +8,8 @@ const { article } = Astro.props;
 interface Props {
   article: CollectionEntry<'blog'>;
 }
+
+const readTime = calculateReadTime(article.body);
 ---
 <div class="max-w-md mx-auto mt-8 h-full">
   <div class="bg-secondary border border-soft rounded-xl overflow-hidden transition-transform duration-200 hover:-translate-y-1 h-full flex flex-col">
@@ -25,7 +27,7 @@ interface Props {
       <h2 class="text-xl font-semibold leading-tight flex-1">
         <a href={'/articles/' + article.slug} class="hover:text-accent transition-colors">{article.data.title}</a>
       </h2>
-      <p class="text-muted text-xs uppercase tracking-[0.2em]">{formatDate(article.data.pubDate)}</p>
+      <p class="text-muted text-xs uppercase tracking-[0.2em]">{formatDate(article.data.pubDate)} · {readTime}</p>
     </div>
   </div>
 </div>

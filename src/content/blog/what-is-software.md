@@ -1,10 +1,11 @@
 ---
-title: 'What is Software?'
+title: 'What is Software? Definition, Types & Key Characteristics'
+description: 'Discover what software is, its core components, different types (system, application, embedded), and the seven key characteristics that define quality software.'
 pubDate: 2026-01-22
 author: 'Rohan Nandan'
-image: 'image1.webp'
-tags: ['CS140']
-slug: what-is-software
+image: 'image.webp'
+tags: ['Intro to Software Engineering']
+slug: what-is-software-definition-types
 ---
 
 Software is the product that software professionals build and support over the long term. It's more than just code — it's a complete system of programs, data, and documentation working together.
@@ -72,6 +73,8 @@ Four essential attributes define quality software:
 - **Acceptability** — Users must find the software understandable, usable, and compatible with their existing tools
 
 ## **Software Engineering as a Layered Technology**
+
+![Layered Technology|small](/images/image1.1.webp)
 
 Think of software engineering as four stacked layers:
 
