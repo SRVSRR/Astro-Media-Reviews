@@ -1,7 +1,7 @@
 ---
 title: 'Agile Development: Frameworks, Principles & Practices'
 description: 'Learn about Agile development methodologies including Scrum, XP, Kanban, and DevOps. Understand agility principles, sprint planning, and how to deliver software iteratively.'
-pubDate: 2026-02-01
+pubDate: 2026-01-31
 author: 'Rohan Nandan'
 image: 'image5.webp'
 tags: ['Intro to Software Engineering']
@@ -28,8 +28,6 @@ Every software project needs a "road map" or generic software process of some ki
 5. Documents should **evolve with the software** and should not delay the start of construction
 6. **Involve stakeholders early and frequently** in the development process
 7. Testers need to become involved in the process **prior to software construction**
-
----
 
 ## **What is Agility?**
 
@@ -111,6 +109,8 @@ XP is an agile methodology that emphasizes technical practices and close collabo
 | **XP Coding** | Construct unit tests before coding; uses pair programming |
 | **XP Testing** | Unit tests executed daily; acceptance tests defined by customer |
 
+![XP Model|large](/images/image5.2.webp)
+
 ### **Pros**
 
 - Emphasizes customer involvement
@@ -168,6 +168,8 @@ DevOps bridges the gap between development and operations, emphasizing automatio
 | **Continuous Integration** | Code with new functionality added to existing running code |
 | **Continuous Deployment** | Integrated code deployed to production environment |
 | **Continuous Monitoring** | Operations staff proactively monitor software performance |
+
+![DevOps Model|large](/images/image5.4.webp)
 
 ### **Pros**
 

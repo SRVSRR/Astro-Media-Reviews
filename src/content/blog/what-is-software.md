@@ -74,8 +74,6 @@ Four essential attributes define quality software:
 
 ## **Software Engineering as a Layered Technology**
 
-![Layered Technology|small](/images/image1.1.webp)
-
 Think of software engineering as four stacked layers:
 
 1. **Quality Focus** — Forms the foundation. Every engineering approach needs organizational commitment to quality and continuous improvement

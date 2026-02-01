@@ -1,7 +1,7 @@
 ---
 title: 'Prototype Development: Guidelines, Evaluation & Software Maintenance'
 description: 'Learn the complete prototype development process from first prototype guidelines to release candidates and software maintenance types. Essential guide for iterative development.'
-pubDate: 2026-01-31
+pubDate: 2026-02-01
 author: 'Rohan Nandan'
 image: 'image1.webp'
 tags: ['Intro to Software Engineering']
