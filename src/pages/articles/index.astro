@@ -11,7 +11,31 @@ const allBlogArticles: CollectionEntry<'blog'>[] = (await getCollection('blog'))
 
 const totalPages: number = Math.max(1, Math.ceil(allBlogArticles.length / ARTICLES_PER_PAGE));
 
-const requestedPage = Number.parseInt(Astro.url.searchParams.get('page') ?? '1', 10);
+const rawPageParam: string | null = Astro.url.searchParams.get('page');
+const normalizedPageParam: string | null = rawPageParam?.trim() ?? null;
+
+if (normalizedPageParam !== null) {
+  if (normalizedPageParam.length === 0) {
+    return Astro.redirect('/articles', 301);
+  }
+
+  const parsedPage = Number.parseInt(normalizedPageParam, 10);
+
+  if (Number.isNaN(parsedPage) || parsedPage < 1) {
+    return Astro.redirect('/articles', 301);
+  }
+
+  if (parsedPage === 1) {
+    return Astro.redirect('/articles', 301);
+  }
+
+  if (parsedPage > totalPages) {
+    const lastPagePath = totalPages === 1 ? '/articles' : `/articles?page=${totalPages}`;
+    return Astro.redirect(lastPagePath, 301);
+  }
+}
+
+const requestedPage = Number.parseInt(normalizedPageParam ?? '1', 10);
 const currentPage: number = Math.min(Math.max(Number.isNaN(requestedPage) ? 1 : requestedPage, 1), totalPages);
 
 const articlesForPage: CollectionEntry<'blog'>[] = allBlogArticles.slice((currentPage - 1) * ARTICLES_PER_PAGE, currentPage * ARTICLES_PER_PAGE);
