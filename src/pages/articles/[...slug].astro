@@ -3,6 +3,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import Tags from "../../components/Tags.astro";
 import { getEntry } from 'astro:content';
 import { formatDate, calculateReadTime } from "../../utils";
+import { SITE_TITLE } from "../../constants";
 
 const { slug } = Astro.params;
 
@@ -22,17 +23,50 @@ const { Content } = await entry.render();
 
 // Generate description from content if not provided
 const description = entry.data.description || `${entry.data.title} - Written by ${entry.data.author}. Learn about ${entry.data.tags.join(', ')}.`;
+const imagePath = `/images/${entry.data.image}`;
+const siteUrl = Astro.site ?? new URL(Astro.url.origin);
+const articleUrl = new URL(Astro.url.pathname, siteUrl).toString();
+const imageUrl = new URL(imagePath, siteUrl).toString();
+const publishedTime = entry.data.pubDate.toISOString();
+const articleJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: entry.data.title,
+  description,
+  image: [imageUrl],
+  datePublished: publishedTime,
+  author: {
+    '@type': 'Person',
+    name: entry.data.author,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: SITE_TITLE,
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': articleUrl,
+  },
+};
 
 // Calculate read time
 const readTime = calculateReadTime(entry.body);
 ---
 
-<MainLayout title={entry.data.title} description={description}>
+<MainLayout
+  title={entry.data.title}
+  description={description}
+  image={imagePath}
+  type="article"
+  publishedTime={publishedTime}
+  author={entry.data.author}
+  jsonLd={articleJsonLd}
+>
   <article class="max-w-3xl mx-auto lg:max-w-[70%]">
     <h1 class="text-4xl font-bold mb-2 text-white"> {entry.data.title}</h1>
     <h3 class="text-lg mb-2 text-muted">Written by {entry.data.author} on {formatDate(entry.data.pubDate)} · {readTime}</h3>
     <Tags tags={entry.data.tags} />
-    <img src={'/images/' + entry.data.image} alt="Article Image" class="w-full h-auto rounded-xl my-6 border border-soft" />
+    <img src={imagePath} alt="Article Image" class="w-full h-auto rounded-xl my-6 border border-soft" />
     <Content />
   </article>
 </MainLayout>

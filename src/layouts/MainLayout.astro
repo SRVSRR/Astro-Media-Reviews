@@ -9,22 +9,73 @@ import { SITE_TITLE, SITE_DESCIPTION } from '../constants';
 interface Props {
     title?: string;
     description?: string;
+    image?: string;
+    type?: 'website' | 'article';
+    noindex?: boolean;
+    publishedTime?: string;
+    author?: string;
+    jsonLd?: Record<string, unknown>;
 }
 
-const { title = 'Blogs, Reviews and News', description = SITE_DESCIPTION } = Astro.props;
-const canonicalUrl = new URL(`${Astro.url.pathname}${Astro.url.search}`, Astro.site ?? Astro.url).toString();
+const {
+  title = 'Blogs, Reviews and News',
+  description = SITE_DESCIPTION,
+  image = '/images/image.webp',
+  type = 'website',
+  noindex = false,
+  publishedTime,
+  author,
+  jsonLd,
+} = Astro.props;
+
+const siteUrl = Astro.site ?? new URL(Astro.url.origin);
+const siteUrlString = siteUrl.toString().replace(/\/$/, '');
+const canonicalUrl = new URL(`${Astro.url.pathname}${Astro.url.search}`, siteUrl).toString();
+const imageUrl = image ? new URL(image, siteUrl).toString() : undefined;
+const pageTitle = `${SITE_TITLE} - ${title}`;
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE_TITLE,
+  url: siteUrlString,
+  description: SITE_DESCIPTION,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: `${siteUrlString}/articles/search?query={search_term_string}`,
+    'query-input': 'required name=search_term_string',
+  },
+};
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any" />
-    <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" href="/file.svg" type="image/svg+xml" sizes="any" />
+    <link rel="shortcut icon" href="/file.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/file.svg" />
     <link rel="canonical" href={canonicalUrl} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    <meta property="og:site_name" content={SITE_TITLE} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalUrl} />
+    {imageUrl && <meta property="og:image" content={imageUrl} />}
+    <meta name="twitter:card" content={imageUrl ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    {imageUrl && <meta name="twitter:image" content={imageUrl} />}
+    {type === 'article' && publishedTime && (
+      <meta property="article:published_time" content={publishedTime} />
+    )}
+    {type === 'article' && author && <meta property="article:author" content={author} />}
+    <script type="application/ld+json" set:html={JSON.stringify(websiteJsonLd)}></script>
+    {jsonLd && (
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
+    )}
     <meta name="google-site-verification" content="PSZNQJwIQqBeaCpv_Klld7nAnK0sNLNuSVnSkqhcALc" />
     <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6251429948741629" crossorigin="anonymous"></script>
     <script defer src="https://cloud.umami.is/script.js" data-website-id="be608fd6-4520-446c-b1ef-151f8620dd6a"></script>
@@ -34,7 +85,7 @@ const canonicalUrl = new URL(`${Astro.url.pathname}${Astro.url.search}`, Astro.s
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>{SITE_TITLE} - {title}</title>
+    <title>{pageTitle}</title>
   </head>
   <body class="bg-gradient-to-b from-primary via-soft to-primary text-slate-100 min-h-screen font-sans">
     <Navbar />

@@ -40,7 +40,10 @@ const currentPage: number = Math.min(Math.max(Number.isNaN(requestedPage) ? 1 : 
 
 const articlesForPage: CollectionEntry<'blog'>[] = allBlogArticles.slice((currentPage - 1) * ARTICLES_PER_PAGE, currentPage * ARTICLES_PER_PAGE);
 ---
-<MainLayout>
+<MainLayout
+  title="All Articles"
+  description="Browse all software engineering articles, tutorials, and project management guides."
+>
     <div class="flex items-center justify-between gap-3 pb-3">
       <h1 class="text-3xl font-semibold text-white">All Articles</h1>
       <span class="text-sm text-muted">{allBlogArticles.length} posts</span>

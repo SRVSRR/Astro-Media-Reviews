@@ -14,11 +14,14 @@ if(tag === undefined){
 const allBlogArticles: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort((a: CollectionEntry <'blog'>, b:CollectionEntry<'blog'> )=> b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const tagArticles  = allBlogArticles.filter(article => article.data.tags.includes(tag));
+const tagLabel = capitalize(tag);
+const pageTitle = `Tag: ${tagLabel}`;
+const pageDescription = `Articles tagged with ${tagLabel}.`;
 
 ---
-<MainLayout>
+<MainLayout title={pageTitle} description={pageDescription}>
     <div class="flex items-center justify-between pb-4">
-      <h1 class="text-3xl font-semibold text-white">#{capitalize(tag)}</h1>
+      <h1 class="text-3xl font-semibold text-white">#{tagLabel}</h1>
     </div>
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {tagArticles.map(article =>(
