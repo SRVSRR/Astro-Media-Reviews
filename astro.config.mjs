@@ -8,7 +8,7 @@ export default defineConfig({
   site: "https://srvsrr.vercel.app",
   trailingSlash: "never",
   integrations: [tailwind(), sitemap()],
-  output: 'server', // Keeps SSR if that's the goal
+  output: 'hybrid', // Pre-renders by default, keeps API dynamic
   adapter: vercel({
     webAnalytics: {
       enabled: true // Keep it enabled if needed, or set it to false if not

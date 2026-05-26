@@ -5,6 +5,15 @@ import type { CollectionEntry } from "astro:content";
 import ArticleCard from "../../../components/ArticleCard.astro";
 import { capitalize } from "../../../utils";
 
+export async function getStaticPaths() {
+  const allBlogArticles = await getCollection('blog');
+  const tags = [...new Set(allBlogArticles.flatMap(article => article.data.tags))];
+  
+  return tags.map(tag => ({
+    params: { tag }
+  }));
+}
+
 const {tag} =  Astro.params;
 
 if(tag === undefined){
@@ -13,7 +22,15 @@ if(tag === undefined){
 
 const allBlogArticles: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort((a: CollectionEntry <'blog'>, b:CollectionEntry<'blog'> )=> b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const tagArticles  = allBlogArticles.filter(article => article.data.tags.includes(tag));
+const tagArticles = allBlogArticles.filter(article => article.data.tags.includes(tag));
+
+if (tagArticles.length === 0) {
+  return new Response(null, {
+    status: 404,
+    statusText: 'Not found'
+  });
+}
+
 const tagLabel = capitalize(tag);
 const pageTitle = `Tag: ${tagLabel}`;
 const pageDescription = `Articles tagged with ${tagLabel}.`;
