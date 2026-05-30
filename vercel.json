@@ -18,17 +18,17 @@
     },
     {
       "source": "/favicon.ico",
-      "destination": "/file.svg",
+      "destination": "/favicon.svg",
       "permanent": true
     },
     {
       "source": "/apple-touch-icon.png",
-      "destination": "/file.svg",
+      "destination": "/favicon.svg",
       "permanent": true
     },
     {
       "source": "/apple-touch-icon-precomposed.png",
-      "destination": "/file.svg",
+      "destination": "/favicon.svg",
       "permanent": true
     },
     {
