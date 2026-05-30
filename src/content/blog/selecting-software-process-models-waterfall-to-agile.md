@@ -1,7 +1,7 @@
 ---
 title: 'Choosing a Process Model: Waterfall, Prototyping, Spiral, Unified Process, and Agile'
 description: 'Compares prescriptive and agile models, their trade-offs, and how to select a process model based on project risk, scale, and change rate.'
-pubDate: 2026-04-23
+pubDate: 2026-01-30
 author: 'Rohan Nandan'
 image: 'image4.webp'
 tags: ['Intro to Software Engineering']
@@ -18,6 +18,8 @@ Prescriptive models emphasize order, phase discipline, and planned control. They
 
 The waterfall approach organizes work in a linear sequence from requirements through deployment.
 
+![Waterfall Model|large](/images/image4.1.webp)
+
 **Best-fit conditions from your notes:**
 
 - requirements are stable and well understood,
@@ -31,6 +33,8 @@ The waterfall approach organizes work in a linear sequence from requirements thr
 
 Prototyping is effective when requirements are unclear or when teams need to validate interaction, technical feasibility, or user acceptance early.
 
+![Prototyping Model|large](/images/image4.2.webp)
+
 - **Throwaway prototypes** clarify requirements quickly but are discarded.
 - **Evolutionary prototypes** are iteratively refined into delivery candidates.
 
@@ -40,6 +44,8 @@ Prototyping is effective when requirements are unclear or when teams need to val
 
 Spiral combines iterative development with explicit risk analysis at each cycle.
 
+![Spiral Model|large](/images/image4.3.webp)
+
 **Strength:** strong fit for large, expensive, high-risk systems where uncertainty is substantial.
 
 **Trade-off:** requires experienced teams and disciplined risk-management capability; can be difficult to manage without mature governance.
@@ -47,6 +53,8 @@ Spiral combines iterative development with explicit risk analysis at each cycle.
 ### **Unified Process (UP)**
 
 Unified Process blends iterative and incremental flow with architecture-centric and use-case-driven practices.
+
+![Unified Process|large](/images/image4.4.webp)
 
 **Strength:** supports structured documentation and evolving requirements.
 

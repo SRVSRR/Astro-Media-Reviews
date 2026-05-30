@@ -1,9 +1,9 @@
 ---
 title: 'SDLC as a System: Framework Activities, Umbrella Activities, and Process Principles'
 description: 'Clarifies SDLC phases, umbrella activities, task sets, and process/practice principles that guide disciplined software development.'
-pubDate: 2026-04-22
+pubDate: 2026-01-22
 author: 'Rohan Nandan'
-image: 'image3.webp'
+image: 'image2.webp'
 tags: ['Intro to Software Engineering']
 slug: sdlc-framework-umbrella-activities-and-principles
 ---

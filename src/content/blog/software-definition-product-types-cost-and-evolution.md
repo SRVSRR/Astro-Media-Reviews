@@ -1,9 +1,9 @@
 ---
 title: 'What Is Software? Product Types, Cost Realities, and Why Software Ages'
 description: 'A theory-first breakdown of software as programs, data structures, and documentation, including product categories and maintenance economics.'
-pubDate: 2026-04-20
+pubDate: 2026-01-20
 author: 'Rohan Nandan'
-image: 'image1.webp'
+image: 'image.webp'
 tags: ['Intro to Software Engineering']
 slug: software-definition-product-types-cost-and-evolution
 ---
