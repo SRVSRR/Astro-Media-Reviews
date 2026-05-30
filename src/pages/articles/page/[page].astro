@@ -1,0 +1,74 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import ArticleCard from "../../../components/ArticleCard.astro";
+import SearchForm from "../../../components/SearchForm.astro";
+import Pagination from "../../../components/Pagination.astro";
+import { ARTICLES_PER_PAGE } from "../../../constants";
+
+export async function getStaticPaths() {
+  const allBlogArticles = (await getCollection('blog')).sort(
+    (a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) =>
+      b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  );
+
+  const totalPages = Math.max(1, Math.ceil(allBlogArticles.length / ARTICLES_PER_PAGE));
+  const pages = Array.from({ length: totalPages }, (_, index) => index + 1).filter(
+    (page) => page > 1
+  );
+
+  return pages.map((page) => ({
+    params: { page: String(page) },
+  }));
+}
+
+const allBlogArticles: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort(
+  (a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) =>
+    b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const totalPages: number = Math.max(1, Math.ceil(allBlogArticles.length / ARTICLES_PER_PAGE));
+const pageParam = Astro.params.page ?? '1';
+const currentPage = Number.parseInt(pageParam, 10);
+
+if (Number.isNaN(currentPage) || currentPage < 1) {
+  return Astro.redirect('/articles', 301);
+}
+
+if (currentPage === 1) {
+  return Astro.redirect('/articles', 301);
+}
+
+if (currentPage > totalPages) {
+  const lastPagePath = totalPages === 1 ? '/articles' : `/articles/page/${totalPages}`;
+  return Astro.redirect(lastPagePath, 301);
+}
+
+const articlesForPage: CollectionEntry<'blog'>[] = allBlogArticles.slice(
+  (currentPage - 1) * ARTICLES_PER_PAGE,
+  currentPage * ARTICLES_PER_PAGE
+);
+---
+<MainLayout
+  title="All Articles"
+  description="Browse all software engineering articles, tutorials, and project management guides."
+>
+    <div class="flex items-center justify-between gap-3 pb-3">
+      <h1 class="text-3xl font-semibold text-white">All Articles</h1>
+      <span class="text-sm text-muted">{allBlogArticles.length} posts</span>
+    </div>
+    <SearchForm />
+    <div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {articlesForPage.map(article =>(
+        <ArticleCard article={article}/>
+      ))}
+    </div>
+    <Pagination 
+      currentPage={currentPage} 
+      totalPages={totalPages} 
+      disablePrevious={currentPage === 1} 
+      disableNext={currentPage === totalPages} 
+    />
+
+      </MainLayout>
