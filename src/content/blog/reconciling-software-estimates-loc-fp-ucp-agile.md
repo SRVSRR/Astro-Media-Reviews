@@ -1,6 +1,6 @@
 ---
 title: 'Reconciling Software Estimates: LOC, FP, UCP, and Agile Story-Based Methods'
-description: 'Explains estimate reconciliation and compares LOC, FP, process-based, UCP, and agile estimation using CS140 formulas and examples.'
+description: 'Explains estimate reconciliation and compares LOC, FP, process-based, UCP, and agile estimation using standard formulas and examples.'
 pubDate: 2026-04-24
 author: 'Rohan Nandan'
 image: 'image4.2.webp'
@@ -12,7 +12,7 @@ Reliable software planning depends on estimation quality. One estimate is rarely
 
 ## **Why Reconciliation Matters**
 
-A core planning principle from your notes is simple:
+A core planning principle is simple:
 
 - Every estimation technique should be cross-checked with at least one other approach.
 - Multiple estimates must be compared and reconciled.
@@ -41,7 +41,7 @@ A practical workflow:
 5. Derive cost and effort for each function.
 6. Aggregate into project-level estimate.
 
-Important cautions from your notes:
+Important cautions:
 
 - Use a taxonomy of project types when collecting productivity data.
 - Include infrastructure software effort, not just user-visible functionality.
@@ -54,7 +54,7 @@ Given:
 - Burdened labor rate: $8,000 per month
 - Approximate cost per LOC: $13
 
-Lecture outcome:
+Example outcome:
 
 - Estimated cost: $431,000
 - Estimated effort: 54 person-months
@@ -67,7 +67,7 @@ Function-point estimate equation:
 
 $$FP_{estimated} = count_{total} \times [0.65 + 0.01 \times \sum F_i]$$
 
-Using the lecture values:
+Using the example values:
 
 - $count_{total} = 320$
 - $\sum F_i = 52$
@@ -88,7 +88,7 @@ FP is often useful when teams need size estimation that is less tied to implemen
 
 Process-based estimation starts from project scope, then maps functions to framework activities. Effort is placed in a function-by-task matrix, and labor rates are applied to total activity effort.
 
-Lecture outcome with average labor rate of $8,000 per month:
+Example outcome with average labor rate of $8,000 per month:
 
 - Estimated cost: $368,000
 - Estimated effort: 46 person-months
@@ -115,7 +115,7 @@ Where:
 - $TCF$: technical complexity factor
 - $ECF$: environment complexity factor
 
-### **Worked CAD Example from Notes**
+### **Worked CAD Example**
 
 Given:
 
@@ -132,14 +132,14 @@ If productivity is 85 LOC per UCP:
 
 $$Estimated\ LOC = 85 \times 513 = 43,605 \approx 43,600$$
 
-Using 620 LOC per person-month and $8,000 labor rate with approximate $13 per LOC, lecture outcomes are:
+Using 620 LOC per person-month and $8,000 labor rate with approximate $13 per LOC, example outcomes are:
 
 - Estimated cost: about $552,000
 - Estimated effort: about 70 person-months
 
 ## **Agile Project Estimation Steps**
 
-The agile estimation flow in your notes emphasizes user-story granularity:
+The agile estimation flow emphasizes user-story granularity:
 
 1. Estimate each user story separately.
 2. Decompose each story into engineering tasks.
@@ -164,4 +164,4 @@ Reconciliation is strongest when it is transparent and repeatable.
 
 ## **Conclusion**
 
-Estimate reliability comes from triangulation, not precision theater. LOC, FP, process-based, UCP, and agile story-based methods each reveal different aspects of project effort. The planning discipline is to compare them, explain differences, and commit only after reconciliation. That is the foundation of credible software cost and schedule planning.
+Estimate reliability is improved by triangulation rather than false precision. LOC, FP, process-based, UCP, and agile story-based methods each reveal different aspects of project effort. The planning discipline is to compare them, explain differences, and commit only after reconciliation. That is the foundation of credible software cost and schedule planning.

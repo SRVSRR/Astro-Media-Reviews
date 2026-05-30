@@ -8,32 +8,32 @@ tags: ['Intro to Software Engineering']
 slug: prototype-development-maintenance-guide
 ---
 
-Prototyping is a powerful approach to software development that allows teams to iteratively build, test, and refine software based on real user feedback. This guide covers the complete prototype lifecycle from initial creation to long-term maintenance.
+Prototyping is a powerful approach to software development that allows teams to iteratively build, test, and refine software based on real user feedback. This article covers the complete prototype lifecycle from initial creation to long-term maintenance.
 
 ## **First Prototype Guidelines**
 
-When transitioning from concept to code, follow these essential guidelines:
+When transitioning from concept to code, the following guidelines apply:
 
 1. **Transition from paper prototype to software design** — Start with low-fidelity sketches before committing to code
 2. **Prototype a user interface** — Focus on the user-facing elements first
 3. **Create a virtual prototype** — Build a working model that simulates the final product
-4. **Add input and output to your prototype** — Ensure data flows correctly through the system
-5. **Engineer your algorithms** — Implement the core logic that powers your features
-6. **Test your prototype** — Validate functionality before moving forward
+4. **Add input and output to the prototype** — Ensure data flows correctly through the system
+5. **Engineer the algorithms** — Implement the core logic that powers the system
+6. **Test the prototype** — Validate functionality before moving forward
 7. **Prototype with deployment in mind** — Consider how the final product will be delivered
 
 
 
 ## **Prototype Evaluation**
 
-Effective evaluation ensures your prototype meets user needs:
+Effective evaluation ensures the prototype meets user needs:
 
 1. **Provide scaffolding when asking for prototype feedback** — Give users context and guidance
-2. **Test your prototype on the right people** — Use representative users from your target audience
+2. **Test the prototype with representative users** — Use representative users from the target audience
 3. **Ask the right questions** — Focus on usability, functionality, and user satisfaction
 4. **Be neutral when presenting alternatives to users** — Avoid biasing feedback
 5. **Adapt while testing** — Be flexible and responsive to unexpected findings
-6. **Allow the user to contribute ideas** — Users often have valuable insights for improvement
+6. **Allow users to contribute ideas** — Users often have valuable insights for improvement
 
 
 
@@ -49,7 +49,7 @@ After evaluating a prototype, the team must assess whether to continue developme
 | **Delivery Risk** | Risk of missing the project delivery date |
 | **User Expectations** | Risk of failing to satisfy user expectations |
 
-> **Goal:** Get commitment from stakeholders and management to provide the resources needed to create the next prototype.
+> **Goal:** Obtain commitment from stakeholders and management to provide the resources needed to create the next prototype.
 
 
 
@@ -86,7 +86,7 @@ After evaluating a prototype, the team must assess whether to continue developme
 - Determine the quality of the current prototype
 - Revise time and cost estimates for completing development
 - Determine the risk of failing to meet stakeholder expectations
-- Get commitment to continue development
+- Obtain commitment to continue development
 
 ### **7. Evolve System**
 - Define new prototype scope
@@ -116,7 +116,7 @@ Effective testing is critical for prototype quality:
 - Prototypes need to be tested for **defects and performance issues**
 - **Regression testing** ensures that adding new features doesn't break existing functionality
 
-> **Key Principle:** Ensure that adding new features to evolutionary prototypes does not accidentally break features working correctly in the previous prototype.
+> **Key Principle:** Ensure that adding new features to evolutionary prototypes does not inadvertently break features that worked correctly in the previous prototype.
 
 
 
@@ -135,7 +135,7 @@ A prototype considered as a release candidate undergoes additional scrutiny:
 ### **Post-Release Considerations**
 
 - Information from the release should be considered before deciding to undertake future development
-- Lessons learned help developers make better cost and time estimates for similar projects
+- Lessons learned improve cost and time estimates for similar projects
 
 
 
@@ -168,4 +168,4 @@ The prototype development lifecycle follows a structured yet flexible path:
 5. **Release** — Deploy thoroughly tested release candidates
 6. **Maintain** — Support the software through its operational lifetime
 
-Understanding this complete lifecycle helps teams deliver software that truly meets user needs while managing risk and resources effectively.
+Understanding this lifecycle helps teams deliver software that meets user needs while managing risk and resources effectively.

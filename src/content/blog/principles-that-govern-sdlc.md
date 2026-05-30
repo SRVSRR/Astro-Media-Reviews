@@ -13,12 +13,12 @@ Software development is guided by a set of core principles that help teams build
 
 ## **Principles that Guide Process**
 
-- **Be agile** — Regardless of your process model, let the basic tenets of agile development govern your approach.
+- **Be agile** — Regardless of the process model, let agile principles inform the approach where feasible.
 - **Focus on quality at every step** — The exit condition for every process activity, action, and task should focus on the quality of the work product produced.
-- **Be ready to adapt** — Dogma has no place in software development. Adapt your approach to constraints imposed by the problem, the people, and the project itself.
-- **Build an effective team** — Software engineering process and practice are important, but the bottom line is people. Build a self-organizing team.
+- **Be ready to adapt** — Dogma has no place in software development. Adapt the approach to constraints imposed by the problem, the people, and the project itself.
+- **Build an effective team** — Software engineering process and practice are important, but the bottom line is people. Establish a self-organizing team.
 - **Establish mechanisms for communication and coordination** — Projects fail because information falls into the cracks and/or stakeholders fail to coordinate their efforts.
-- **Manage change** — The approach may be formal or informal. You need mechanisms to manage how changes are requested, assessed, approved, and implemented.
+- **Manage change** — The approach may be formal or informal. Mechanisms are needed to manage how changes are requested, assessed, approved, and implemented.
 - **Assess risk** — Lots of things can go wrong as software is being developed; establish contingency plans.
 - **Create work products that provide value for others** — Create only those work products that provide value for other process activities, actions, or tasks.
 
@@ -32,22 +32,22 @@ Software development is guided by a set of core principles that help teams build
 - **Build software that exhibits effective modularity** — Provides a mechanism for realizing the philosophy of separation of concerns.
 - **Look for patterns** — The goal of patterns is to create a body of literature to help developers resolve recurring problems encountered in software development.
 - **Use multiple viewpoints** — Represent the problem and solution from different perspectives.
-- **Someone consumes your work products** — Remember that someone will maintain the software.
+- **Someone consumes the work products** — Remember that someone will maintain the software.
 
 
 ## **Communication Principles**
 
-- **Listen** — Try to focus on the speaker's words, not formulating your response to those words.
-- **Prepare before you communicate** — Understand a problem before meeting with others.
+- **Listen** — Focus on the speaker's words rather than formulating a response.
+- **Prepare before communication** — Understand the problem before meeting with others.
 - **Someone should facilitate the activity** — Every communication meeting should have a leader to keep the conversation moving in a productive direction.
-- **Face-to-face communication is best** — Visual representations of information can be helpful.
+- **Face-to-face communication is preferred** — Visual representations of information can further support shared understanding.
 - **Take notes and document decisions** — Someone should serve as a "recorder" and write down all important points and decisions.
 - **Strive for collaboration** — Consensus occurs when collective team knowledge is combined.
-- **Stay focused, modularize your discussion** — The more people involved in communication, the more likely discussion will bounce between topics.
-- **If something is unclear, draw a picture.**
+- **Stay focused, modularize discussion** — As more people are involved, discussion is more likely to bounce between topics.
+- **When something is unclear, draw a picture.**
 - **Learn to move on:**
-  - Once you agree to something, move on
-  - If you can't agree to something, move on
+  - Once agreement is reached, move on
+  - If agreement cannot be reached, move on
   - If a feature or function is unclear and cannot be clarified at the moment, move on
 - **Negotiation is not a contest or a game** — It works best when both parties win.
 
@@ -57,55 +57,55 @@ Software development is guided by a set of core principles that help teams build
 - **Understand the scope of the project** — Scope provides the software team with a destination as the roadmap is created.
 - **Involve the customer in the planning activity** — They define priorities and project constraints.
 - **Recognize that planning is iterative** — A project plan is likely to change as work begins.
-- **Estimate based on what you know** — Estimation provides an indication of effort, cost, and task duration, based on the team's current understanding of work.
-- **Consider risk as you define the plan** — Contingency planning is needed for identified high-impact and high-probability risks.
-- **Adjust granularity as you define the plan** — Granularity refers to the level of detail that is introduced as a project plan is developed.
-- **Define how you intend to ensure quality** — Your plan should identify how the software team intends to ensure quality.
-- **Describe how you intend to accommodate change** — Even the best planning can be obviated by uncontrolled change.
+- **Estimate based on available information** — Estimation provides an indication of effort, cost, and task duration, based on the team's current understanding of work.
+- **Consider risk as the plan is defined** — Contingency planning is needed for identified high-impact and high-probability risks.
+- **Adjust granularity as the plan is defined** — Granularity refers to the level of detail that is introduced as a project plan is developed.
+- **Define how quality will be ensured** — The plan should identify how the software team intends to ensure quality.
+- **Describe how change will be accommodated** — Even the best planning can be obviated by uncontrolled change.
 - **Track the plan frequently and make adjustments as required** — Software projects fall behind schedule one day at a time.
 
 
 ## **Agile Modeling Principles**
 
 - The primary goal of the software team is to **build software, not create models**.
-- **Travel light** — Don't create more models than you need.
+- **Travel light** — Avoid creating more models than needed.
 - Strive to produce the **simplest model** that will describe the problem or the software.
 - Build models in a way that makes them **amenable to change**.
 - Be able to state an **explicit purpose** for each model that is created.
-- **Adapt the models** you create to the system at hand.
-- Try to build **useful models**, forget about building perfect models.
-- Don't become dogmatic about model syntax — **successful communication is key**.
-- If your instincts tell you a paper model isn't working, you may have a reason to be concerned.
-- **Get feedback as soon as you can.**
+- **Adapt the models** to the system at hand.
+- Build **useful models** rather than perfect models.
+- Avoid dogma about model syntax — **successful communication is key**.
+- If indications suggest a paper model is ineffective, reconsider the approach.
+- **Seek feedback as early as possible.**
 
 
 ## **Construction Principles - Coding**
 
 ### **Preparation Principles**
 
-Before you write one line of code, be sure you:
+Before writing code, ensure that:
 
 - Understand the problem to be solved
 - Understand basic design principles and concepts
 - Pick a programming language that meets the needs of the software to be built
-- Select a programming environment that provides tools that will make your work easier
-- Create a set of unit tests that will be applied once the component you code is completed
+- Select a programming environment that provides appropriate tooling
+- Create a set of unit tests to apply once the component is completed
 
 ### **Coding Principles**
 
-As you begin writing code, be sure you:
+When writing code, ensure that:
 
-- Constrain your algorithms by following structured programming practice
-- Consider the use of pair programming
-- Select data structures that will meet the needs of the design
-- Understand the software architecture and create interfaces that are consistent with it
+- Constrain algorithms by following structured programming practice
+- Consider pair programming where appropriate
+- Select data structures that meet the needs of the design
+- Understand the software architecture and create interfaces consistent with it
 
 ### **Validation Principles**
 
-After you've completed your first coding pass, be sure you:
+After the first coding pass, ensure that:
 
 - Conduct a code walkthrough when appropriate
-- Perform unit tests and correct errors you've uncovered
+- Perform unit tests and correct uncovered errors
 - Refactor the code to improve its quality
 
 
@@ -113,7 +113,7 @@ After you've completed your first coding pass, be sure you:
 
 - All tests should be **traceable to customer requirements**.
 - Tests should be **planned long before testing begins**.
-- Testing is a process of executing a program with the **intent of finding an error**.
+- Testing is a process of executing a program with the **intent of finding an error**; verification tests also confirm expected behavior.
 - A good test case is one that has a **high probability of finding an as-yet-undiscovered error**.
 - A successful test is one that **uncovers an as-yet-undiscovered error**.
 - The **Pareto principle** applies to software testing.
@@ -122,7 +122,7 @@ After you've completed your first coding pass, be sure you:
 - Testing effort for each system module should be **commensurate to expected fault density**.
 - **Static testing** can yield high results.
 - **Track defects** and look for patterns in defects uncovered by testing.
-- Include test cases that demonstrate software is **behaving correctly**.
+- Include test cases that demonstrate software is **behaving correctly** under expected conditions.
 
 
 ## **Deployment Principles**
@@ -149,7 +149,7 @@ After you've completed your first coding pass, be sure you:
 
 Using IT within the resources of the organization.
 
-- IT specialists within your organization will develop the system
+- IT specialists within the organization will develop the system
 - One of the most common methods to develop a system
 - Typically the cheapest option
 - Company does not have to hire contractors

@@ -23,7 +23,7 @@ SDLC provides a disciplined response by defining what work happens, when it happ
 
 ## **Framework Activities**
 
-Your notes describe a common process framework with the following core activities:
+A widely used process framework includes the following core activities:
 
 1. **Communication** - understand stakeholder goals, constraints, and expectations.
 2. **Planning** - define timeline, resources, scope boundaries, and quality approach.
@@ -61,7 +61,7 @@ This matters because vague phase labels alone do not guarantee execution quality
 
 ## **Process Principles That Guide Execution**
 
-From your CS140 notes, effective process behavior includes:
+Effective process behavior includes:
 
 - be agile in response to change,
 - keep quality as an exit condition for every activity,
@@ -91,13 +91,13 @@ These principles lower cognitive load and reduce defect propagation.
 
 ## **Communication and Planning as Continuous Activities**
 
-SDLC is often taught as linear, but your notes emphasize iterative behavior:
+SDLC is often taught as linear, but in practice it is iterative:
 
 - communication should be prepared, facilitated, documented, and collaborative,
 - planning should be iterative, risk-aware, and continuously tracked,
 - granularity should increase as knowledge improves.
 
-This is important because software projects do not fail in one step. They drift through unmanaged daily deviations.
+This matters because software projects rarely fail in a single step; they drift through unmanaged daily deviations.
 
 ## **Construction, Testing, and Deployment Discipline**
 
@@ -107,11 +107,11 @@ Lifecycle integrity requires explicit engineering discipline:
 - testing is traceable to requirements and begins early,
 - deployment manages support readiness and user expectations.
 
-A practical rule from your notes remains useful: release quality first; do not normalize delivering known-critical defects.
+A practical rule remains useful: release quality first; do not normalize delivering known-critical defects.
 
 ## **Layered Technology Perspective**
 
-Another useful framing from week 1 is software engineering as layered technology:
+Another useful framing is software engineering as layered technology:
 
 - quality focus,
 - process,

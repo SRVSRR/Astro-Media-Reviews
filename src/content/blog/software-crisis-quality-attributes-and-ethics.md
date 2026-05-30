@@ -21,7 +21,7 @@ Typical outcomes include:
 - reduced quality,
 - and in severe cases, cancellation.
 
-Your notes highlight a sobering distribution of outcomes: a minority of projects complete on time and within budget, while many slip or are terminated.
+Observed outcomes show a sobering distribution: a minority of projects complete on time and within budget, while many slip or are terminated.
 
 ## **Symptoms and How Teams Track Them**
 
@@ -41,7 +41,7 @@ Measurement does not remove risk by itself, but it creates early warning signals
 
 ## **Core Causes**
 
-Two root causes in your notes remain central in practice:
+Two root causes remain central in practice:
 
 1. **Communication breakdown** among stakeholders, developers, and decision-makers.
 2. **Complexity mismanagement** as scope, dependencies, and constraints scale.
@@ -61,7 +61,7 @@ If these qualities are deferred until late testing, cost of correction grows sha
 
 ## **Ethics vs Law in Software Practice**
 
-A critical CS140 distinction is that **law sets minimum enforceable standards**, while **ethics guides professional judgment beyond legal compliance**.
+A critical distinction is that **law sets minimum enforceable standards**, while **ethics guides professional judgment beyond legal compliance**.
 
 - Legal compliance answers: "Is this permitted?"
 - Ethical practice answers: "Is this responsible and defensible?"
@@ -70,7 +70,7 @@ In software engineering, many harmful decisions are legal but still professional
 
 ## **Professional Responsibility Areas**
 
-Four recurring responsibility areas from your notes:
+Four recurring responsibility areas:
 
 1. **Confidentiality** - protect client/employer information.
 2. **Competence** - do not misrepresent skill level or accept work far outside capability without support.
@@ -81,7 +81,7 @@ These are practical operating constraints, not abstract values.
 
 ## **ACM/IEEE Software Engineering Code of Ethics**
 
-The ACM-oriented ethical framework in your notes organizes obligations across eight domains:
+The ACM/IEEE ethical framework organizes obligations across eight domains:
 
 1. Public interest
 2. Client and employer interest (within public interest)

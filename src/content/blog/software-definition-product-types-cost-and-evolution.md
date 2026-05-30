@@ -12,7 +12,7 @@ Software is often misunderstood as "just code." In software engineering, that vi
 
 ## **Software as an Engineered Product**
 
-In CS140 terms, software includes three integrated parts:
+In standard software engineering terms, software includes three integrated parts:
 
 1. **Programs** - executable instructions that deliver required behavior.
 2. **Data structures** - organized representations that allow storage and manipulation of information.
@@ -40,7 +40,7 @@ Why does this happen?
 - Security and compliance expectations increase.
 - New integrations and interfaces become necessary.
 
-This is why maintainability is not a "nice-to-have" quality attribute. It is an economic requirement.
+Maintainability is therefore an economic requirement rather than a "nice-to-have" quality attribute.
 
 ## **Why Software Ages Even If It Does Not Wear Out**
 
@@ -51,7 +51,7 @@ Two important observations from foundational software engineering:
 - Software is **engineered, not manufactured**. Once created, copying is cheap; design quality is where risk concentrates.
 - Software may follow a **bathtub-like quality pattern** where early defects are removed, but later change-driven complexity can increase failure likelihood if architecture and process are weak.
 
-In short, software quality decays when design integrity is not protected over time.
+Consequently, software quality decays when design integrity is not protected over time.
 
 ## **Major Software Application Classes**
 
@@ -82,7 +82,7 @@ Software engineering therefore occupies the boundary between theory and delivery
 
 ## **Attributes of Good Software**
 
-Your notes identify four core quality attributes that remain widely accepted:
+A common framing identifies four core quality attributes that remain widely accepted:
 
 - **Maintainability** - ability to evolve safely and efficiently.
 - **Dependability and security** - reliability, safety, and resistance to misuse.

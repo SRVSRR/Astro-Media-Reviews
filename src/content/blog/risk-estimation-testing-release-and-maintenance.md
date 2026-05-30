@@ -23,7 +23,7 @@ A practical risk discipline allows teams to answer:
 
 ## **Software Risk Categories**
 
-Your CS140 notes define three major categories:
+A common classification defines three major categories:
 
 - **Project risks** - threaten the project plan and execution flow.
 - **Technical risks** - threaten software quality and timely delivery.
@@ -80,7 +80,7 @@ Risk projection rates each risk by:
 - likelihood/probability,
 - and consequence/impact.
 
-Your notes describe four projection steps:
+Risk projection typically follows four steps:
 
 1. Define a likelihood scale.
 2. Delineate consequences.
@@ -111,7 +111,7 @@ where:
 - $P$ = probability of occurrence,
 - $C$ = cost impact if the risk occurs.
 
-### **Worked Example (from your notes)**
+### **Worked Example**
 
 Suppose only 70% of reusable components are actually reusable.
 

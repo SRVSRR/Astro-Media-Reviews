@@ -21,7 +21,7 @@ A planning phase should answer practical questions such as:
 
 ## **Five Major Planning Activities**
 
-Your CS140 notes define five core planning activities:
+Five core planning activities are commonly defined:
 
 1. **Estimation**
 2. **Scheduling**
@@ -88,9 +88,9 @@ In project terms, scope is the system's goals, limitations, and constraints.
 
 After scope agreement, the team should explicitly test feasibility:
 
-- Can we build this with available technology?
-- Can we build it within available budget and time?
-- Can we staff and support the required work?
+- Can the system be built with available technology?
+- Can it be delivered within available budget and time?
+- Can the effort be staffed and supported at the required level?
 - Is there a real business need for this system?
 
 A technically possible product with no practical demand is still a failed investment.

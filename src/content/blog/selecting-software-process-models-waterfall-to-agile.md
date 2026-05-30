@@ -20,7 +20,7 @@ The waterfall approach organizes work in a linear sequence from requirements thr
 
 ![Waterfall Model|large](/images/image4.1.webp)
 
-**Best-fit conditions from your notes:**
+**Best-fit conditions:**
 
 - requirements are stable and well understood,
 - technology is known,
@@ -113,18 +113,18 @@ No single model dominates across all contexts. The right choice is conditional.
 - Use **agile models** when change is expected and frequent value delivery is essential.
 - Combine with **DevOps practices** when release cadence and production feedback are strategic priorities.
 
-This aligns with your course principle: every project needs a roadmap, but every roadmap should be adapted to project realities.
+This aligns with the principle that every project needs a roadmap, but the roadmap should be adapted to project realities.
 
 ## **Adapting, Not Blindly Adopting**
 
-Your notes emphasize that process should be tailored, not copied. Effective teams:
+A recurring principle is that process should be tailored, not copied. Effective teams:
 
 - retain structure where coordination is required,
 - remove unnecessary ceremony where it adds no value,
 - involve stakeholders early and often,
 - and integrate testing before late-stage construction bottlenecks form.
 
-In other words, process rigor and agility are not opposites. Good engineering combines both.
+Thus, process rigor and agility are not opposites; effective engineering combines both.
 
 ## **Conclusion**
 
