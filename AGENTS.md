@@ -78,6 +78,8 @@ Work should be committed **incrementally**, not as one large diff. Break a task 
 │   │       ├── [...slug].astro     # /articles/{slug}
 │   │       ├── page/[page].astro   # /articles/page/{n}
 │   │       ├── tag/[...tag].astro  # /articles/tag/{tag}
+│   │       ├── browse.astro        # /articles/browse (Categories + Series)
+│   │       ├── tags.astro          # 301 redirect → /articles/browse
 │   │       └── search.astro        # /articles/search?query=
 │   ├── constants.ts
 │   ├── env.d.ts
@@ -118,6 +120,7 @@ Frontmatter schema (all fields in `entry.data`):
 - Article listing: `/articles` (page 1), `/articles/page/{n}` (n > 1). Page 1 redirects to `/articles` (301).
 - Individual article: `/articles/{slug}`.
 - Tag filter: `/articles/tag/{tag}` — tags are URL-safe slugified via `slugify()` (see Utilities). e.g. `Intro to Software Engineering` → `/articles/tag/intro-to-software-engineering`.
+- Browse page: `/articles/browse` — Categories + Series sections (`#categories`, `#series`, `#series-{slug}` anchors). Footer links top 5 tags and top 5 series here.
 - Search: `/articles/search?query=...` (server-rendered) and `/api/search.json?query=...` (JSON; `prerender = false`).
 - `trailingSlash: "never"` is set — do not add trailing slashes to internal links.
 - Internal links use URL-safe lowercase slugs; `capitalize()` (from `src/utils.ts`) is used for display labels.

@@ -16,11 +16,24 @@ const topTags: string[] = Object.entries(tagCounts)
   .sort((a, b) => b[1] - a[1])
   .slice(0, 5)
   .map(([tag]) => tag);
+
+const seriesCounts: Record<string, number> = {};
+
+for (const article of allBlogArticles) {
+  const series = article.data.series;
+  if (!series) continue;
+  seriesCounts[series] = (seriesCounts[series] || 0) + 1;
+}
+
+const topSeries: string[] = Object.entries(seriesCounts)
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 5)
+  .map(([series]) => series);
 ---
 
 <footer class="bg-secondary/80 border-t border-soft mt-16 text-slate-200">
   <div class="container mx-auto max-w-screen-xl px-6 sm:px-8 py-12">
-    <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
       <div class="space-y-3">
         <h3 class="text-xl font-semibold text-white">About</h3>
         <p class="text-sm text-muted leading-relaxed">
@@ -35,7 +48,20 @@ const topTags: string[] = Object.entries(tagCounts)
             </li>
           ))}
           <li>
-            <a class="hover:text-accent transition text-accent" href="/articles/tags">View all categories →</a>
+            <a class="hover:text-accent transition text-accent" href="/articles/browse#categories">View all categories →</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-white mb-4">Series</h3>
+        <ul class="text-sm space-y-2 text-muted">
+          {topSeries.map(series => (
+            <li>
+              <a class="hover:text-accent transition" href={'/articles/browse#series-' + slugify(series)}>{series}</a>
+            </li>
+          ))}
+          <li>
+            <a class="hover:text-accent transition text-accent" href="/articles/browse#series">View all series →</a>
           </li>
         </ul>
       </div>

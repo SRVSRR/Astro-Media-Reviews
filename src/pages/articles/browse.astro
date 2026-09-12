@@ -1,0 +1,93 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import { capitalize, slugify, formatDate } from "../../utils";
+
+const allBlogArticles: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const tags: string[] = allBlogArticles.flatMap((article) => article.data.tags);
+
+const tagCounts: Record<string, number> = tags.reduce((acc: Record<string, number>, tag: string) => {
+  acc[tag] = (acc[tag] || 0) + 1;
+  return acc;
+}, {});
+
+const sortedTags = Object.entries(tagCounts)
+  .sort((a, b) => b[1] - a[1])
+  .map(([tag, count]) => ({ tag, count }));
+
+const seriesGroups: Record<string, CollectionEntry<'blog'>[]> = {};
+
+for (const article of allBlogArticles) {
+  const series = article.data.series;
+  if (!series) continue;
+  if (!seriesGroups[series]) seriesGroups[series] = [];
+  seriesGroups[series].push(article);
+}
+
+const sortedSeries = Object.entries(seriesGroups)
+  .sort((a, b) => b[1].length - a[1].length)
+  .map(([name, posts]) => ({
+    name,
+    posts: [...posts].sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()),
+  }));
+---
+<MainLayout
+  title="Browse"
+  description="Browse all article categories and series."
+>
+  <div class="flex items-center justify-between gap-3 pb-3">
+    <h1 class="text-3xl font-semibold text-white">Browse</h1>
+  </div>
+
+  <section id="categories" class="scroll-mt-24">
+    <div class="flex items-center justify-between gap-3 mb-4 mt-6">
+      <h2 class="text-2xl font-semibold text-white">Categories</h2>
+      <span class="text-sm text-muted">{Object.keys(tagCounts).length} categories</span>
+    </div>
+    <div class="flex flex-wrap gap-3">
+      {sortedTags.map(({ tag, count }) => (
+        <a
+          href={'/articles/tag/' + slugify(tag)}
+          class="inline-flex items-center gap-2 px-4 py-2 bg-secondary border border-soft rounded-full text-sm text-slate-100 hover:border-accent hover:text-accent transition"
+        >
+          <span>{capitalize(tag)}</span>
+          <span class="bg-soft/50 text-xs text-muted px-2 py-0.5 rounded-full">{count}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section id="series" class="scroll-mt-24">
+    <div class="flex items-center justify-between gap-3 mb-4 mt-12">
+      <h2 class="text-2xl font-semibold text-white">Series</h2>
+      <span class="text-sm text-muted">{sortedSeries.length} series</span>
+    </div>
+    {sortedSeries.length === 0 ? (
+      <p class="text-muted text-sm">No series yet.</p>
+    ) : (
+      <div class="flex flex-col gap-6">
+        {sortedSeries.map(({ name, posts }) => (
+          <div id={'series-' + slugify(name)} class="scroll-mt-24 bg-secondary border border-soft rounded-xl p-6">
+            <div class="flex items-center justify-between gap-3 mb-4">
+              <h3 class="text-lg font-semibold text-white">{name}</h3>
+              <span class="text-sm text-muted">{posts.length} {posts.length === 1 ? 'post' : 'posts'}</span>
+            </div>
+            <ol class="space-y-2">
+              {posts.map((post, index) => (
+                <li class="flex items-baseline gap-3">
+                  <span class="text-accent text-sm font-semibold shrink-0">Part {index + 1}</span>
+                  <a href={'/articles/' + post.slug} class="text-slate-100 hover:text-accent transition-colors text-sm leading-relaxed">{post.data.title}</a>
+                  <span class="text-muted text-xs uppercase tracking-[0.2em] whitespace-nowrap ml-auto shrink-0">{formatDate(post.data.pubDate)}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+        ))}
+      </div>
+    )}
+  </section>
+</MainLayout>
