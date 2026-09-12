@@ -30,7 +30,7 @@ ToC → progress bar → newsletter → lighthouse → search console.
 **Accept:** each button opens the correct share target with title/URL.
 **Effort:** S. **Depends on:** nothing.
 
-## 3. Prev/next navigation (series-aware) `[x]`
+## 3. Prev/next navigation (series-aware) `[ ] (dropped — RelatedPosts cards already cover discovery)`
 
 **Why:** carry readers through the Expense Tracker sequence in order.
 **Scope:**

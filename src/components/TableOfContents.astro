@@ -15,16 +15,14 @@ const items = headings.filter((heading) => heading.depth === 2 || heading.depth 
 ---
 
 {items.length > 0 && (
-  <aside class="hidden lg:block w-60 shrink-0">
-    <div class="sticky top-24">
-      <p class="text-xs uppercase tracking-[0.2em] text-muted mb-3">On this page</p>
-      <ul class="space-y-2 text-sm border-l border-soft pl-4">
-        {items.map((heading) => (
-          <li class={heading.depth === 3 ? 'pl-4' : ''}>
-            <a href={'#' + heading.slug} class="text-muted hover:text-accent transition-colors">{heading.text}</a>
-          </li>
-        ))}
-      </ul>
-    </div>
+  <aside class="hidden min-[1440px]:block fixed right-8 top-28 w-60 z-30">
+    <p class="text-xs uppercase tracking-[0.2em] text-muted mb-3">On this page</p>
+    <ul class="space-y-2 text-sm border-l border-soft pl-4">
+      {items.map((heading) => (
+        <li class={heading.depth === 3 ? 'pl-4' : ''}>
+          <a href={'#' + heading.slug} class="text-muted hover:text-accent transition-colors">{heading.text}</a>
+        </li>
+      ))}
+    </ul>
   </aside>
 )}

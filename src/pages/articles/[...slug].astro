@@ -58,25 +58,6 @@ const customLd = articleJsonLd;
 
 // Calculate read time
 const readTime = calculateReadTime(entry.body);
-
-// Series-aware prev/next neighbors
-const entrySeries = entry.data.series;
-let prevPost = null;
-let nextPost = null;
-
-if (entrySeries) {
-  const seriesPosts = allEntries
-    .filter(e => e.data.series === entrySeries)
-    .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
-  const index = seriesPosts.findIndex(e => e.slug === entry.slug);
-  prevPost = index > 0 ? seriesPosts[index - 1] : null;
-  nextPost = index < seriesPosts.length - 1 ? seriesPosts[index + 1] : null;
-} else {
-  const chronological = [...allEntries].sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-  const index = chronological.findIndex(e => e.slug === entry.slug);
-  nextPost = index > 0 ? chronological[index - 1] : null;
-  prevPost = index < chronological.length - 1 ? chronological[index + 1] : null;
-}
 ---
 
 <MainLayout
@@ -88,39 +69,16 @@ if (entrySeries) {
   author={entry.data.author}
   jsonLd={articleJsonLd}
 >
-  <div class="lg:flex lg:gap-10 lg:items-start max-w-3xl lg:max-w-5xl mx-auto">
-    <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-accent z-50 w-0"></div>
-    <article id="article-content" class="min-w-0 flex-1">
+  <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-accent z-50 w-0"></div>
+  <article id="article-content" class="max-w-3xl mx-auto lg:max-w-[70%]">
       <h1 class="text-4xl font-bold mb-2 text-white"> {entry.data.title}</h1>
       <p class="text-lg mb-2 text-muted">Written by {entry.data.author} on {formatDate(entry.data.pubDate)} · {readTime}</p>
       <Tags tags={entry.data.tags} />
       <img src={imagePath} alt="Article Image" class="w-full h-auto rounded-xl my-6 border border-soft" />
       <Content />
       <ShareButtons url={articleUrl} title={entry.data.title} />
-    </article>
-    <TableOfContents headings={headings} />
-  </div>
-
-  {(prevPost || nextPost) && (
-    <nav class="max-w-3xl mx-auto lg:max-w-[70%] mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
-      {prevPost ? (
-        <a href={'/articles/' + prevPost.slug} class="block bg-secondary border border-soft rounded-xl p-5 hover:border-accent transition">
-          <span class="text-xs uppercase tracking-[0.2em] text-muted">← Previous</span>
-          <span class="block text-white font-semibold mt-1 leading-snug">{prevPost.data.title}</span>
-        </a>
-      ) : (
-        <span />
-      )}
-      {nextPost ? (
-        <a href={'/articles/' + nextPost.slug} class="block bg-secondary border border-soft rounded-xl p-5 hover:border-accent transition text-right">
-          <span class="text-xs uppercase tracking-[0.2em] text-muted">Next →</span>
-          <span class="block text-white font-semibold mt-1 leading-snug">{nextPost.data.title}</span>
-        </a>
-      ) : (
-        <span />
-      )}
-    </nav>
-  )}
+  </article>
+  <TableOfContents headings={headings} />
 
   <RelatedPosts currentEntry={entry} allEntries={allEntries} />
 </MainLayout>
