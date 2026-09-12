@@ -41,8 +41,7 @@ if (currentPage === 1) {
 }
 
 if (currentPage > totalPages) {
-  const lastPagePath = totalPages === 1 ? '/articles' : `/articles/page/${totalPages}`;
-  return Astro.redirect(lastPagePath, 301);
+  return Astro.redirect(totalPages === 1 ? '/articles' : `/articles/page/${totalPages}`, 301);
 }
 
 const articlesForPage: CollectionEntry<'blog'>[] = allBlogArticles.slice(

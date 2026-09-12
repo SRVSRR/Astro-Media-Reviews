@@ -75,13 +75,13 @@ const websiteJsonLd = {
       <meta property="article:published_time" content={publishedTime} />
     )}
     {type === 'article' && author && <meta property="article:author" content={author} />}
-    <script type="application/ld+json" set:html={JSON.stringify(websiteJsonLd)}></script>
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(websiteJsonLd)}></script>
     {jsonLd && (
-      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
+      <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
     )}
     <meta name="google-site-verification" content="PSZNQJwIQqBeaCpv_Klld7nAnK0sNLNuSVnSkqhcALc" />
     <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6251429948741629" crossorigin="anonymous"></script>
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="be608fd6-4520-446c-b1ef-151f8620dd6a"></script>
+    <script is:inline defer src="https://cloud.umami.is/script.js" data-website-id="be608fd6-4520-446c-b1ef-151f8620dd6a"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

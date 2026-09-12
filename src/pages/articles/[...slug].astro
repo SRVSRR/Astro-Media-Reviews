@@ -16,7 +16,6 @@ export async function getStaticPaths() {
   }));
 }
 
-const { slug } = Astro.params;
 const { entry, allEntries } = Astro.props;
 
 if(entry === undefined) {
@@ -53,8 +52,6 @@ const articleJsonLd = {
     '@id': articleUrl,
   },
 };
-
-const customLd = articleJsonLd;
 
 // Calculate read time
 const readTime = calculateReadTime(entry.body);
