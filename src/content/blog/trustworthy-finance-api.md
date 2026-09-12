@@ -1,7 +1,7 @@
 ---
 title: 'Making a Personal-Finance API Trustworthy: Tests, Isolation, and Balance Accounting'
 description: 'How to build an API that guarantees correct account balances, strict user isolation, and consistent analytics through isolated integration tests, immutable transaction rules, and cache invalidation.'
-pubDate: 2026-02-10
+pubDate: 2026-09-08
 author: 'Rohan Nandan'
 image: 'image4.webp'
 tags: ['Backend Engineering', 'Data Engineering']

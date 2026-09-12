@@ -1,7 +1,7 @@
 ---
 title: 'Shipping Analytics Safely: Caching, Budgets, Deployment, and Handoff'
 description: 'User-scoped caching with TTLs, mutation-driven invalidation, rule-based budgets, Render deployment with health checks, and unambiguous mobile handoff.'
-pubDate: 2026-03-10
+pubDate: 2026-09-12
 author: 'Rohan Nandan'
 image: 'image4.4.webp'
 tags: ['Data Engineering', 'Platform Engineering']

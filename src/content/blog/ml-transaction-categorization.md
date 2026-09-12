@@ -1,7 +1,7 @@
 ---
 title: 'Transaction Categorization That Survives Cold Starts'
 description: 'A hybrid categorization system with rule-based fallback, LightGBM classifier, and confidence-gated ML predictions—ensuring sensible behavior from day one.'
-pubDate: 2026-02-24
+pubDate: 2026-09-10
 author: 'Rohan Nandan'
 image: 'image4.2.webp'
 tags: ['Machine Learning', 'Data Science']

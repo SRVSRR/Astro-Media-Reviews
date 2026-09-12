@@ -1,7 +1,7 @@
 ---
 title: 'Migrating Production Auth Without Breaking the Product'
 description: 'A four-phase migration from local JWT to Supabase Auth with reversible migrations, additive verification, and 82 integration tests passing throughout.'
-pubDate: 2026-02-17
+pubDate: 2026-09-09
 author: 'Rohan Nandan'
 image: 'image4.1.webp'
 tags: ['Backend Engineering', 'Security']
