@@ -65,17 +65,17 @@ This method is direct and useful when historical LOC productivity is trustworthy
 
 Function-point estimate equation:
 
-$$FP_{estimated} = count_{total} \times [0.65 + 0.01 \times \sum F_i]$$
+`FP_estimated = count_total × [0.65 + 0.01 × ΣF_i]`
 
 Using the example values:
 
-- $count_{total} = 320$
-- $\sum F_i = 52$
-- Adjustment factor $= 0.65 + 0.01 \times 52 = 1.17$
+- `count_total = 320`
+- `ΣF_i = 52`
+- Adjustment factor: `0.65 + 0.01 × 52 = 1.17`
 
 So:
 
-$$FP_{estimated} = 320 \times 1.17 = 375$$
+`FP_estimated = 320 × 1.17 = 375`
 
 With historical cost per FP of $1,230:
 
@@ -106,31 +106,31 @@ UCP incorporates:
 
 General equation:
 
-$$UCP = (UUCW + UAW) \times TCF \times ECF$$
+`UCP = (UUCW + UAW) × TCF × ECF`
 
 Where:
 
-- $UUCW$: unadjusted use case weight
-- $UAW$: unadjusted actor weight
-- $TCF$: technical complexity factor
-- $ECF$: environment complexity factor
+- `UUCW`: unadjusted use case weight
+- `UAW`: unadjusted actor weight
+- `TCF`: technical complexity factor
+- `ECF`: environment complexity factor
 
 ### Worked CAD Example
 
 Given:
 
-- $UUCW = 470$
-- $UAW = 44$
-- $TCF = 1.04$
-- $ECF = 0.96$
+- `UUCW = 470`
+- `UAW = 44`
+- `TCF = 1.04`
+- `ECF = 0.96`
 
 Then:
 
-$$UCP = (470 + 44) \times 1.04 \times 0.96 = 513$$
+`UCP = (470 + 44) × 1.04 × 0.96 = 513`
 
 If productivity is 85 LOC per UCP:
 
-$$Estimated\ LOC = 85 \times 513 = 43,605 \approx 43,600$$
+`Estimated LOC = 85 × 513 = 43,605 ≈ 43,600`
 
 Using 620 LOC per person-month and $8,000 labor rate with approximate $13 per LOC, example outcomes are:
 

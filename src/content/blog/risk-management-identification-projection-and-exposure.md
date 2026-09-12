@@ -118,12 +118,12 @@ Constructing the table follows a specific sequence for good reason: each risk is
 
 Overall risk exposure is commonly estimated as:
 
-$$RE = P \times C$$
+`RE = P × C`
 
 where:
 
-- $P$ = probability of occurrence,
-- $C$ = cost impact if the risk occurs.
+- `P` = probability of occurrence,
+- `C` = cost impact if the risk occurs.
 
 This risk exposure relationship is drawn directly from established software engineering risk management practice, where it is used to convert a probability and a cost estimate into a single comparable figure for each risk on the table [2]. One useful extension worth noting alongside the formula: a commonly cited rule of thumb states that if a risk's exposure exceeds roughly 50% of the total project cost, the viability of the project itself should be reevaluated rather than simply mitigated as one risk among many [3] — a reminder that risk exposure is not only a prioritization tool but, at extreme values, a signal to question whether the project should proceed in its current form at all.
 
@@ -138,11 +138,11 @@ Suppose only 70% of reusable components are actually reusable.
 
 Cost impact:
 
-$$C = 18 \times 100 \times 14 = 25,200$$
+`C = 18 × 100 × 14 = 25,200`
 
 If probability is 80%:
 
-$$RE = 0.80 \times 25,200 = 20,160$$
+`RE = 0.80 × 25,200 = 20,160`
 
 This estimate makes trade-offs explicit and supports better contingency planning.
 

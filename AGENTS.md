@@ -137,6 +137,7 @@ All new posts follow this structure. (The 12 pre-2026-09 study-guide posts preda
 - No manual `Reading time` / `Audience` / `Repository evidence` header blocks — read time is auto-computed.
 - Repo and file references use absolute GitHub URLs, never relative `../../` paths.
 - Code fences always carry a language tag (`sh`, `json`, `python`, `ts`).
+- No LaTeX (`$...$`, `$$...$$`) — the site has no math renderer, so write formulas as plain Unicode in code spans (`` `RE = P × C` ``); use `×`, `Σ`, `≈`, `→` directly.
 - Inline images use the `|small|medium|large|left|right|center` alt suffixes.
 
 ## Routing Conventions
