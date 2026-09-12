@@ -92,7 +92,7 @@ if (entrySeries) {
     <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-accent z-50 w-0"></div>
     <article id="article-content" class="min-w-0 flex-1">
       <h1 class="text-4xl font-bold mb-2 text-white"> {entry.data.title}</h1>
-      <h3 class="text-lg mb-2 text-muted">Written by {entry.data.author} on {formatDate(entry.data.pubDate)} · {readTime}</h3>
+      <p class="text-lg mb-2 text-muted">Written by {entry.data.author} on {formatDate(entry.data.pubDate)} · {readTime}</p>
       <Tags tags={entry.data.tags} />
       <img src={imagePath} alt="Article Image" class="w-full h-auto rounded-xl my-6 border border-soft" />
       <Content />
