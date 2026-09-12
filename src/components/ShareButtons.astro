@@ -1,0 +1,65 @@
+---
+interface Props {
+  url: string;
+  title: string;
+}
+
+const { url, title } = Astro.props;
+
+const xHref = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`;
+const linkedInHref = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+---
+
+<div class="flex flex-wrap items-center gap-3 mt-6">
+  <span class="text-sm text-muted">Share:</span>
+  <a
+    href={xHref}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="inline-block bg-soft border border-soft text-white text-sm px-4 py-2 rounded-lg hover:border-accent hover:text-accent transition"
+  >
+    Post on X
+  </a>
+  <a
+    href={linkedInHref}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="inline-block bg-soft border border-soft text-white text-sm px-4 py-2 rounded-lg hover:border-accent hover:text-accent transition"
+  >
+    Share on LinkedIn
+  </a>
+  <button
+    type="button"
+    id="copy-link-button"
+    data-url={url}
+    class="inline-block bg-soft border border-soft text-white text-sm px-4 py-2 rounded-lg hover:border-accent hover:text-accent transition"
+  >
+    Copy link
+  </button>
+</div>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('copy-link-button');
+    if (!button) return;
+
+    button.addEventListener('click', async () => {
+      const url = button.getAttribute('data-url') || window.location.href;
+      try {
+        await navigator.clipboard.writeText(url);
+      } catch {
+        const input = document.createElement('input');
+        input.value = url;
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand('copy');
+        document.body.removeChild(input);
+      }
+      const original = button.textContent;
+      button.textContent = 'Copied ✓';
+      setTimeout(() => {
+        button.textContent = original;
+      }, 2000);
+    });
+  });
+</script>

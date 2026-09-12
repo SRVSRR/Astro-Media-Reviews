@@ -2,6 +2,7 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import Tags from "../../components/Tags.astro";
 import RelatedPosts from "../../components/RelatedPosts.astro";
+import ShareButtons from "../../components/ShareButtons.astro";
 import { getCollection } from 'astro:content';
 import { formatDate, calculateReadTime } from "../../utils";
 import { SITE_TITLE } from "../../constants";
@@ -56,6 +57,25 @@ const customLd = articleJsonLd;
 
 // Calculate read time
 const readTime = calculateReadTime(entry.body);
+
+// Series-aware prev/next neighbors
+const entrySeries = entry.data.series;
+let prevPost = null;
+let nextPost = null;
+
+if (entrySeries) {
+  const seriesPosts = allEntries
+    .filter(e => e.data.series === entrySeries)
+    .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
+  const index = seriesPosts.findIndex(e => e.slug === entry.slug);
+  prevPost = index > 0 ? seriesPosts[index - 1] : null;
+  nextPost = index < seriesPosts.length - 1 ? seriesPosts[index + 1] : null;
+} else {
+  const chronological = [...allEntries].sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+  const index = chronological.findIndex(e => e.slug === entry.slug);
+  nextPost = index > 0 ? chronological[index - 1] : null;
+  prevPost = index < chronological.length - 1 ? chronological[index + 1] : null;
+}
 ---
 
 <MainLayout
@@ -73,8 +93,30 @@ const readTime = calculateReadTime(entry.body);
     <Tags tags={entry.data.tags} />
     <img src={imagePath} alt="Article Image" class="w-full h-auto rounded-xl my-6 border border-soft" />
     <Content />
+    <ShareButtons url={articleUrl} title={entry.data.title} />
   </article>
-  
+
+  {(prevPost || nextPost) && (
+    <nav class="max-w-3xl mx-auto lg:max-w-[70%] mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {prevPost ? (
+        <a href={'/articles/' + prevPost.slug} class="block bg-secondary border border-soft rounded-xl p-5 hover:border-accent transition">
+          <span class="text-xs uppercase tracking-[0.2em] text-muted">← Previous</span>
+          <span class="block text-white font-semibold mt-1 leading-snug">{prevPost.data.title}</span>
+        </a>
+      ) : (
+        <span />
+      )}
+      {nextPost ? (
+        <a href={'/articles/' + nextPost.slug} class="block bg-secondary border border-soft rounded-xl p-5 hover:border-accent transition text-right">
+          <span class="text-xs uppercase tracking-[0.2em] text-muted">Next →</span>
+          <span class="block text-white font-semibold mt-1 leading-snug">{nextPost.data.title}</span>
+        </a>
+      ) : (
+        <span />
+      )}
+    </nav>
+  )}
+
   <RelatedPosts currentEntry={entry} allEntries={allEntries} />
 </MainLayout>
 
