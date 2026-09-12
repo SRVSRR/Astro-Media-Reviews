@@ -36,8 +36,8 @@ First, I added Supabase JWT verification without changing the live auth path:
 
 Relevant files:
 
-- `../../backend/app/utils/supabase_auth.py`
-- `../../backend/tests/test_supabase_auth.py`
+- `backend/app/utils/supabase_auth.py`
+- `backend/tests/test_supabase_auth.py`
 
 The new verifier was tested with mocked JWKS responses and real RSA keys. It accepts valid tokens and rejects tampered, expired, wrong-audience, and wrong-issuer tokens. The existing 72 integration tests still passed untouched.
 
@@ -65,7 +65,7 @@ The migration is reversible. That constraint was intentional: auth migrations sh
 
 Relevant migration:
 
-- `../../backend/alembic/versions/59062dbe3d50_add_auth_users_fk.py`
+- `backend/alembic/versions/59062dbe3d50_add_auth_users_fk.py`
 
 ### Phase 3: Switch the live dependency safely
 
@@ -90,7 +90,7 @@ Only `/api/auth/me` remains as a backend auth endpoint. Registration, login, pas
 
 Relevant migration:
 
-- `../../backend/alembic/versions/b3028a70b346_drop_local_users_table.py`
+- `backend/alembic/versions/b3028a70b346_drop_local_users_table.py`
 
 ## Stack
 

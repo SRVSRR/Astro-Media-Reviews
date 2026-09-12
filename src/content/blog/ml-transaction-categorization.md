@@ -31,7 +31,7 @@ The baseline also preserves auditability. A suggested category can be traced to 
 
 Relevant code:
 
-- `../../backend/app/services/categorize.py`
+- `backend/app/services/categorize.py`
 
 ### 2. LightGBM classifier with TF-IDF features
 
@@ -47,7 +47,7 @@ Training requires at least 30 samples. The implementation uses 200 boosting roun
 
 Relevant code:
 
-- `../../backend/app/ml/categorizer.py`
+- `backend/app/ml/categorizer.py`
 
 ### 3. Confidence-gated fallback
 
@@ -105,7 +105,7 @@ Training is not a notebook-only step. The API exposes the complete correction-to
 
 Relevant code:
 
-- `../../backend/app/routes/categorize.py`
+- `backend/app/routes/categorize.py`
 
 Example training response:
 

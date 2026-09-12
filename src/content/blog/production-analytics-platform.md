@@ -42,7 +42,7 @@ This separation matters because forecasts change faster than long-run budget agg
 
 Relevant code:
 
-- `../../backend/app/services/prediction_cache.py`
+- `backend/app/services/prediction_cache.py`
 
 ### 2. Invalidate on every relevant mutation
 
@@ -76,7 +76,7 @@ This makes budget recommendations auditable without requiring users to trust an 
 
 Relevant code:
 
-- `../../backend/app/routes/budget.py`
+- `backend/app/routes/budget.py`
 
 ### 4. Deploy with verifiable health and configuration
 
@@ -95,8 +95,8 @@ The deployment also retains a clear migration story: startup runs Alembic migrat
 
 Relevant documentation:
 
-- `../../docs/INFRASTRUCTURE.md`
-- `../../README.md`
+- `docs/INFRASTRUCTURE.md`
+- `README.md`
 
 ### 5. Make mobile integration unambiguous
 

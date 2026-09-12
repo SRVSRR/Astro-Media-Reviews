@@ -10,7 +10,7 @@ slug: operating-systems-foundations-and-perspectives
 
 Operating systems sit at the center of modern computing, but they are best understood by first decomposing the computer system into its major parts and then examining the roles of the OS and kernel.
 
-## **Computer System Components**
+## Computer System Components
 
 A computer system can be divided into four components:
 
@@ -21,7 +21,7 @@ A computer system can be divided into four components:
 
 This breakdown matters because the OS is not just another program. It is the coordinator that decides how resources are shared across the entire system.
 
-## **Operating System Viewpoints**
+## Operating System Viewpoints
 
 The OS looks different depending on the point of view:
 
@@ -33,7 +33,7 @@ The OS looks different depending on the point of view:
 
 In every case, the OS balances convenience with control, and efficiency with fairness.
 
-## **Kernel vs Operating System**
+## Kernel vs Operating System
 
 The **kernel** is the core system software inside an OS.
 
@@ -51,7 +51,7 @@ The **operating system** includes the kernel plus additional system software and
 
 In summary, the kernel is the essential core, while the OS is the complete environment that makes the system usable.
 
-## **API vs System Calls: The Restaurant Model**
+## API vs System Calls: The Restaurant Model
 
 A common way to conceptualize the OS layers is a restaurant analogy:
 
@@ -62,7 +62,7 @@ A common way to conceptualize the OS layers is a restaurant analogy:
 
 This model highlights an important concept: user programs do not access hardware directly; they request services from the kernel.
 
-## **What Counts as an Operating System?**
+## What Counts as an Operating System?
 
 There is no universally accepted definition. A practical approximation is: **"everything a vendor ships when an operating system is ordered."** But even that varies across platforms.
 
@@ -74,12 +74,12 @@ A helpful breakdown is:
 
 Modern general-purpose and mobile OSes also include **middleware**—software frameworks that provide services to application developers, such as databases, multimedia, and graphics.
 
-## **Further Reading**
+## Further Reading
 
 For a deeper, structured treatment of these concepts, see:
 
 - Silberschatz, A., Galvin, P. B., and Gagne, G. (2018). *Operating System Concepts* (10th ed.). John Wiley and Sons. ISBN 81-265-0962-7. Available at: [Archive.org](https://archive.org/details/operating-system-concepts-10th).
 
-## **Conclusion**
+## Conclusion
 
 Operating systems are both resource managers and control programs. They keep shared systems fair, keep mobile devices efficient, and keep embedded systems reliable. At the center is the kernel, translating high-level requests into machine actions. Understanding these roles and boundaries clarifies the rest of OS design.

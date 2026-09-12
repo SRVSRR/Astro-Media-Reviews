@@ -39,12 +39,12 @@ The test suite uses:
 
 Important files:
 
-- `../../backend/tests/conftest.py`
-- `../../backend/tests/test_auth_integration.py`
-- `../../backend/tests/test_crud_integration.py`
-- `../../backend/tests/test_forecast_budget_integration.py`
-- `../../backend/tests/test_supabase_auth.py`
-- `../../backend/tests/test_business_logic.py`
+- `backend/tests/conftest.py`
+- `backend/tests/test_auth_integration.py`
+- `backend/tests/test_crud_integration.py`
+- `backend/tests/test_forecast_budget_integration.py`
+- `backend/tests/test_supabase_auth.py`
+- `backend/tests/test_business_logic.py`
 
 This design avoids the most common integration-test failure mode: tests contaminating each other through shared state. Every test begins from a clean schema and ends by tearing it down. It also avoids the second most common failure: accidentally testing or mutating a developer database.
 
@@ -79,7 +79,7 @@ Transactions mutate account balances, so updates and deletes require exact accou
 
 That last decision is deliberate. Changing a transaction's type or account after creation could silently move money between accounts or alter its accounting meaning. The API rejects that dangerous operation instead of trying to implement it implicitly. A future transfer or type-change feature would need an explicit atomic reversal-and-apply operation, planned separately.
 
-The balance logic lives in a small, directly testable function in `../../backend/app/routes/transactions.py`. Unit tests cover balance application and reversal, while integration tests cover the full request-to-balance behavior.
+The balance logic lives in a small, directly testable function in `backend/app/routes/transactions.py`. Unit tests cover balance application and reversal, while integration tests cover the full request-to-balance behavior.
 
 ### 4. Derived-data invalidation
 

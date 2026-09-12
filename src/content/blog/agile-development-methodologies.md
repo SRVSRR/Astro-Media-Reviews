@@ -1,16 +1,16 @@
 ---
 title: 'Agile Development: Frameworks, Principles & Practices'
-description: 'Learn about Agile development methodologies including Scrum, XP, Kanban, and DevOps. Understand agility principles, sprint planning, and how to deliver software iteratively.'
+description: 'How Agile teams deliver software iteratively, covering Scrum, XP, Kanban, and DevOps principles and practices.'
 pubDate: 2026-01-31
 author: 'Rohan Nandan'
 image: 'image5.webp'
-tags: ['Intro to Software Engineering']
+tags: ['Agile', 'Scrum']
 slug: agile-development-methodologies
 ---
 
 Agile development represents a fundamental shift in how software teams approach building products. Rather than following rigid plans, agile embraces change and prioritizes delivering value to customers quickly and continuously.
 
-## **Adapting Process Models**
+## Adapting Process Models
 
 Every software project needs a roadmap or generic software process. However:
 
@@ -19,7 +19,7 @@ Every software project needs a roadmap or generic software process. However:
 - Any roadmap or generic process should be grounded in **recognized industry practices**
 - Process models should be **adapted** to the current project context, team capability, and user needs
 
-### **Principles for Organizing Software Projects**
+### Principles for Organizing Software Projects
 
 1. It is **risky to use a linear process model** without ample feedback
 2. Comprehensive up-front requirements gathering is rarely possible or desirable
@@ -29,7 +29,7 @@ Every software project needs a roadmap or generic software process. However:
 6. **Involve stakeholders early and frequently** in the development process
 7. Testers need to become involved in the process **prior to software construction**
 
-## **What is Agility?**
+## What is Agility?
 
 Agility in software development encompasses:
 
@@ -39,11 +39,11 @@ Agility in software development encompasses:
 - Organizing the team so that it controls the work performed
 - Rapid, incremental delivery of software
 
-### **Agility and the Cost of Change**
+### Agility and the Cost of Change
 
 Traditional models assume that the cost of change increases exponentially as a project progresses. Agile methodologies aim to flatten this curve by embracing change at any stage through iterative development and continuous feedback.
 
-## **What is an Agile Process?**
+## What is an Agile Process?
 
 An agile process is:
 
@@ -54,7 +54,7 @@ An agile process is:
 - Delivers multiple **software increments** as executable prototypes
 - **Adapts** as project or technical changes occur
 
-## **Agility Principles**
+## Agility Principles
 
 The core principles that guide agile development:
 
@@ -68,11 +68,11 @@ The core principles that guide agile development:
 8. An agile team is a **self-organizing team** trusted to develop well-structured architectures
 9. Team culture includes **introspection** aimed at improving effectiveness
 
-## **Scrum Framework**
+## Scrum Framework
 
 Scrum is one of the most widely adopted agile frameworks, organizing work into time-boxed iterations called "sprints."
 
-### **Scrum Events**
+### Scrum Events
 
 | Event | Description |
 |-------|-------------|
@@ -82,25 +82,25 @@ Scrum is one of the most widely adopted agile frameworks, organizing work into t
 | **Sprint Review** | Prototype demos delivered to stakeholders for approval or rejection |
 | **Sprint Retrospective** | Team reflects on what went well and what needs improvement |
 
-### **Pros**
+### Pros
 
 - Product owner sets priorities
 - Team owns decision-making
 - Documentation is lightweight
 - Supports frequent updates
 
-### **Cons**
+### Cons
 
 - Difficult to control the cost of changes
 - May not be suitable for large teams
 - Requires expert team members
 
 
-## **Extreme Programming (XP) Model**
+## Extreme Programming (XP) Model
 
 XP is an agile methodology that emphasizes technical practices and close collaboration with customers.
 
-### **XP Practices**
+### XP Practices
 
 | Practice | Description |
 |----------|-------------|
@@ -111,14 +111,14 @@ XP is an agile methodology that emphasizes technical practices and close collabo
 
 ![XP Model|large](/images/image5.2.webp)
 
-### **Pros**
+### Pros
 
 - Emphasizes customer involvement
 - Establishes rational plans and schedules
 - High developer commitment to the project
 - Reduced likelihood of product rejection
 
-### **Cons**
+### Cons
 
 - Risk of premature prototype release
 - Requires frequent meetings (increasing coordination cost)
@@ -127,11 +127,11 @@ XP is an agile methodology that emphasizes technical practices and close collabo
 
 
 
-## **Kanban Framework**
+## Kanban Framework
 
 Kanban focuses on visualizing work and limiting work in progress to improve flow and efficiency.
 
-### **Kanban Principles**
+### Kanban Principles
 
 1. **Visualizing workflow** using a Kanban board
 2. **Limiting work in progress** at any given time
@@ -140,14 +140,14 @@ Kanban focuses on visualizing work and limiting work in progress to improve flow
 5. Focusing on **continuous improvement** through feedback loops
 6. Making **process changes collaboratively** with all stakeholders
 
-### **Pros**
+### Pros
 
 - Lower budget and time requirements
 - Allows early product delivery
 - Process policies written down
 - Continuous process improvement
 
-### **Cons**
+### Cons
 
 - Team collaboration skills determine success
 - Poor business analysis can doom the project
@@ -155,11 +155,11 @@ Kanban focuses on visualizing work and limiting work in progress to improve flow
 - Reluctance to use measurement
 
 
-## **DevOps**
+## DevOps
 
 DevOps bridges the gap between development and operations, emphasizing automation and continuous delivery.
 
-### **DevOps Pipeline**
+### DevOps Pipeline
 
 | Stage | Description |
 |-------|-------------|
@@ -171,21 +171,21 @@ DevOps bridges the gap between development and operations, emphasizing automatio
 
 ![DevOps Model|large](/images/image5.4.webp)
 
-### **Pros**
+### Pros
 
 - Reduced time to code deployment
 - Automated quality assurance
 - Faster feedback loops
 - Improved collaboration between teams
 
-### **Cons**
+### Cons
 
 - Requires significant tooling investment
 - Cultural shift required across the organization
 - Security considerations at every stage
 
 
-## **Agile Requirements Definition**
+## Agile Requirements Definition
 
 Best practices for gathering and managing requirements in an agile environment:
 
@@ -202,7 +202,7 @@ Best practices for gathering and managing requirements in an agile environment:
 
 
 
-## **Agile Architectural Design**
+## Agile Architectural Design
 
 Key elements for designing architecture in an agile context:
 
@@ -213,7 +213,7 @@ Key elements for designing architecture in an agile context:
 
 
 
-## **Resource Estimation for Agile Projects**
+## Resource Estimation for Agile Projects
 
 Estimating resources in agile requires balancing precision with adaptability:
 
@@ -224,7 +224,7 @@ Estimating resources in agile requires balancing precision with adaptability:
 
 
 
-## **Comparison: Agile Frameworks**
+## Comparison: Agile Frameworks
 
 | Framework | Best For | Key Strength | Key Weakness |
 |-----------|----------|--------------|--------------|
@@ -235,7 +235,7 @@ Estimating resources in agile requires balancing precision with adaptability:
 
 ---
 
-## **Characteristics of Agile Process Models**
+## Characteristics of Agile Process Models
 
 Key characteristics that define agile approaches:
 
@@ -253,7 +253,7 @@ Key characteristics that define agile approaches:
 
 ---
 
-## **Spiral Model Characteristics Recap**
+## Spiral Model Characteristics Recap
 
 For reference, key points about the Spiral Model in relation to agile:
 

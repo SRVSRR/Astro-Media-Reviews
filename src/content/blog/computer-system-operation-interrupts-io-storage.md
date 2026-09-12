@@ -10,7 +10,7 @@ slug: computer-system-operation-interrupts-io-storage
 
 Operating system fundamentals are clarified by examining how hardware, I/O, and storage interact at runtime. This article summarizes the core mechanisms that keep a system responsive and coordinated.
 
-## **Computer-System Operation**
+## Computer-System Operation
 
 A modern computer system is built around shared access and concurrent activity:
 
@@ -23,7 +23,7 @@ A modern computer system is built around shared access and concurrent activity:
 
 This layout explains why the OS is coordination-heavy: the system executes multiple activities concurrently.
 
-## **Interrupts and Traps**
+## Interrupts and Traps
 
 **Interrupts** are events raised by hardware or software. They signal the processor to finish the current instruction and immediately handle an **Interrupt Service Routine (ISR)**.
 
@@ -34,7 +34,7 @@ Key points:
 - A **trap** (or exception) is a software-generated interrupt caused by an error or a user request.
 - Operating systems are **interrupt driven**: the OS reacts to events rather than polling constantly.
 
-## **Bootstrapping and Startup**
+## Bootstrapping and Startup
 
 When a machine powers on or reboots, a **bootstrap program** runs first:
 
@@ -44,25 +44,25 @@ When a machine powers on or reboots, a **bootstrap program** runs first:
 
 Without a reliable bootstrap sequence, nothing else in the system can run.
 
-## **I/O Control Flow**
+## I/O Control Flow
 
 Two core I/O control styles appear in OS design:
 
-### **Synchronous I/O (Blocking)**
+### Synchronous I/O (Blocking)
 
 - After I/O starts, control returns to the user program **only after** I/O completion.
 - A **wait** instruction can idle the CPU until the next interrupt.
 - With a simple wait loop, there is contention for memory access.
 - At most one I/O request is outstanding at a time (no simultaneous I/O).
 
-### **Asynchronous I/O (Non-blocking)**
+### Asynchronous I/O (Non-blocking)
 
 - After I/O starts, control returns to the user program **without waiting** for completion.
 - A system call allows the user program to wait for I/O completion if needed.
 - A **device-status table** stores the type, address, and state of each I/O device.
 - The OS indexes into this table on interrupts to update device state and completion status.
 
-## **Main Memory and Secondary Storage**
+## Main Memory and Secondary Storage
 
 **Main memory** is the only large storage the CPU can access directly:
 
@@ -75,7 +75,7 @@ Two core I/O control styles appear in OS design:
 - Includes Hard Disk Drives (HDDs) and Solid State Drives (SSDs).
 - **Non-volatile memory (NVM)** devices are faster than disks and increasingly common as prices drop.
 
-## **Bits, Bytes, and Words**
+## Bits, Bytes, and Words
 
 Storage is built from bits:
 
@@ -85,7 +85,7 @@ Storage is built from bits:
 
 CPUs execute most operations in word-sized chunks rather than bit by bit.
 
-## **Storage Units (Binary Prefixes)**
+## Storage Units (Binary Prefixes)
 
 Storage is measured in bytes and their binary multiples:
 
@@ -97,7 +97,7 @@ Storage is measured in bytes and their binary multiples:
 
 Manufacturers often round these to powers of ten, but systems typically use the binary values. Networking is the exception, measuring throughput in **bits** rather than bytes.
 
-## **Storage Hierarchy and Caching**
+## Storage Hierarchy and Caching
 
 Storage systems are organized in a hierarchy defined by:
 
@@ -107,7 +107,7 @@ Storage systems are organized in a hierarchy defined by:
 
 **Caching** copies data into faster storage layers. Main memory can be viewed as a cache for secondary storage.
 
-## **Device Drivers and OS Interfaces**
+## Device Drivers and OS Interfaces
 
 Each controller type has a **device driver** that:
 
@@ -116,13 +116,13 @@ Each controller type has a **device driver** that:
 
 This abstraction allows the OS to treat diverse hardware consistently.
 
-## **Direct Memory Access (DMA)**
+## Direct Memory Access (DMA)
 
 For high-speed devices, **DMA** allows the controller to transfer blocks of data directly to main memory without CPU intervention.
 
 - Only one interrupt is generated per block, not one per byte.
 - This reduces overhead and improves throughput.
 
-## **Conclusion**
+## Conclusion
 
 Computer-system operation is defined by concurrency, interrupts, and layered storage. The OS orchestrates device controllers, memory, and I/O so that user programs can run smoothly and safely. These mechanisms are the foundation for everything from desktop responsiveness to high-performance server throughput.

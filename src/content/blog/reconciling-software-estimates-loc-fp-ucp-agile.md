@@ -4,13 +4,13 @@ description: 'Explains estimate reconciliation and compares LOC, FP, process-bas
 pubDate: 2026-04-24
 author: 'Rohan Nandan'
 image: 'image4.2.webp'
-tags: ['Intro to Software Engineering']
+tags: ['Estimation', 'Agile']
 slug: reconciling-software-estimates-loc-fp-ucp-agile
 ---
 
 Reliable software planning depends on estimation quality. One estimate is rarely enough. In practice, teams increase confidence by producing multiple estimates, comparing them, and reconciling differences before committing to budget and schedule.
 
-## **Why Reconciliation Matters**
+## Why Reconciliation Matters
 
 A core planning principle is simple:
 
@@ -25,7 +25,7 @@ When estimates diverge widely, two root causes are common:
 
 This makes reconciliation a quality-control activity, not an optional reporting step.
 
-## **Problem-Based Estimation**
+## Problem-Based Estimation
 
 LOC and FP are used in two ways:
 
@@ -46,7 +46,7 @@ Important cautions:
 - Use a taxonomy of project types when collecting productivity data.
 - Include infrastructure software effort, not just user-visible functionality.
 
-## **LOC-Based Estimation Example**
+## LOC-Based Estimation Example
 
 Given:
 
@@ -61,7 +61,7 @@ Example outcome:
 
 This method is direct and useful when historical LOC productivity is trustworthy and scope granularity is clear.
 
-## **FP-Based Estimation Example**
+## FP-Based Estimation Example
 
 Function-point estimate equation:
 
@@ -84,7 +84,7 @@ With historical cost per FP of $1,230:
 
 FP is often useful when teams need size estimation that is less tied to implementation language detail.
 
-## **Process-Based Estimation Example**
+## Process-Based Estimation Example
 
 Process-based estimation starts from project scope, then maps functions to framework activities. Effort is placed in a function-by-task matrix, and labor rates are applied to total activity effort.
 
@@ -95,7 +95,7 @@ Example outcome with average labor rate of $8,000 per month:
 
 This approach can expose where effort is concentrated across communication, modeling, construction, testing, and other process activities.
 
-## **Use Case Point Estimation (UCP)**
+## Use Case Point Estimation (UCP)
 
 UCP incorporates:
 
@@ -115,7 +115,7 @@ Where:
 - $TCF$: technical complexity factor
 - $ECF$: environment complexity factor
 
-### **Worked CAD Example**
+### Worked CAD Example
 
 Given:
 
@@ -137,7 +137,7 @@ Using 620 LOC per person-month and $8,000 labor rate with approximate $13 per LO
 - Estimated cost: about $552,000
 - Estimated effort: about 70 person-months
 
-## **Agile Project Estimation Steps**
+## Agile Project Estimation Steps
 
 The agile estimation flow emphasizes user-story granularity:
 
@@ -149,7 +149,7 @@ The agile estimation flow emphasizes user-story granularity:
 
 This approach supports iterative planning and faster re-estimation when backlog priorities shift.
 
-## **How to Reconcile Different Estimates**
+## How to Reconcile Different Estimates
 
 A practical reconciliation workflow:
 
@@ -162,6 +162,6 @@ A practical reconciliation workflow:
 
 Reconciliation is strongest when it is transparent and repeatable.
 
-## **Conclusion**
+## Conclusion
 
 Estimate reliability is improved by triangulation rather than false precision. LOC, FP, process-based, UCP, and agile story-based methods each reveal different aspects of project effort. The planning discipline is to compare them, explain differences, and commit only after reconciliation. That is the foundation of credible software cost and schedule planning.

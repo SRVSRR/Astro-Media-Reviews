@@ -1,16 +1,16 @@
 ---
-title: 'Prototype Development: Guidelines, Evaluation & Software Maintenance'
-description: 'Learn the complete prototype development process from first prototype guidelines to release candidates and software maintenance types. Essential guide for iterative development.'
+title: 'Prototype Development and Software Maintenance'
+description: 'The prototype development process from first prototype to release candidates, plus software maintenance types.'
 pubDate: 2026-02-01
 author: 'Rohan Nandan'
 image: 'image1.webp'
-tags: ['Intro to Software Engineering']
+tags: ['Prototyping', 'Maintenance']
 slug: prototype-development-maintenance-guide
 ---
 
 Prototyping is a powerful approach to software development that allows teams to iteratively build, test, and refine software based on real user feedback. This article covers the complete prototype lifecycle from initial creation to long-term maintenance.
 
-## **First Prototype Guidelines**
+## First Prototype Guidelines
 
 When transitioning from concept to code, the following guidelines apply:
 
@@ -24,7 +24,7 @@ When transitioning from concept to code, the following guidelines apply:
 
 
 
-## **Prototype Evaluation**
+## Prototype Evaluation
 
 Effective evaluation ensures the prototype meets user needs:
 
@@ -37,7 +37,7 @@ Effective evaluation ensures the prototype meets user needs:
 
 
 
-## **Go/No-Go Decision**
+## Go/No-Go Decision
 
 After evaluating a prototype, the team must assess whether to continue development:
 
@@ -53,53 +53,53 @@ After evaluating a prototype, the team must assess whether to continue developme
 
 
 
-## **Recommended Prototype Evolutionary Process**
+## Recommended Prototype Evolutionary Process
 
-### **1. Requirements Engineering**
+### 1. Requirements Engineering
 - Gather user stories from all stakeholders
 - Have stakeholders describe acceptance criteria for user stories
 
-### **2. Preliminary Architectural Design**
+### 2. Preliminary Architectural Design
 - Make use of paper prototypes and models
 - Assess alternatives using nonfunctional requirements
 - Document architecture design decisions
 
-### **3. Estimate Required Project Resources**
+### 3. Estimate Required Project Resources
 - Use historic data to estimate time to complete each user story
 - Organize the user stories into sprints
 - Determine the number of sprints needed to complete the product
 - Revise the time estimates as user stories are added or deleted
 
-### **4. Construct First Prototype**
+### 4. Construct First Prototype
 - Select subset of user stories most important to stakeholders
 - Create paper prototype as part of the design process
 - Design a user interface prototype with inputs and outputs
 - Engineer the algorithms needed for first prototype
 - Prototype with deployment in mind
 
-### **5. Evaluate Prototype**
+### 5. Evaluate Prototype
 - Create test cases while prototype is being designed
 - Test prototype using appropriate users
 - Capture stakeholder feedback for use in revision process
 
-### **6. Go/No-Go Decision**
+### 6. Go/No-Go Decision
 - Determine the quality of the current prototype
 - Revise time and cost estimates for completing development
 - Determine the risk of failing to meet stakeholder expectations
 - Obtain commitment to continue development
 
-### **7. Evolve System**
+### 7. Evolve System
 - Define new prototype scope
 - Construct new prototype
 - Evaluate new prototype and include regression testing
 - Assess risks associated with continuing evolution
 
-### **8. Release Prototype**
+### 8. Release Prototype
 - Perform acceptance testing
 - Document defects identified
 - Share quality risks with management
 
-### **9. Maintain Software**
+### 9. Maintain Software
 - Understand code before making changes
 - Test software after making changes
 - Document changes
@@ -107,7 +107,7 @@ After evaluating a prototype, the team must assess whether to continue developme
 
 
 
-## **Testing New Prototypes**
+## Testing New Prototypes
 
 Effective testing is critical for prototype quality:
 
@@ -120,7 +120,7 @@ Effective testing is critical for prototype quality:
 
 
 
-## **Release Candidates**
+## Release Candidates
 
 A prototype considered as a release candidate undergoes additional scrutiny:
 
@@ -132,18 +132,18 @@ A prototype considered as a release candidate undergoes additional scrutiny:
 | **Verification** | Second round of acceptance testing if changes are made |
 | **Documentation** | Issues and lessons learned documented for project postmortem |
 
-### **Post-Release Considerations**
+### Post-Release Considerations
 
 - Information from the release should be considered before deciding to undertake future development
 - Lessons learned improve cost and time estimates for similar projects
 
 
 
-## **Software Release Maintenance**
+## Software Release Maintenance
 
 **Maintenance** encompasses all activities needed to keep software operational after it has been accepted and released in the end-user environment.
 
-### **Types of Maintenance**
+### Types of Maintenance
 
 | Type | Nature | Description |
 |------|--------|-------------|
@@ -152,12 +152,12 @@ A prototype considered as a release candidate undergoes additional scrutiny:
 | **Perfective** | Proactive | Modification to provide new user features, better code structure, or improved documentation |
 | **Preventive** | Proactive | Modification to correct product faults before discovery by users |
 
-### **Maintenance in Agile**
+### Maintenance in Agile
 
 In agile process models, much (but not all) of the maintenance work is **preventive or perfective** as new features are added. This aligns with the iterative nature of agile development, where continuous improvement is built into the process.
 
 
-## **Summary**
+## Conclusion
 
 The prototype development lifecycle follows a structured yet flexible path:
 

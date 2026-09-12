@@ -1,17 +1,17 @@
 ---
-title: '50+ SDLC Principles: Process, Planning, Testing & Deployment Guide'
-description: 'Master 50+ essential SDLC principles covering process, planning, modeling, construction, testing, and deployment. A comprehensive guide for software engineers.'
+title: 'SDLC Principles: Process, Planning, Testing, and Deployment'
+description: 'Core SDLC principles for process, planning, modeling, construction, testing, and deployment.'
 pubDate: 2026-01-29
 author: 'Rohan Nandan'
 image: 'image3.webp'
-tags: ['Intro to Software Engineering']
+tags: ['Software Engineering']
 slug: sdlc-principles-guide
 ---
 
 Software development is guided by a set of core principles that help teams build quality software efficiently. These principles span across process, practice, communication, planning, modeling, construction, testing, and deployment.
 
 
-## **Principles that Guide Process**
+## Principles that Guide Process
 
 - **Be agile** — Regardless of the process model, let agile principles inform the approach where feasible.
 - **Focus on quality at every step** — The exit condition for every process activity, action, and task should focus on the quality of the work product produced.
@@ -23,7 +23,7 @@ Software development is guided by a set of core principles that help teams build
 - **Create work products that provide value for others** — Create only those work products that provide value for other process activities, actions, or tasks.
 
 
-## **Principles that Guide Practice**
+## Principles that Guide Practice
 
 - **Divide and conquer** — Analysis and design should always emphasize separation of concerns (SoC).
 - **Understand the use of abstraction** — Abstraction is a simplification of a complex system element used to communicate meaning simply.
@@ -35,7 +35,7 @@ Software development is guided by a set of core principles that help teams build
 - **Someone consumes the work products** — Remember that someone will maintain the software.
 
 
-## **Communication Principles**
+## Communication Principles
 
 - **Listen** — Focus on the speaker's words rather than formulating a response.
 - **Prepare before communication** — Understand the problem before meeting with others.
@@ -52,7 +52,7 @@ Software development is guided by a set of core principles that help teams build
 - **Negotiation is not a contest or a game** — It works best when both parties win.
 
 
-## **Planning Principles**
+## Planning Principles
 
 - **Understand the scope of the project** — Scope provides the software team with a destination as the roadmap is created.
 - **Involve the customer in the planning activity** — They define priorities and project constraints.
@@ -65,7 +65,7 @@ Software development is guided by a set of core principles that help teams build
 - **Track the plan frequently and make adjustments as required** — Software projects fall behind schedule one day at a time.
 
 
-## **Agile Modeling Principles**
+## Agile Modeling Principles
 
 - The primary goal of the software team is to **build software, not create models**.
 - **Travel light** — Avoid creating more models than needed.
@@ -79,9 +79,9 @@ Software development is guided by a set of core principles that help teams build
 - **Seek feedback as early as possible.**
 
 
-## **Construction Principles - Coding**
+## Construction Principles - Coding
 
-### **Preparation Principles**
+### Preparation Principles
 
 Before writing code, ensure that:
 
@@ -91,7 +91,7 @@ Before writing code, ensure that:
 - Select a programming environment that provides appropriate tooling
 - Create a set of unit tests to apply once the component is completed
 
-### **Coding Principles**
+### Coding Principles
 
 When writing code, ensure that:
 
@@ -100,7 +100,7 @@ When writing code, ensure that:
 - Select data structures that meet the needs of the design
 - Understand the software architecture and create interfaces consistent with it
 
-### **Validation Principles**
+### Validation Principles
 
 After the first coding pass, ensure that:
 
@@ -109,7 +109,7 @@ After the first coding pass, ensure that:
 - Refactor the code to improve its quality
 
 
-## **Testing Principles**
+## Testing Principles
 
 - All tests should be **traceable to customer requirements**.
 - Tests should be **planned long before testing begins**.
@@ -125,16 +125,16 @@ After the first coding pass, ensure that:
 - Include test cases that demonstrate software is **behaving correctly** under expected conditions.
 
 
-## **Deployment Principles**
+## Deployment Principles
 
-### **Software Deployment Actions**
+### Software Deployment Actions
 
 - Assemble deployment package
 - Establish support regimen
 - Manage customer expectations
 - Provide instructional materials to end users
 
-### **Key Principles**
+### Key Principles
 
 - Customer expectations for the software must be managed.
 - A complete delivery package should be assembled and tested.
@@ -143,9 +143,9 @@ After the first coding pass, ensure that:
 - **Buggy software should be fixed first, delivered later.**
 
 
-## **Sourcing**
+## Sourcing
 
-### **Insourcing**
+### Insourcing
 
 Using IT within the resources of the organization.
 
@@ -154,13 +154,13 @@ Using IT within the resources of the organization.
 - Typically the cheapest option
 - Company does not have to hire contractors
 
-### **Selfsourcing**
+### Selfsourcing
 
 Using knowledge workers (also called knowledge worker development or end-user development).
 
 - The development and support of IT systems by knowledge workers with little or no help from IT specialists
 
-### **Outsourcing**
+### Outsourcing
 
 Using another organization.
 
