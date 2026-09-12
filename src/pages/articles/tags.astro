@@ -1,0 +1,40 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import { capitalize, slugify } from "../../utils";
+
+const allBlogArticles: CollectionEntry<'blog'>[] = await getCollection('blog');
+
+const tags: string[] = allBlogArticles.flatMap((article: any) => article.data.tags);
+
+const tagCounts: Record<string, number> = tags.reduce((acc: Record<string, number>, tag: string) => {
+  acc[tag] = (acc[tag] || 0) + 1;
+  return acc;
+}, {});
+
+const sortedTags = Object.entries(tagCounts)
+  .sort((a, b) => b[1] - a[1])
+  .map(([tag, count]) => ({ tag, count }));
+---
+<MainLayout
+  title="All Categories"
+  description="Browse all article categories and topics."
+>
+  <div class="flex items-center justify-between gap-3 pb-3">
+    <h1 class="text-3xl font-semibold text-white">All Categories</h1>
+    <span class="text-sm text-muted">{Object.keys(tagCounts).length} categories</span>
+  </div>
+
+  <div class="flex flex-wrap gap-3">
+    {sortedTags.map(({ tag, count }) => (
+      <a
+        href={'/articles/tag/' + slugify(tag)}
+        class="inline-flex items-center gap-2 px-4 py-2 bg-secondary border border-soft rounded-full text-sm text-slate-100 hover:border-accent hover:text-accent transition"
+      >
+        <span>{capitalize(tag)}</span>
+        <span class="bg-soft/50 text-xs text-muted px-2 py-0.5 rounded-full">{count}</span>
+      </a>
+    ))}
+  </div>
+</MainLayout>

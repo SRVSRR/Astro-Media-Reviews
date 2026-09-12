@@ -14,7 +14,7 @@ const tagCounts: Record<string, number> = tags.reduce((acc: Record<string, numbe
 
 const topTags: string[] = Object.entries(tagCounts)
   .sort((a, b) => b[1] - a[1])
-  .slice(0, 8)
+  .slice(0, 5)
   .map(([tag]) => tag);
 ---
 
