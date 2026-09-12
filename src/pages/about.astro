@@ -67,34 +67,6 @@ const experience = [
   },
 ];
 
-// Education
-const education = [
-  {
-    school: "Bachelor of Software Engineering",
-    detail: "University of the South Pacific",
-    dates: "2023 - 2027",
-    points: [
-      "Relevant coursework: Data Structures & Algorithms, Database Systems, Operating Systems, Web Development, Software Engineering.",
-    ],
-  },
-  {
-    school: "High School Diploma",
-    detail: "Jai Narayan College",
-    dates: "2018 - 2022",
-    points: [
-      "Achieved 370/400 in year 12 external examination.",
-    ],
-  },
-];
-
-// Awards
-const awards = [
-  "Head of School's Award for Most Outstanding First Year Student in the School of Information Technology, Engineering, Mathematics and Physics (STEMP), USP",
-  "University Award for Most Outstanding Software Engineering Student in First Year, USP",
-  "Won 3rd Place at Honeywell x TCS AI Hackathon for building an AI-based AOG prevention system",
-  "Best Frontend Developer at Honeywell x TCS AI Hackathon",
-];
-
 // Featured Repositories
 const repositories = [
   {
@@ -183,48 +155,6 @@ const repositories = [
               <li>{point}</li>
             ))}
           </ul>
-        </div>
-      ))}
-    </div>
-  </div>
-
-  <!-- Education Section -->
-  <div class="mb-16">
-    <h2 class="text-3xl font-extrabold text-white mb-2 text-center">Education</h2>
-    <p class="text-muted text-center mb-10">Academic background</p>
-
-    <div class="flex flex-col gap-6 max-w-3xl mx-auto">
-      {education.map(ed => (
-        <div class="bg-secondary border border-soft rounded-xl p-6">
-          <div class="flex items-start justify-between gap-4">
-            <div>
-              <h3 class="text-lg font-semibold text-white">{ed.school}</h3>
-              <p class="text-accent text-sm">{ed.detail}</p>
-            </div>
-            <span class="text-muted text-sm shrink-0">{ed.dates}</span>
-          </div>
-          <ul class="mt-4 space-y-2 text-muted text-sm list-disc pl-5">
-            {ed.points.map(point => (
-              <li>{point}</li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </div>
-  </div>
-
-  <!-- Awards Section -->
-  <div class="mb-16">
-    <h2 class="text-3xl font-extrabold text-white mb-2 text-center">Awards & Accolades</h2>
-    <p class="text-muted text-center mb-10">Recognition and achievements</p>
-
-    <div class="flex flex-col gap-4 max-w-3xl mx-auto">
-      {awards.map(award => (
-        <div class="flex items-start gap-3 bg-secondary border border-soft rounded-xl p-5">
-          <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 7.7l5.4-.8z" />
-          </svg>
-          <span class="text-muted text-sm leading-relaxed">{award}</span>
         </div>
       ))}
     </div>
