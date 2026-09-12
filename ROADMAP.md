@@ -74,7 +74,7 @@ ToC → progress bar → newsletter → lighthouse → search console.
 **Accept:** bar tracks article scroll smoothly; absent on non-article pages.
 **Effort:** S. **Depends on:** nothing (coordinate placement with ToC work).
 
-## 7. Newsletter signup `[ ]`
+## 7. Newsletter signup `[x]`
 
 **Why:** RSS exists, but email captures casual readers.
 **Scope:**
