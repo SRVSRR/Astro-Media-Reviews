@@ -35,6 +35,11 @@
       "source": "/sitemap.xml",
       "destination": "/sitemap-index.xml",
       "permanent": true
+    },
+    {
+      "source": "/articles/tag/intro-to-software-engineering",
+      "destination": "/articles/browse",
+      "permanent": true
     }
   ]
 }
