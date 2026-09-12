@@ -1,7 +1,8 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import Tags from "../../components/Tags.astro";
-import { getCollection, getEntry } from 'astro:content';
+import RelatedPosts from "../../components/RelatedPosts.astro";
+import { getCollection } from 'astro:content';
 import { formatDate, calculateReadTime } from "../../utils";
 import { SITE_TITLE } from "../../constants";
 
@@ -9,12 +10,12 @@ export async function getStaticPaths() {
   const allBlogArticles = await getCollection('blog');
   return allBlogArticles.map(entry => ({
     params: { slug: entry.slug },
-    props: { entry },
+    props: { entry, allEntries: allBlogArticles },
   }));
 }
 
 const { slug } = Astro.params;
-const { entry } = Astro.props;
+const { entry, allEntries } = Astro.props;
 
 if(entry === undefined) {
   return Astro.redirect('/404');
@@ -73,6 +74,8 @@ const readTime = calculateReadTime(entry.body);
     <img src={imagePath} alt="Article Image" class="w-full h-auto rounded-xl my-6 border border-soft" />
     <Content />
   </article>
+  
+  <RelatedPosts currentEntry={entry} allEntries={allEntries} />
 </MainLayout>
 
 <style is:global>

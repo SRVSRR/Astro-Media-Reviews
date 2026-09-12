@@ -6,6 +6,7 @@ author: 'Rohan Nandan'
 image: 'image4.1.webp'
 tags: ['Backend Engineering', 'Security']
 slug: supabase-auth-migration
+series: "Expense Tracker Case Studies"
 ---
 
 ## Problem

@@ -58,6 +58,7 @@ Work should be committed **incrementally**, not as one large diff. Break a task 
 │   │   ├── Navbar.astro
 │   │   ├── Footer.astro
 │   │   ├── ArticleCard.astro
+│   │   ├── RelatedPosts.astro    # bottom-of-article suggestions: same series (max 3) or tag overlap (max 3)
 │   │   ├── Pagination.astro
 │   │   ├── SearchForm.astro
 │   │   └── Tags.astro
@@ -101,6 +102,7 @@ Frontmatter schema (all fields in `entry.data`):
   author: string;         // required
   image: string;          // required — filename only, e.g. 'image5.webp'
   tags: string[];         // required
+  series?: string;        // optional — groups connected posts (e.g. 'Expense Tracker Case Studies')
 }
 ```
 

@@ -6,6 +6,7 @@ author: 'Rohan Nandan'
 image: 'image4.webp'
 tags: ['Backend Engineering', 'Data Engineering']
 slug: trustworthy-finance-api
+series: "Expense Tracker Case Studies"
 ---
 
 ## Problem

@@ -6,6 +6,7 @@ author: 'Rohan Nandan'
 image: 'image4.3.webp'
 tags: ['Machine Learning', 'Data Science']
 slug: ml-cash-flow-forecasting
+series: "Expense Tracker Case Studies"
 ---
 
 ## Problem

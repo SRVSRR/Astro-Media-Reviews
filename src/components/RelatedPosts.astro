@@ -1,0 +1,58 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { formatDate } from "../utils";
+
+interface Props {
+  currentEntry: CollectionEntry<'blog'>;
+  allEntries: CollectionEntry<'blog'>[];
+}
+
+const { currentEntry, allEntries } = Astro.props;
+
+const seriesName = currentEntry.data.series;
+
+let relatedPosts: CollectionEntry<'blog'>[] = [];
+
+if (seriesName) {
+  relatedPosts = allEntries
+    .filter(entry => entry.data.series === seriesName && entry.slug !== currentEntry.slug)
+    .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf())
+    .slice(0, 3);
+} else {
+  const currentTags = new Set(currentEntry.data.tags);
+
+  relatedPosts = allEntries
+    .filter(entry => entry.slug !== currentEntry.slug)
+    .map(entry => {
+      const sharedTags = entry.data.tags.filter(tag => currentTags.has(tag)).length;
+      return { entry, sharedTags };
+    })
+    .filter(({ sharedTags }) => sharedTags > 0)
+    .sort((a, b) => b.sharedTags - a.sharedTags)
+    .slice(0, 3)
+    .map(({ entry }) => entry);
+}
+---
+
+{relatedPosts.length > 0 && (
+  <section class="mt-16 pt-8 border-t border-soft">
+    <h2 class="text-2xl font-semibold text-white mb-6">
+      {seriesName ? (
+        <>Part of the <span class="text-accent">"{seriesName}"</span> series</>
+      ) : (
+        "Related Posts"
+      )}
+    </h2>
+    <div class="flex flex-col gap-4">
+      {relatedPosts.map(post => (
+        <a href={'/articles/' + post.slug} class="block bg-secondary border border-soft rounded-xl p-5 transition-colors duration-200 hover:border-accent">
+          <h3 class="text-lg font-semibold leading-tight text-white">{post.data.title}</h3>
+          {post.data.description && (
+            <p class="text-muted text-sm leading-relaxed mt-2">{post.data.description}</p>
+          )}
+          <p class="text-muted text-xs uppercase tracking-[0.2em] mt-3">{formatDate(post.data.pubDate)}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+)}

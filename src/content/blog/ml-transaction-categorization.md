@@ -6,6 +6,7 @@ author: 'Rohan Nandan'
 image: 'image4.2.webp'
 tags: ['Machine Learning', 'Data Science']
 slug: ml-transaction-categorization
+series: "Expense Tracker Case Studies"
 ---
 
 ## Problem

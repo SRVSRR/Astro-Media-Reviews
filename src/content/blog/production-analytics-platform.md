@@ -6,6 +6,7 @@ author: 'Rohan Nandan'
 image: 'image4.4.webp'
 tags: ['Data Engineering', 'Platform Engineering']
 slug: production-analytics-platform
+series: "Expense Tracker Case Studies"
 ---
 
 ## Problem
