@@ -59,7 +59,7 @@ const articlesForPage: CollectionEntry<'blog'>[] = allBlogArticles.slice(
       <span class="text-sm text-muted">{allBlogArticles.length} posts</span>
     </div>
     <SearchForm />
-    <div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="mt-6 flex flex-col gap-4">
       {articlesForPage.map(article =>(
         <ArticleCard article={article}/>
       ))}

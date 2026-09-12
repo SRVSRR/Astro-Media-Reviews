@@ -1,7 +1,6 @@
 ---
 import { formatDate, calculateReadTime } from "../utils";
 import type { CollectionEntry } from "astro:content";
-import Tags from "./Tags.astro";
 
 const { article } = Astro.props;
 
@@ -11,23 +10,13 @@ interface Props {
 
 const readTime = calculateReadTime(article.body);
 ---
-<div class="max-w-md mx-auto mt-8 h-full">
-  <div class="bg-secondary border border-soft rounded-xl overflow-hidden transition-transform duration-200 hover:-translate-y-1 h-full flex flex-col">
-    <a href={'/articles/' + article.slug} class="block">
-      <div class="aspect-[16/9] w-full overflow-hidden">
-        <img
-          src={'/images/' + article.data.image}
-          alt="Article Image"
-          class="w-full h-full object-cover hover:opacity-80 transition duration-300 ease-in-out"
-        />
-      </div>
-    </a>
-    <div class="p-5 space-y-2 flex-1 flex flex-col">
-      <Tags tags={article.data.tags} />
-      <h2 class="text-xl font-semibold leading-tight flex-1">
-        <a href={'/articles/' + article.slug} class="hover:text-accent transition-colors">{article.data.title}</a>
-      </h2>
-      <p class="text-muted text-xs uppercase tracking-[0.2em]">{formatDate(article.data.pubDate)} · {readTime}</p>
-    </div>
+<a href={'/articles/' + article.slug} class="block bg-secondary border border-soft rounded-xl p-5 transition-colors duration-200 hover:border-accent">
+  <h2 class="text-xl font-semibold leading-tight text-white">{article.data.title}</h2>
+  {article.data.description && (
+    <p class="text-muted text-sm leading-relaxed mt-2">{article.data.description}</p>
+  )}
+  <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mt-3 text-xs">
+    <span class="text-accent">{formatDate(article.data.pubDate)}</span>
+    <span class="text-muted">{readTime}</span>
   </div>
-</div>
+</a>

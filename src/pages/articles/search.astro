@@ -38,7 +38,7 @@ const searchResults  = allBlogArticles.filter(article => {
     <SearchForm />
     <h1 class="text-2xl pb-3 mt-6 text-white">Results for <strong>{rawQuery}</strong></h1>
 
-    <div class="grid grid-cols-1 gap-6 sm:grid-cols-3 lg:grid-cols-3">
+    <div class="flex flex-col gap-4">
         {searchResults.map(article => ( 
             <ArticleCard article={article}/>
         ))}
