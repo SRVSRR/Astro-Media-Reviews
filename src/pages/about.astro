@@ -35,6 +35,66 @@ const socials = [
   },
 ];
 
+// Work Experience
+const experience = [
+  {
+    role: "Data Scientist/Engineer",
+    org: "Pacific Technologies PTE Limited",
+    dates: "January 2026 - Present",
+    points: [
+      "Performed EDA and built robust data preprocessing and feature engineering pipelines, including advanced feature extraction techniques.",
+      "Developed and tuned LightGBM (LGBM) models to optimize predictive performance.",
+    ],
+  },
+  {
+    role: "Peer Mentor",
+    org: "University of the South Pacific",
+    dates: "July - November 2024",
+    points: [
+      "Led CS111: Introduction to Computer Science using specialized training accredited by Griffith University.",
+      "Facilitated collaborative learning environments to enhance students' understanding of course content.",
+      "Developed tailored study strategies, fostering individual student growth and academic success.",
+    ],
+  },
+  {
+    role: "Archivist and Scanning Clerk",
+    org: "Erasito Consultants Limited",
+    dates: "May - December 2023",
+    points: [
+      "Organized and maintained physical and digital records, ensuring accurate archiving of office documents.",
+      "Scanned and digitized large volumes of paperwork, enhancing data accessibility and reducing physical storage needs.",
+    ],
+  },
+];
+
+// Education
+const education = [
+  {
+    school: "Bachelor of Software Engineering",
+    detail: "University of the South Pacific",
+    dates: "2023 - 2027",
+    points: [
+      "Relevant coursework: Data Structures & Algorithms, Database Systems, Operating Systems, Web Development, Software Engineering.",
+    ],
+  },
+  {
+    school: "High School Diploma",
+    detail: "Jai Narayan College",
+    dates: "2018 - 2022",
+    points: [
+      "Achieved 370/400 in year 12 external examination.",
+    ],
+  },
+];
+
+// Awards
+const awards = [
+  "Head of School's Award for Most Outstanding First Year Student in the School of Information Technology, Engineering, Mathematics and Physics (STEMP), USP",
+  "University Award for Most Outstanding Software Engineering Student in First Year, USP",
+  "Won 3rd Place at Honeywell x TCS AI Hackathon for building an AI-based AOG prevention system",
+  "Best Frontend Developer at Honeywell x TCS AI Hackathon",
+];
+
 // Featured Repositories
 const repositories = [
   {
@@ -62,6 +122,11 @@ const repositories = [
   <!-- Hero About Section -->
   <div class="mb-16">
     <h1 class="text-5xl font-bold mb-8 text-white text-center">About Me</h1>
+
+    <div class="flex justify-center gap-3 mb-10">
+      <a href="/rohan-nandan-resume.pdf" class="inline-block bg-accent text-white px-5 py-2.5 rounded-lg font-semibold hover:brightness-110 transition">Download Resume (PDF)</a>
+      <a href="/rohan-nandan-resume.docx" class="inline-block bg-soft border border-soft text-white px-5 py-2.5 rounded-lg hover:border-accent hover:text-accent transition">Download Resume (DOCX)</a>
+    </div>
     
     <div class="flex flex-col lg:flex-row items-center gap-10 bg-secondary/50 rounded-2xl p-8 border border-soft">
       <!-- Profile Image -->
@@ -88,6 +153,80 @@ const repositories = [
           
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Skills Section -->
+  <div class="mb-16 text-center">
+    <h2 class="text-3xl font-extrabold text-white mb-2">Skills</h2>
+    <p class="text-muted mb-6">A full breakdown of my technical skills and expertise.</p>
+    <a href="/skills" class="inline-block bg-soft border border-soft text-white px-5 py-2.5 rounded-lg hover:border-accent hover:text-accent transition">View Skills &amp; Expertise</a>
+  </div>
+
+  <!-- Work Experience Section -->
+  <div class="mb-16">
+    <h2 class="text-3xl font-extrabold text-white mb-2 text-center">Work Experience</h2>
+    <p class="text-muted text-center mb-10">Where I've worked</p>
+
+    <div class="flex flex-col gap-6 max-w-3xl mx-auto">
+      {experience.map(job => (
+        <div class="bg-secondary border border-soft rounded-xl p-6">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="text-lg font-semibold text-white">{job.role}</h3>
+              <p class="text-accent text-sm">{job.org}</p>
+            </div>
+            <span class="text-muted text-sm shrink-0">{job.dates}</span>
+          </div>
+          <ul class="mt-4 space-y-2 text-muted text-sm list-disc pl-5">
+            {job.points.map(point => (
+              <li>{point}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Education Section -->
+  <div class="mb-16">
+    <h2 class="text-3xl font-extrabold text-white mb-2 text-center">Education</h2>
+    <p class="text-muted text-center mb-10">Academic background</p>
+
+    <div class="flex flex-col gap-6 max-w-3xl mx-auto">
+      {education.map(ed => (
+        <div class="bg-secondary border border-soft rounded-xl p-6">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="text-lg font-semibold text-white">{ed.school}</h3>
+              <p class="text-accent text-sm">{ed.detail}</p>
+            </div>
+            <span class="text-muted text-sm shrink-0">{ed.dates}</span>
+          </div>
+          <ul class="mt-4 space-y-2 text-muted text-sm list-disc pl-5">
+            {ed.points.map(point => (
+              <li>{point}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Awards Section -->
+  <div class="mb-16">
+    <h2 class="text-3xl font-extrabold text-white mb-2 text-center">Awards & Accolades</h2>
+    <p class="text-muted text-center mb-10">Recognition and achievements</p>
+
+    <div class="flex flex-col gap-4 max-w-3xl mx-auto">
+      {awards.map(award => (
+        <div class="flex items-start gap-3 bg-secondary border border-soft rounded-xl p-5">
+          <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 7.7l5.4-.8z" />
+          </svg>
+          <span class="text-muted text-sm leading-relaxed">{award}</span>
+        </div>
+      ))}
     </div>
   </div>
 
