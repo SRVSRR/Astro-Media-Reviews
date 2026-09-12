@@ -139,4 +139,4 @@ Future work could add held-out evaluation, per-category precision and recall, ca
 3. **Keep training artifacts together.** Model, vectorizer, labels, and metadata must be versioned and reloadable as a unit.
 4. **Use corrections as training data.** Logging overrides creates a natural feedback loop for model improvement.
 5. **Shared training data is a product decision.** Corrections from all users improve a shared model here; that tradeoff should be reviewed explicitly before handling more sensitive data.
-5. **Report minimum-data behavior.** Training endpoints should distinguish "trained," "insufficient data," and "no data" instead of failing opaquely. That distinction also makes future monitoring straightforward: data volume, training outcomes, and fallback frequency can be tracked as operational signals.
+6. **Report minimum-data behavior.** Training endpoints should distinguish "trained," "insufficient data," and "no data" instead of failing opaquely. That distinction also makes future monitoring straightforward: data volume, training outcomes, and fallback frequency can be tracked as operational signals.

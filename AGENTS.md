@@ -115,6 +115,30 @@ Frontmatter schema (all fields in `entry.data`):
 - Sorting is always newest-first using `b.data.pubDate.valueOf()` (`b - a`).
 - `tags` are single strings (e.g. `['Intro to Software Engineering']`).
 
+## Blog Post Format
+
+All new posts follow this structure. (The 12 pre-2026-09 study-guide posts predate it — bold-wrapped headings, `Conclusion` + `References` endings, reused cover images — and are grandfathered; migrate opportunistically, don't bulk-rewrite.)
+
+**Frontmatter:**
+- `title`: plain text, no clickbait superlatives ("Guide", "Essential", "Master 50+").
+- `description`: one plain summary sentence of what the post covers.
+- `image`: unique cover per post — never reuse a filename already used by another post.
+- `tags`: 1–3 concise topical tags (e.g. `Machine Learning`, `Backend Engineering`), not course names.
+- `slug:` must match the filename (both kebab-case).
+- `series:` only when the post belongs to a multi-part series.
+
+**Body structure (build/case-study posts):** `Problem` → `Approach` → `Stack` → `Results` → `Lessons`, in that order.
+
+**Style rules:**
+- Plain headings (`## Title`), never bold-wrapped (`## **Title**`).
+- Numbered `###` subsections only where order matters (e.g. Approach phases/steps); `Results` subsections stay unnumbered.
+- `Lessons` is always a single ordered list `1..n`, sequential with no duplicates; each item starts with a bold takeaway (`1. **Isolation is a feature.** ...`).
+- End with `Lessons` (build posts) or `Conclusion` (study posts). A `References` section only for real citations with working links.
+- No manual `Reading time` / `Audience` / `Repository evidence` header blocks — read time is auto-computed.
+- Repo and file references use absolute GitHub URLs, never relative `../../` paths.
+- Code fences always carry a language tag (`sh`, `json`, `python`, `ts`).
+- Inline images use the `|small|medium|large|left|right|center` alt suffixes.
+
 ## Routing Conventions
 
 - Article listing: `/articles` (page 1), `/articles/page/{n}` (n > 1). Page 1 redirects to `/articles` (301).

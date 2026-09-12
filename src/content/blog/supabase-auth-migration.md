@@ -142,5 +142,5 @@ curl https://expense-tracker-uwrp.onrender.com/api/auth/me \
 2. **Keep rollback cheap.** Reversible migrations and feature flags turn a risky migration into a sequence of safe steps.
 3. **Watch identity types.** UUID versus string identity mismatches are easy to overlook and expensive to fix later.
 4. **Test doubles must not weaken production.** Tests simulate Supabase identities locally while production still verifies real RS256 tokens.
-4. **Remove dead auth code deliberately.** Old registration and password paths are security liabilities once replaced.
-5. **Document secrets handling explicitly.** Never log passwords, tokens, database URLs, or JWKS secrets while troubleshooting authentication.
+5. **Remove dead auth code deliberately.** Old registration and password paths are security liabilities once replaced.
+6. **Document secrets handling explicitly.** Never log passwords, tokens, database URLs, or JWKS secrets while troubleshooting authentication.
