@@ -7,11 +7,11 @@ export default {
 				sans: ['"Space Grotesk"', 'Inter', 'system-ui', 'sans-serif'],
 			},
 			colors: {
-				primary: '#0c1728',
-				secondary: '#111e32',
+				primary: '#0b1220',
+				secondary: '#121a2b',
 				accent: '#f97316',
-				muted: '#a7b4c8',
-				soft: '#1b2a44',
+				muted: '#8b95a6',
+				soft: '#1f2a3d',
 			},
 			boxShadow: {
 				glow: '0 20px 60px rgba(249, 115, 22, 0.25)',
