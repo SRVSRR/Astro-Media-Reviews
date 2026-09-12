@@ -89,7 +89,8 @@ if (entrySeries) {
   jsonLd={articleJsonLd}
 >
   <div class="lg:flex lg:gap-10 lg:items-start max-w-3xl lg:max-w-5xl mx-auto">
-    <article class="min-w-0 flex-1">
+    <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-accent z-50 w-0"></div>
+    <article id="article-content" class="min-w-0 flex-1">
       <h1 class="text-4xl font-bold mb-2 text-white"> {entry.data.title}</h1>
       <h3 class="text-lg mb-2 text-muted">Written by {entry.data.author} on {formatDate(entry.data.pubDate)} · {readTime}</h3>
       <Tags tags={entry.data.tags} />
@@ -342,6 +343,20 @@ if (entrySeries) {
 </style>
 
 <script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const bar = document.getElementById('reading-progress');
+    const article = document.getElementById('article-content');
+    if (bar && article) {
+      const update = () => {
+        const total = article.offsetHeight - window.innerHeight;
+        const progress = total > 0 ? Math.min(Math.max(-article.getBoundingClientRect().top / total, 0), 1) : 0;
+        bar.style.width = `${progress * 100}%`;
+      };
+      update();
+      document.addEventListener('scroll', update, { passive: true });
+    }
+  });
+
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('article pre').forEach((block) => {
       const button = document.createElement('button');
