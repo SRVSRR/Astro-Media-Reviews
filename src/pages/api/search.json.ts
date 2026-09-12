@@ -26,17 +26,24 @@ export const GET:APIRoute = async ({ url }): Promise<Response> => {
         const titleMatch: boolean = article.data.title
         .toLowerCase()
         .includes(query);
-    
+
         const bodyMatch: boolean = article.body
         .toLowerCase()
         .includes(query);
-    
+
         const slugMatch: boolean = article.slug
         .toLowerCase()
         .includes(query);
-    
-        return titleMatch || bodyMatch || slugMatch;
-    });
+
+        const descriptionMatch: boolean = (article.data.description ?? '')
+        .toLowerCase()
+        .includes(query);
+
+        const tagMatch: boolean = article.data.tags
+        .some(tag => tag.toLowerCase().includes(query));
+
+        return titleMatch || bodyMatch || slugMatch || descriptionMatch || tagMatch;
+    }).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
     return new Response(JSON.stringify(searchResults), {
         status: 200,
