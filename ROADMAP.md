@@ -9,7 +9,7 @@ ToC → progress bar → newsletter → lighthouse → search console.
 
 ---
 
-## 1. Custom 404 with search + popular links `[ ]`
+## 1. Custom 404 with search + popular links `[x]`
 
 **Why:** current 404 is bare; don't strand mistyped visitors.
 **Scope:**
@@ -19,7 +19,7 @@ ToC → progress bar → newsletter → lighthouse → search console.
 **Accept:** `/nonexistent` renders search + links; build passes.
 **Effort:** S. **Depends on:** nothing.
 
-## 2. Share buttons on articles `[ ]`
+## 2. Share buttons on articles `[x]`
 
 **Why:** cheap distribution; pairs with the fixed OG card.
 **Scope:**
@@ -30,7 +30,7 @@ ToC → progress bar → newsletter → lighthouse → search console.
 **Accept:** each button opens the correct share target with title/URL.
 **Effort:** S. **Depends on:** nothing.
 
-## 3. Prev/next navigation (series-aware) `[ ]`
+## 3. Prev/next navigation (series-aware) `[x]`
 
 **Why:** carry readers through the Expense Tracker sequence in order.
 **Scope:**
@@ -42,7 +42,7 @@ ToC → progress bar → newsletter → lighthouse → search console.
 **Accept:** correct links both directions on series + standalone posts.
 **Effort:** S. **Depends on:** nothing.
 
-## 4. Copy-code buttons on code blocks `[ ]`
+## 4. Copy-code buttons on code blocks `[x]`
 
 **Why:** case-study posts have `sh`/`json` snippets readers will lift.
 **Scope:**
@@ -52,7 +52,7 @@ ToC → progress bar → newsletter → lighthouse → search console.
 **Accept:** click copies exact code text; visible feedback; no layout shift.
 **Effort:** S. **Depends on:** nothing.
 
-## 5. Table of contents on long articles `[ ]`
+## 5. Table of contents on long articles `[x]`
 
 **Why:** several posts are 130+ lines with deep heading trees.
 **Scope:**
@@ -64,7 +64,7 @@ ToC → progress bar → newsletter → lighthouse → search console.
 **Accept:** ToC lists every h2/h3 with working anchor links on desktop.
 **Effort:** M. **Depends on:** nothing.
 
-## 6. Reading progress bar `[ ]`
+## 6. Reading progress bar `[x]`
 
 **Why:** expected on long-form technical blogs.
 **Scope:**
@@ -86,14 +86,25 @@ ToC → progress bar → newsletter → lighthouse → search console.
 **Blocked on:** user creating the provider account first. No API keys or
 secrets in the repo — embed snippet only.
 
-## 8. Lighthouse / performance audit `[ ]`
+## 8. Lighthouse / performance audit `[x]`
 
 **Why:** verify AdSense + analytics scripts aren't tanking Core Web Vitals.
-**Scope:**
-- Run Lighthouse against home + longest article (preview or prod URL).
-- Record scores; file follow-ups only for issues in site-owned code
-  (third-party script cost gets documented, not chased).
-**Accept:** written report with scores + action list.
+**Result (desktop, local static server, Sep 2026):**
+
+| Page | Perf | A11y | BP | SEO | LCP | CLS |
+|------|------|------|----|-----|-----|-----|
+| Home (before) | 86 | 91 | 73 | 100 | 1.8s | 0.001 |
+| Home (after) | 92 | 100 | 73 | 100 | 1.7s | 0.001 |
+| Article (before) | 92 | 94 | 73 | 100 | 1.8s | 0.004 |
+| Article (after) | 92 | 100 | 73 | 100 | 1.8s | 0.004 |
+
+**Fixed from audit:** accent-button contrast (`text-white` → `text-primary`
+on 3 CTAs), `<main>` landmark in `MainLayout`, byline `h3` → `p`
+(heading-order).
+**Remaining BP deductions (not chased):** AdSense third-party cookies +
+related inspector issues; `/_vercel/*` script 404s are local-server
+artifacts (scripts only exist in production). Unused-JS/render-blocking
+savings flagged are Google Fonts + AdSense + Vercel scripts (third-party).
 **Effort:** S (audit only; fixes are separate items). **Depends on:** nothing.
 
 ## 9. Sitemap/robots verification in Search Console `[ ]`

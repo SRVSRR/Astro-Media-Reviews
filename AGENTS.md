@@ -59,6 +59,7 @@ Work should be committed **incrementally**, not as one large diff. Break a task 
 │   │   ├── Footer.astro
 │   │   ├── ArticleCard.astro
 │   │   ├── RelatedPosts.astro    # bottom-of-article suggestions: same series (max 3) or tag overlap (max 3)
+│   │   ├── ShareButtons.astro    # X / LinkedIn / copy-link row on article pages
 │   │   ├── Pagination.astro
 │   │   ├── SearchForm.astro
 │   │   └── Tags.astro
