@@ -70,20 +70,26 @@ const featuredProjects = [
 >
   <h1 class="text-4xl font-bold mb-8 text-white">Skills &amp; Expertise</h1>
 
-  <section class="mb-14">
-    <div class="flex flex-col">
+  <section class="mb-16">
+    <h2 class="text-3xl font-extrabold text-white mb-2 text-center">Skills</h2>
+    <p class="text-muted text-center mb-10">Languages, frameworks, and tools I work with</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {skillGroups.map((group) => (
-        <div class="flex flex-col sm:flex-row gap-1 sm:gap-8 py-5 border-t border-soft">
-          <div class="sm:w-40 shrink-0 text-sm font-semibold text-accent uppercase tracking-wider pt-0.5">{group.label}</div>
-          <div class="text-slate-100 leading-relaxed">{group.items.join(', ')}</div>
+        <div class="bg-secondary border border-soft rounded-xl p-6">
+          <h3 class="text-lg font-semibold text-white mb-3">{group.label}</h3>
+          <ul class="space-y-2 text-muted text-sm list-disc pl-5">
+            {group.items.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
         </div>
       ))}
-      <div class="border-t border-soft"></div>
     </div>
   </section>
 
-  <section class="mb-14">
-    <h2 class="text-2xl font-semibold text-white mb-6">Core Competencies</h2>
+  <section class="mb-16">
+    <h2 class="text-3xl font-extrabold text-white mb-2 text-center">Core Competencies</h2>
+    <p class="text-muted text-center mb-10">How I apply these skills in practice</p>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       {competencies.map((competency) => (
         <div class="bg-secondary border border-soft rounded-xl p-6">
@@ -99,7 +105,8 @@ const featuredProjects = [
   </section>
 
   <section class="mb-8">
-    <h2 class="text-2xl font-semibold text-white mb-4">Featured Projects</h2>
+    <h2 class="text-3xl font-extrabold text-white mb-2 text-center">Featured Projects</h2>
+    <p class="text-muted text-center mb-10">Projects that put these skills to work</p>
     <div class="flex flex-col gap-6">
       {featuredProjects.map((project) => (
         <div class="bg-secondary border border-soft rounded-xl p-6">
