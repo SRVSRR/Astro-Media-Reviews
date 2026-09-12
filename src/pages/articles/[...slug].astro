@@ -3,6 +3,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import Tags from "../../components/Tags.astro";
 import RelatedPosts from "../../components/RelatedPosts.astro";
 import ShareButtons from "../../components/ShareButtons.astro";
+import TableOfContents from "../../components/TableOfContents.astro";
 import { getCollection } from 'astro:content';
 import { formatDate, calculateReadTime } from "../../utils";
 import { SITE_TITLE } from "../../constants";
@@ -22,7 +23,7 @@ if(entry === undefined) {
   return Astro.redirect('/404');
 }
 
-const { Content } = await entry.render();
+const { Content, headings } = await entry.render();
 
 // Generate description from content if not provided
 const description = entry.data.description || `${entry.data.title} - Written by ${entry.data.author}. Learn about ${entry.data.tags.join(', ')}.`;
@@ -87,14 +88,17 @@ if (entrySeries) {
   author={entry.data.author}
   jsonLd={articleJsonLd}
 >
-  <article class="max-w-3xl mx-auto lg:max-w-[70%]">
-    <h1 class="text-4xl font-bold mb-2 text-white"> {entry.data.title}</h1>
-    <h3 class="text-lg mb-2 text-muted">Written by {entry.data.author} on {formatDate(entry.data.pubDate)} · {readTime}</h3>
-    <Tags tags={entry.data.tags} />
-    <img src={imagePath} alt="Article Image" class="w-full h-auto rounded-xl my-6 border border-soft" />
-    <Content />
-    <ShareButtons url={articleUrl} title={entry.data.title} />
-  </article>
+  <div class="lg:flex lg:gap-10 lg:items-start max-w-3xl lg:max-w-5xl mx-auto">
+    <article class="min-w-0 flex-1">
+      <h1 class="text-4xl font-bold mb-2 text-white"> {entry.data.title}</h1>
+      <h3 class="text-lg mb-2 text-muted">Written by {entry.data.author} on {formatDate(entry.data.pubDate)} · {readTime}</h3>
+      <Tags tags={entry.data.tags} />
+      <img src={imagePath} alt="Article Image" class="w-full h-auto rounded-xl my-6 border border-soft" />
+      <Content />
+      <ShareButtons url={articleUrl} title={entry.data.title} />
+    </article>
+    <TableOfContents headings={headings} />
+  </div>
 
   {(prevPost || nextPost) && (
     <nav class="max-w-3xl mx-auto lg:max-w-[70%] mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
