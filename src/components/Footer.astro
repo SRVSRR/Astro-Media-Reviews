@@ -7,7 +7,15 @@ const allBlogArticles: CollectionEntry<'blog'>[] = await getCollection('blog');
 
 const tags: string[] = allBlogArticles.flatMap((article: any) => article.data.tags);
 
-const uniqueTags: string[] = [...new Set(tags)];
+const tagCounts: Record<string, number> = tags.reduce((acc: Record<string, number>, tag: string) => {
+  acc[tag] = (acc[tag] || 0) + 1;
+  return acc;
+}, {});
+
+const topTags: string[] = Object.entries(tagCounts)
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 8)
+  .map(([tag]) => tag);
 ---
 
 <footer class="bg-secondary/80 border-t border-soft mt-16 text-slate-200">
@@ -21,11 +29,14 @@ const uniqueTags: string[] = [...new Set(tags)];
       <div>
         <h3 class="text-xl font-semibold text-white mb-4">Categories</h3>
         <ul class="text-sm space-y-2 text-muted">
-          {uniqueTags.map(tag => (
+          {topTags.map(tag => (
             <li>
               <a class="hover:text-accent transition" href={'/articles/tag/' + slugify(tag)}>{capitalize(tag)}</a>  
             </li>
           ))}
+          <li>
+            <a class="hover:text-accent transition text-accent" href="/articles/tags">View all categories →</a>
+          </li>
         </ul>
       </div>
       <div>
