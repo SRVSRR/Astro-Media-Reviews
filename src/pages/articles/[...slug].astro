@@ -76,8 +76,10 @@ const readTime = calculateReadTime(entry.body);
       <Tags tags={entry.data.tags} />
       <img src={imagePath} alt="Article Image" class="w-full h-auto rounded-xl my-6 border border-soft" />
       <Content />
-      <ShareButtons url={articleUrl} title={entry.data.title} />
   </article>
+  <div class="max-w-3xl mx-auto lg:max-w-[70%]">
+    <ShareButtons url={articleUrl} title={entry.data.title} />
+  </div>
   <TableOfContents headings={headings} />
 
   <RelatedPosts currentEntry={entry} allEntries={allEntries} />
