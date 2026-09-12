@@ -22,4 +22,13 @@ function calculateReadTime(content: string): string {
     return `${minutes} min read`;
 }
 
-export { formatDate, capitalize, calculateReadTime };
+// Convert a string to a URL-safe slug (lowercase, hyphen-separated)
+function slugify(str: string): string {
+    return str
+        .toLowerCase()
+        .trim()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
+}
+
+export { formatDate, capitalize, calculateReadTime, slugify };

@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
-import { capitalize } from "../utils";
+import { capitalize, slugify } from "../utils";
 
 const allBlogArticles: CollectionEntry<'blog'>[] = await getCollection('blog');
 
@@ -23,7 +23,7 @@ const uniqueTags: string[] = [...new Set(tags)];
         <ul class="text-sm space-y-2 text-muted">
           {uniqueTags.map(tag => (
             <li>
-              <a class="hover:text-accent transition" href={'/articles/tag/' + tag}>{capitalize(tag)}</a>  
+              <a class="hover:text-accent transition" href={'/articles/tag/' + slugify(tag)}>{capitalize(tag)}</a>  
             </li>
           ))}
         </ul>

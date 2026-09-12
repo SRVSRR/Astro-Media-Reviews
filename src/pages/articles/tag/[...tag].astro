@@ -3,12 +3,12 @@ import MainLayout from "../../../layouts/MainLayout.astro";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 import ArticleCard from "../../../components/ArticleCard.astro";
-import { capitalize } from "../../../utils";
+import { capitalize, slugify } from "../../../utils";
 
 export async function getStaticPaths() {
   const allBlogArticles = await getCollection('blog');
-  const tags = [...new Set(allBlogArticles.flatMap(article => article.data.tags))];
-  
+  const tags = [...new Set(allBlogArticles.flatMap(article => article.data.tags.map(slugify)))];
+
   return tags.map(tag => ({
     params: { tag }
   }));
@@ -22,7 +22,7 @@ if(tag === undefined){
 
 const allBlogArticles: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort((a: CollectionEntry <'blog'>, b:CollectionEntry<'blog'> )=> b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const tagArticles = allBlogArticles.filter(article => article.data.tags.includes(tag));
+const tagArticles = allBlogArticles.filter(article => article.data.tags.some(t => slugify(t) === tag));
 
 if (tagArticles.length === 0) {
   return new Response(null, {
@@ -31,7 +31,7 @@ if (tagArticles.length === 0) {
   });
 }
 
-const tagLabel = capitalize(tag);
+const tagLabel = capitalize(tagArticles[0].data.tags.find(t => slugify(t) === tag) ?? tag);
 const pageTitle = `Tag: ${tagLabel}`;
 const pageDescription = `Articles tagged with ${tagLabel}.`;
 
@@ -40,7 +40,7 @@ const pageDescription = `Articles tagged with ${tagLabel}.`;
     <div class="flex items-center justify-between pb-4">
       <h1 class="text-3xl font-semibold text-white">#{tagLabel}</h1>
     </div>
-    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="flex flex-col gap-4">
       {tagArticles.map(article =>(
         <ArticleCard article={article}/>
       ))}
