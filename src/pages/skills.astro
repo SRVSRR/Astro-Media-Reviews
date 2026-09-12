@@ -1,0 +1,118 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+const skillGroups = [
+  { label: "Languages", items: ["Python", "JavaScript", "TypeScript", "Java", "SQL"] },
+  { label: "Data Science", items: ["EDA", "Feature Engineering", "LightGBM Tuning", "Pandas", "Scikit-Learn"] },
+  { label: "Frontend", items: ["Next.js", "React", "React Native", "Astro", "Tailwind CSS"] },
+  { label: "Backend", items: ["FastAPI", "Spring Boot", "PostgreSQL", "MySQL"] },
+  { label: "Testing", items: ["Unit Testing"] },
+  { label: "Tools", items: ["Git", "GitHub"] },
+];
+
+const competencies = [
+  {
+    title: "Analysis & Understanding",
+    points: [
+      "Surface data quality issues, distributions, and relationships through EDA before any modeling begins",
+      "Turn raw, messy datasets into structured, actionable insight",
+    ],
+  },
+  {
+    title: "Data & Feature Engineering",
+    points: [
+      "Build clean, reproducible preprocessing pipelines that transform raw data into modeling-ready form",
+      "Craft both domain-driven and technique-driven features to represent data effectively",
+    ],
+  },
+  {
+    title: "Machine Learning",
+    points: [
+      "Develop and tune gradient-boosted tree models, with a focus on LightGBM",
+      "Apply predictive analytics to real-world signals like equipment health, finances, and anomalies",
+    ],
+  },
+  {
+    title: "Production-Grade Engineering",
+    points: [
+      "Treat models and pipelines with production rigor, including unit testing rather than notebook-only work",
+      "Ship data products end-to-end across frontend and backend",
+    ],
+  },
+];
+
+const featuredProjects = [
+  {
+    title: "AOG Zero — Aircraft-on-Ground Prevention System",
+    description: "A hackathon project built for Honeywell, monitoring Auxiliary Power Unit (APU) health across a fleet to predict and prevent aircraft-on-ground incidents.",
+    details: [
+      "Stack: Next.js/TypeScript (frontend dashboard), FastAPI + PostgreSQL (backend, predictive analytics)",
+      "Contribution: Worked across both the frontend dashboard and backend predictive analytics system",
+      "Team: Collaborated with a multi-person team in a hackathon setting",
+    ],
+    url: "https://github.com/SRVSRR/aog-zero",
+  },
+  {
+    title: "Expense Tracker & Predictor (Mobile App)",
+    description: "A mobile application combining data science with mobile development, designed as part of a personal software product line.",
+    details: [
+      "Stack: React Native",
+      "Features: Logs spending, forecasts end-of-month balance, flags anomalous transactions, and suggests budget adjustments",
+      "Focus: Applying spending prediction and anomaly detection models within a consumer-facing mobile experience",
+    ],
+    url: "https://github.com/SRVSRR",
+  },
+];
+---
+<MainLayout
+  title="Skills & Expertise"
+  description="Rohan Nandan's skills and expertise in data science, data engineering, machine learning, and full-stack software engineering."
+>
+  <h1 class="text-4xl font-bold mb-8 text-white">Skills &amp; Expertise</h1>
+
+  <section class="mb-14">
+    <div class="flex flex-col">
+      {skillGroups.map((group) => (
+        <div class="flex flex-col sm:flex-row gap-1 sm:gap-8 py-5 border-t border-soft">
+          <div class="sm:w-40 shrink-0 text-sm font-semibold text-accent uppercase tracking-wider pt-0.5">{group.label}</div>
+          <div class="text-slate-100 leading-relaxed">{group.items.join(', ')}</div>
+        </div>
+      ))}
+      <div class="border-t border-soft"></div>
+    </div>
+  </section>
+
+  <section class="mb-14">
+    <h2 class="text-2xl font-semibold text-white mb-6">Core Competencies</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {competencies.map((competency) => (
+        <div class="bg-secondary border border-soft rounded-xl p-6">
+          <h3 class="text-lg font-semibold text-white mb-3">{competency.title}</h3>
+          <ul class="space-y-2 text-muted text-sm list-disc pl-5">
+            {competency.points.map((point) => (
+              <li>{point}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-2xl font-semibold text-white mb-4">Featured Projects</h2>
+    <div class="flex flex-col gap-6">
+      {featuredProjects.map((project) => (
+        <div class="bg-secondary border border-soft rounded-xl p-6">
+          <h3 class="text-lg font-semibold text-white mb-2">{project.title}</h3>
+          <p class="text-muted text-sm leading-relaxed">{project.description}</p>
+          <ul class="mt-4 space-y-2 text-muted text-sm list-disc pl-5">
+            {project.details.map((detail) => (
+              <li>{detail}</li>
+            ))}
+          </ul>
+          <a href={project.url} target="_blank" rel="noopener noreferrer" class="inline-block mt-4 text-sm text-accent hover:underline">View project</a>
+        </div>
+      ))}
+    </div>
+  </section>
+</MainLayout>
