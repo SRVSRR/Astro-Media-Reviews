@@ -1,16 +1,32 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
+import SearchForm from "../components/SearchForm.astro";
 import { Image } from 'astro:assets';
 import error from '../images/error-404.png'
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+
+const latestPost: CollectionEntry<'blog'> | undefined = (await getCollection('blog'))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())[0];
 ---
 
-<MainLayout title="404 - Page Not Found">
+<MainLayout title="404 - Page Not Found" noindex={true}>
   <div class="flex flex-col items-center justify-items-center gap-7 text-center">
     <Image src={error} alt="404" height={250} width={250} class="mt-10" format="webp" />
     <h1 class="text-5xl font-bold text-white">Page Not Found</h1>
     <p class="text-xl text-muted max-w-xl">
       Sorry, we couldn't find the page you were looking for.
     </p>
-    <a href="/" class="inline-block bg-soft border border-soft text-white px-4 py-2 rounded-lg hover:border-accent hover:text-accent transition">Return To Home Page</a>
+    <div class="w-full max-w-xl">
+      <SearchForm />
+    </div>
+    <div class="flex flex-wrap justify-center gap-3">
+      <a href="/" class="inline-block bg-soft border border-soft text-white px-4 py-2 rounded-lg hover:border-accent hover:text-accent transition">Home</a>
+      <a href="/articles" class="inline-block bg-soft border border-soft text-white px-4 py-2 rounded-lg hover:border-accent hover:text-accent transition">All Articles</a>
+      <a href="/skills" class="inline-block bg-soft border border-soft text-white px-4 py-2 rounded-lg hover:border-accent hover:text-accent transition">Skills</a>
+      {latestPost && (
+        <a href={'/articles/' + latestPost.slug} class="inline-block bg-accent text-white px-4 py-2 rounded-lg font-semibold hover:brightness-110 transition">Latest Post</a>
+      )}
+    </div>
   </div>
 </MainLayout>
