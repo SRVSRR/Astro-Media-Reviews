@@ -3,7 +3,7 @@ title: 'Honeywell AOG Zero: Building an APU Health Monitoring System in a Week'
 description: 'A hackathon case study on building a real-time aircraft APU health dashboard with Next.js, FastAPI, and PostgreSQL — and the trained ML model that never made it to production.'
 pubDate: 2026-09-14
 author: 'Rohan Nandan'
-image: 'aog-zero-fleet.png'
+image: 'aog-zero-fleet.webp'
 tags: ['Machine Learning', 'Data Engineering']
 slug: aog-zero
 ---
@@ -18,7 +18,7 @@ AOG Zero targets one of those components: the Auxiliary Power Unit (APU), the sm
 
 The project was an eight-person hackathon build completed between December 15 and 21, 2025. The constraint was not just catching failure early, but doing it across a whole fleet with a dashboard a maintenance manager could act on in time.
 
-![Fleet dashboard with each aircraft's APU health priority|large](/images/aog-zero-fleet.png)
+![Fleet dashboard with each aircraft's APU health priority|large](/images/aog-zero-fleet.webp)
 
 ## Approach
 
@@ -40,7 +40,7 @@ A flight-hours multiplier tightens the window for high-utilization airframes: ai
 
 The health score itself is computed per sensor by normalizing the recent mean reading between a healthy and critical threshold — for example, oil temperature: healthy = 80°C, critical = 140°C — then averaging across all six sensors on the APU (oil temperature, combustion temperature, ambient temperature, pressure, RPM, vibration). It is a straightforward, explainable rule-based calculation, which turned out to matter more than we expected (see Lessons).
 
-![Aircraft sensor readings with charts|large](/images/aog-zero-sensors.png)
+![Aircraft sensor readings with charts|large](/images/aog-zero-sensors.webp)
 
 ### 2. The trained model that never shipped
 
