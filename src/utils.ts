@@ -7,7 +7,7 @@ function formatDate(date: Date): string {
 
 // Compact date for tight layouts (e.g. series listings on mobile)
 function formatShortDate(date: Date): string {
-    const options: Intl.DateTimeFormatOptions = {month: 'short', day: 'numeric'};
+    const options: Intl.DateTimeFormatOptions = {month: 'short', day: 'numeric', year: 'numeric'};
 
     return new Date(date).toLocaleDateString(undefined, options);
 }
