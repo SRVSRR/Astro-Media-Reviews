@@ -9,6 +9,8 @@ slug: supabase-auth-migration
 series: "Expense Tracker Case Studies"
 ---
 
+> Source: [github.com/SRVSRR](https://github.com/SRVSRR)
+
 ## Problem
 
 The API originally used local JWT authentication with bcrypt-backed passwords. That was sufficient for early development, but it had three growing limitations:
@@ -100,7 +102,6 @@ Relevant migration:
 - Alembic reversible migrations
 - FastAPI authentication dependencies
 - `pytest` with async fixtures and isolated databases
-- **Repository:** [github.com/SRVSRR](https://github.com/SRVSRR)
 
 ## Results
 

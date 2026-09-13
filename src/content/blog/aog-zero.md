@@ -8,6 +8,8 @@ tags: ['Machine Learning', 'Data Engineering']
 slug: aog-zero
 ---
 
+> Source: [github.com/SRVSRR/aog-zero](https://github.com/SRVSRR/aog-zero)
+
 ## Problem
 
 Aircraft on Ground (AOG) events — planes grounded by unexpected mechanical issues — are among the most expensive failure modes in aviation. Every grounded hour costs an airline real money, and a large share of AOG events trace back to a handful of components degrading quietly before anyone notices.
@@ -67,7 +69,6 @@ My contributions were concentrated on the frontend, mostly in the aircraft list,
 - **Database:** PostgreSQL — `Company` → `Aircraft` → `AircraftPart` (APU) → `PartSensor` (six sensor types) → `SensorReading`, plus a separate `AircraftLog` table for cumulative flight hours.
 - **ML tooling:** scikit-learn, pandas, numpy, Jupyter — used offline for feature engineering and model training, not in the request path.
 - **Infra:** Docker, Azure DevOps for CI, mirrored to GitHub.
-- **Repository:** [github.com/SRVSRR/aog-zero](https://github.com/SRVSRR/aog-zero)
 
 Four core REST endpoints (`/aircrafts`, `/aircrafts/{id}`, `/aircrafts/{id}/flights`, `/health`), each duplicated under `/api/*`.
 

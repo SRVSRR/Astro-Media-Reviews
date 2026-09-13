@@ -9,6 +9,8 @@ slug: ml-cash-flow-forecasting
 series: "Expense Tracker Case Studies"
 ---
 
+> Source: [github.com/SRVSRR](https://github.com/SRVSRR)
+
 ## Problem
 
 Simple finance forecasts usually report one number per day: expected income minus expected expenses. That hides the most important question for a user: how uncertain is the projection?
@@ -89,7 +91,6 @@ Transaction, account, and recurring-rule mutations invalidate the affected user'
 - FastAPI forecast endpoints
 - PostgreSQL-backed prediction cache with TTL and invalidation
 - Pydantic response schemas with confidence-interval fields
-- **Repository:** [github.com/SRVSRR](https://github.com/SRVSRR)
 
 ## Results
 

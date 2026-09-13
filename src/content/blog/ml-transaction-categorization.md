@@ -9,6 +9,8 @@ slug: ml-transaction-categorization
 series: "Expense Tracker Case Studies"
 ---
 
+> Source: [github.com/SRVSRR](https://github.com/SRVSRR)
+
 ## Problem
 
 Manual finance tracking breaks down when users must categorize every transaction by hand. Free-text descriptions such as "Starbucks," "Uber trip," or "monthly electricity bill" are noisy, inconsistent, and often ambiguous. Merchant text may be abbreviated, misspelled, or missing entirely.
@@ -73,7 +75,6 @@ The categorizer avoids exotic deployment machinery. Artifacts live in backend-co
 - NumPy and pandas
 - FastAPI endpoints for suggestion, correction logging, training, and model inspection
 - File-backed model, vectorizer, encoder, and metadata artifacts
-- **Repository:** [github.com/SRVSRR](https://github.com/SRVSRR)
 
 ## Results
 

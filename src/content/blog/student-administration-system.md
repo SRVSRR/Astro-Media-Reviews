@@ -8,6 +8,8 @@ tags: ['Full-Stack Engineering', 'Backend Engineering']
 slug: student-administration-system
 ---
 
+> Source: [github.com/SRVSRR/student-administration-system](https://github.com/SRVSRR/student-administration-system)
+
 ## Problem
 
 Small schools running admin on spreadsheets hit the same wall every term: no single source of truth for who is enrolled in which class, no enforcement of grading rules, and report generation that means someone manually copying numbers into a document.
@@ -51,7 +53,6 @@ Report generation runs entirely in the browser: `pdfExport.ts` builds class mark
 - **Database:** PostgreSQL via JPA/Hibernate — `User` (single table for Student/Teacher/Admin), `ClassEntity` (many-to-many with `Subject` and `User` for enrollment), `ClassSubject` as the join entity that `Assessment` hangs off, and `Mark` tying a student, an assessment, and a score together.
 - **PDF export:** jsPDF + jspdf-autotable, generated client-side.
 - **Email:** Spring Mail for password-reset links.
-- **Repository:** [github.com/SRVSRR/student-administration-system](https://github.com/SRVSRR/student-administration-system)
 
 Seven controllers (`/api/assessments`, `/api/auth`, `/api/classes`, `/api/class-subjects`, `/api/marks`, `/api/subjects`, `/api/users`) covering roughly 30 REST endpoints in total.
 

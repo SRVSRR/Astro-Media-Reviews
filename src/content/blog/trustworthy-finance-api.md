@@ -9,6 +9,8 @@ slug: trustworthy-finance-api
 series: "Expense Tracker Case Studies"
 ---
 
+> Source: [github.com/SRVSRR](https://github.com/SRVSRR)
+
 ## Problem
 
 Personal-finance software fails in especially costly ways. A balance can drift by cents, one user can see another user's accounts, or derived analytics can silently become stale after an edit. Those are not cosmetic bugs: they undermine trust in money movement, reporting, and forecasts.
@@ -102,7 +104,6 @@ The cache behavior is tested directly, including:
 - PostgreSQL through Supabase for production
 - `pytest`, `pytest-asyncio`, and `httpx.ASGITransport`
 - JWT authentication backed by Supabase in production
-- **Repository:** [github.com/SRVSRR](https://github.com/SRVSRR)
 
 ## Results
 

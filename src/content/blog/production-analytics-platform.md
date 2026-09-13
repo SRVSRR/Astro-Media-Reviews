@@ -9,6 +9,8 @@ slug: production-analytics-platform
 series: "Expense Tracker Case Studies"
 ---
 
+> Source: [github.com/SRVSRR](https://github.com/SRVSRR)
+
 ## Problem
 
 A correct API is not automatically a production-ready platform. Analytics endpoints can become expensive, repeated requests can recompute the same results, stale outputs can mislead users, deployments can fail silently, and mobile clients can integrate against the wrong environment.
@@ -119,7 +121,6 @@ Mobile devices cannot reach a development machine's `127.0.0.1`; the case-study 
 - Render deployment with health checks
 - OpenAPI, Swagger UI, and ReDoc
 - Supabase Auth and `@supabase/supabase-js` for clients
-- **Repository:** [github.com/SRVSRR](https://github.com/SRVSRR)
 
 ## Results
 
