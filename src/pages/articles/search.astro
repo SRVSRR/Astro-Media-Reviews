@@ -5,6 +5,8 @@ import SearchForm from "../../components/SearchForm.astro";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 
+export const prerender = false;
+
 const rawQuery: string | null = Astro.url.searchParams.get('query');
 
 if (!rawQuery || rawQuery.trim().length === 0) {
