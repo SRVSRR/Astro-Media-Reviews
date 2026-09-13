@@ -5,8 +5,8 @@ const skillGroups = [
   { label: "Languages", items: ["Python", "JavaScript", "TypeScript", "Java", "SQL"] },
   { label: "Data Science", items: ["EDA", "Feature Engineering", "LightGBM Tuning", "Pandas", "Scikit-Learn"] },
   { label: "Frontend", items: ["Next.js", "React", "React Native", "Astro", "Tailwind CSS"] },
-  { label: "Backend", items: ["FastAPI", "Spring Boot", "PostgreSQL", "MySQL"] },
-  { label: "Platforms & Infrastructure", items: ["Databricks", "Render", "Supabase", "Neon", "trigger.dev"] },
+  { label: "Backend", items: ["FastAPI", "Spring Boot", "PostgreSQL", "MySQL", "JWT / OAuth", "Networking"] },
+  { label: "Platforms & Infrastructure", items: ["Databricks", "Render", "Supabase", "Neon", "trigger.dev", "Docker"] },
   { label: "Testing", items: ["Unit Testing", "Integration Testing", "Smoke Testing"] },
   { label: "Tools", items: ["Git", "GitHub"] },
 ];
@@ -62,6 +62,26 @@ const featuredProjects = [
       "Focus: Applying spending prediction and anomaly detection models within a consumer-facing mobile experience",
     ],
     url: "https://github.com/SRVSRR",
+  },
+  {
+    title: "Student Administration System",
+    description: "A full-stack student administration system with role-based access, assessments, marks, and PDF report generation.",
+    details: [
+      "Stack: Next.js 15 + TypeScript frontend, Spring Boot + Java 17 backend, PostgreSQL",
+      "Features: Three-role RBAC (Admin/Teacher/Student), assessment weighting rules, client-side PDF reports",
+      "Grade: A+ in CS241 Software Design and Implementation",
+    ],
+    url: "https://github.com/SRVSRR/student-administration-system",
+  },
+  {
+    title: "TCP File Transfer Protocol",
+    description: "A custom request/response file-transfer protocol hand-rolled on raw TCP sockets in Python.",
+    details: [
+      "Stack: Python standard library only (socket, os), no dependencies",
+      "Features: Text-control framing, binary payload streaming, path-traversal protection on both sides",
+      "Grade: A in CS310 Computer Networking",
+    ],
+    url: "https://github.com/SRVSRR/CS310-Client-Server-TCP-File-Transfer",
   },
 ];
 ---
