@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 import vercel from "@astrojs/vercel";
 import sitemap from "@astrojs/sitemap";
+import remarkImageAttrs from "./src/image-attrs-rehype.mjs";
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,5 +14,8 @@ export default defineConfig({
     webAnalytics: {
       enabled: true // Keep it enabled if needed, or set it to false if not
     }
-  })
+  }),
+  markdown: {
+    remarkPlugins: [remarkImageAttrs]
+  }
 });
