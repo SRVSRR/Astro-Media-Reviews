@@ -38,7 +38,7 @@ A flight-hours multiplier tightens the window for high-utilization airframes: ai
 
 The health score itself is computed per sensor by normalizing the recent mean reading between a healthy and critical threshold — for example, oil temperature: healthy = 80°C, critical = 140°C — then averaging across all six sensors on the APU (oil temperature, combustion temperature, ambient temperature, pressure, RPM, vibration). It is a straightforward, explainable rule-based calculation, which turned out to matter more than we expected (see Lessons).
 
-![Aircraft sensor readings with charts|medium](/images/aog-zero-sensors.png)
+![Aircraft sensor readings with charts|large](/images/aog-zero-sensors.png)
 
 ### 2. The trained model that never shipped
 
@@ -58,7 +58,7 @@ My contributions were concentrated on the frontend, mostly in the aircraft list,
 - Sensor-reading charts built with Shadcn.
 - A pass of button, hover-state, and sidebar styling cleanup.
 
-![Aircraft list with health-based filters and search|medium](/images/aog-zero-aircraft.png)
+![Aircraft list with health-based filters and search|large](/images/aog-zero-aircraft.png)
 
 ## Stack
 
