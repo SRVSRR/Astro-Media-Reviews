@@ -73,11 +73,11 @@ The team took **3rd place** at the event, and I picked up **Best Frontend Develo
 - An offline RUL model (Linear Regression on 15 statistical features per sensor) at R² = 0.970 on held-out data.
 - A fleet dashboard that surfaces the worst aircraft first, filters by health band, and exports sensor and log data.
 
-![Fleet dashboard with each aircraft's APU health priority|large]
+![Fleet dashboard with each aircraft's APU health priority|large](/images/aog-zero-fleet.png)
 
-![Aircraft sensor readings with charts|medium]
+![Aircraft sensor readings with charts|medium](/images/aog-zero-sensors.png)
 
-![Aircraft list with health-based filters and search|medium]
+![Aircraft list with health-based filters and search|medium](/images/aog-zero-aircraft.png)
 
 ## Lessons
 
