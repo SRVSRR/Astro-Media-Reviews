@@ -349,9 +349,97 @@ const coverDims = getImageDims(entry.data.image);
     margin-top: -16px;
     margin-bottom: 24px;
   }
+
+  /* Lightbox */
+  #article-content img {
+    cursor: zoom-in;
+  }
+
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 4vw;
+    background-color: rgba(4, 8, 16, 0.88);
+  }
+
+  .lightbox.open {
+    display: flex;
+  }
+
+  .lightbox img {
+    max-width: 100%;
+    max-height: 86vh;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.6);
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 2rem;
+    line-height: 1;
+    color: #a7b4c8;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 10px;
+  }
+
+  .lightbox-close:hover {
+    color: #f97316;
+  }
 </style>
 
 <script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox';
+    lightbox.setAttribute('role', 'dialog');
+    lightbox.setAttribute('aria-modal', 'true');
+    lightbox.setAttribute('aria-label', 'Image preview');
+    const lightboxImg = document.createElement('img');
+    lightboxImg.alt = '';
+    const closeBtn = document.createElement('button');
+    closeBtn.type = 'button';
+    closeBtn.className = 'lightbox-close';
+    closeBtn.setAttribute('aria-label', 'Close image preview');
+    closeBtn.textContent = '×';
+    lightbox.appendChild(lightboxImg);
+    lightbox.appendChild(closeBtn);
+    document.body.appendChild(lightbox);
+
+    const close = () => lightbox.classList.remove('open');
+    closeBtn.addEventListener('click', close);
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) close();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') close();
+    });
+
+    document.querySelectorAll('#article-content img:not([alt="Article Image"])').forEach((img) => {
+      img.tabIndex = 0;
+      const open = () => {
+        lightboxImg.src = img.currentSrc || img.getAttribute('src');
+        lightboxImg.alt = img.alt.replace(/\|(small|medium|large|left|right|center)$/g, '').trim();
+        lightbox.classList.add('open');
+      };
+      img.addEventListener('click', open);
+      img.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          open();
+        }
+      });
+    });
+  });
+
   document.addEventListener('DOMContentLoaded', () => {
     const bar = document.getElementById('reading-progress');
     const article = document.getElementById('article-content');
