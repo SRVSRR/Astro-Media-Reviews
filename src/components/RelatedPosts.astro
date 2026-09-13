@@ -1,6 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import { formatDate } from "../utils";
+import { formatShortDate } from "../utils";
 
 interface Props {
   currentEntry: CollectionEntry<'blog'>;
@@ -43,14 +43,14 @@ if (seriesName) {
         "Related Posts"
       )}
     </h2>
-    <div class="flex flex-col gap-4">
+    <div class="flex flex-col gap-4 sm:gap-5">
       {relatedPosts.map(post => (
-        <a href={'/articles/' + post.slug} class="block bg-secondary border border-soft rounded-xl p-5 transition-colors duration-200 hover:border-accent">
+        <a href={'/articles/' + post.slug} class="block bg-secondary border border-soft rounded-xl p-5 sm:p-6 transition-colors duration-200 hover:border-accent">
           <h3 class="text-lg font-semibold leading-tight text-white">{post.data.title}</h3>
           {post.data.description && (
             <p class="text-muted text-sm leading-relaxed mt-2">{post.data.description}</p>
           )}
-          <p class="text-muted text-xs uppercase tracking-[0.2em] mt-3">{formatDate(post.data.pubDate)}</p>
+          <p class="text-muted text-xs mt-3">{formatShortDate(post.data.pubDate)}</p>
         </a>
       ))}
     </div>

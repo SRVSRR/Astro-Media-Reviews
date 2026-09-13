@@ -2,7 +2,7 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
-import { capitalize, slugify, formatDate } from "../../utils";
+import { capitalize, slugify, formatShortDate } from "../../utils";
 
 const allBlogArticles: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -71,17 +71,17 @@ const sortedSeries = Object.entries(seriesGroups)
     ) : (
       <div class="flex flex-col gap-6">
         {sortedSeries.map(({ name, posts }) => (
-          <div id={'series-' + slugify(name)} class="scroll-mt-24 bg-secondary border border-soft rounded-xl p-6">
+          <div id={'series-' + slugify(name)} class="scroll-mt-24 bg-secondary border border-soft rounded-xl p-6 sm:p-8">
             <div class="flex items-center justify-between gap-3 mb-4">
               <h3 class="text-lg font-semibold text-white">{name}</h3>
-              <span class="text-sm text-muted">{posts.length} {posts.length === 1 ? 'post' : 'posts'}</span>
+              <span class="text-sm text-muted shrink-0">{posts.length} {posts.length === 1 ? 'post' : 'posts'}</span>
             </div>
-            <ol class="space-y-2">
+            <ol class="space-y-3">
               {posts.map((post, index) => (
-                <li class="flex items-baseline gap-3">
+                <li class="flex items-baseline gap-x-4 gap-y-1 flex-wrap">
                   <span class="text-accent text-sm font-semibold shrink-0">Part {index + 1}</span>
                   <a href={'/articles/' + post.slug} class="text-slate-100 hover:text-accent transition-colors text-sm leading-relaxed">{post.data.title}</a>
-                  <span class="text-muted text-xs uppercase tracking-[0.2em] whitespace-nowrap ml-auto shrink-0">{formatDate(post.data.pubDate)}</span>
+                  <span class="text-muted text-xs ml-auto shrink-0">{formatShortDate(post.data.pubDate)}</span>
                 </li>
               ))}
             </ol>

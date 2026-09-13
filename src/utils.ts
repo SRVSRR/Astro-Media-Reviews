@@ -5,6 +5,13 @@ function formatDate(date: Date): string {
     return new Date(date).toLocaleDateString(undefined, options);
 }
 
+// Compact date for tight layouts (e.g. series listings on mobile)
+function formatShortDate(date: Date): string {
+    const options: Intl.DateTimeFormatOptions = {month: 'short', day: 'numeric'};
+
+    return new Date(date).toLocaleDateString(undefined, options);
+}
+
 // Capitalize the first ltter of tags
 function capitalize(str: string): string {
     if(typeof str !== 'string' || str.length === 0) {
@@ -31,4 +38,4 @@ function slugify(str: string): string {
         .replace(/^-+|-+$/g, '');
 }
 
-export { formatDate, capitalize, calculateReadTime, slugify };
+export { formatDate, formatShortDate, capitalize, calculateReadTime, slugify };
