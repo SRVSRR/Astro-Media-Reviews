@@ -3,7 +3,7 @@ title: 'Building a Custom TCP File Transfer Protocol from Scratch'
 description: 'A CS310 Computer Networking assignment: hand-rolling a request/response protocol on top of raw TCP sockets in Python, and where the server and client implementations actually diverge in robustness.'
 pubDate: 2026-09-13
 author: 'Rohan Nandan'
-image: 'tcp-transfer-cover.png'
+image: 'tcp-connection.png'
 tags: ['Networking', 'Backend Engineering']
 slug: tcp-file-transfer-protocol
 ---
