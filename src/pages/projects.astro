@@ -1,0 +1,83 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+const projects = [
+  {
+    name: "AOG Zero",
+    tagline: "AI-powered real-time aircraft APU health monitoring and AOG prevention system.",
+    description:
+      "Next.js + FastAPI + Google OAuth. Won 3rd place and Best Frontend Developer at the Honeywell × TCS AI Hackathon (Dec 2025).",
+    repo: "https://github.com/SRVSRR/aog-zero",
+    post: "/articles/aog-zero",
+    badge: "Hackathon · 3rd Place + Best Frontend",
+  },
+  {
+    name: "Student Administration System",
+    tagline: "Full-stack system for staff, students, classes, enrollments, assessments, and PDF reports.",
+    description:
+      "Next.js + Spring Boot + PostgreSQL. Built for CS241 Software Design & Implementation and graded A+.",
+    repo: "https://github.com/SRVSRR/student-administration-system",
+    post: "/articles/student-administration-system",
+    badge: "CS241 · A+",
+  },
+  {
+    name: "TCP File Transfer Protocol",
+    tagline: "A hand-rolled request/response file-transfer protocol over raw TCP sockets in Python.",
+    description:
+      "With integrity checks and path-traversal protection. Built for CS310 Computer Networking and graded A.",
+    repo: "https://github.com/SRVSRR/CS310-Client-Server-TCP-File-Transfer",
+    post: "/articles/tcp-file-transfer-protocol",
+    badge: "CS310 · A",
+  },
+  {
+    name: "Expense Tracker",
+    tagline: "End-to-end personal finance platform: local-first API, Supabase auth, ML categorization and forecasting.",
+    description:
+      "A five-part case-study series covering a local-first finance API, a Supabase auth migration, ML transaction categorization, cash-flow forecasting, and a production analytics platform.",
+    repo: "https://github.com/SRVSRR",
+    post: "/articles/trustworthy-finance-api",
+    badge: "Flagship · 5-part series",
+  },
+  {
+    name: "USP-BSE-Resources",
+    tagline: "A curated archive of past papers, solutions, and notes from the USP Bachelor of Software Engineering.",
+    description:
+      "160+ files across Year 1-3 covering USP computer science courses (CS140, CS211, and more).",
+    repo: "https://github.com/SRVSRR/USP-BSE-Resources",
+    post: null,
+    badge: "Study resource archive",
+  },
+];
+---
+<MainLayout
+  title="Projects"
+  description="A catalog of Rohan Nandan's projects: hackathon builds, university coursework, and long-running case studies, each with source code and write-ups."
+>
+  <h1 class="text-3xl font-semibold text-white">Projects</h1>
+  <p class="text-muted mt-2 mb-8 max-w-2xl">
+    Every project here has public source code and, where one exists, a full case-study write-up.
+  </p>
+
+  <div class="flex flex-col gap-4">
+    {projects.map(project => (
+      <article class="bg-secondary border border-soft rounded-xl p-5 sm:p-6">
+        <div class="flex flex-wrap items-center gap-x-3 gap-y-2">
+          <h2 class="text-xl font-semibold text-white">{project.name}</h2>
+          <span class="text-xs text-accent bg-soft/50 px-2 py-1 rounded-full">{project.badge}</span>
+        </div>
+        <p class="text-muted text-sm mt-2 leading-relaxed">{project.tagline}</p>
+        <p class="text-muted text-sm mt-1 leading-relaxed">{project.description}</p>
+        <div class="flex flex-wrap items-center gap-4 mt-4 text-sm">
+          <a href={project.repo} target="_blank" rel="noopener noreferrer" class="font-semibold text-accent hover:text-white transition-colors">
+            Source code ↗
+          </a>
+          {project.post && (
+            <a href={project.post} class="font-semibold text-accent hover:text-white transition-colors">
+              Read the case study →
+            </a>
+          )}
+        </div>
+      </article>
+    ))}
+  </div>
+</MainLayout>
