@@ -158,7 +158,7 @@ For each high-priority risk, teams should define:
 
 RMMM converts risk awareness into operational action.
 
-Mitigation, monitoring, and management address three genuinely different moments in a risk's life, which is why treating them as one undifferentiated "risk plan" tends to produce weaker outcomes than addressing each explicitly. Mitigation is proactive: it asks what the team can do now to make the risk less likely or less severe before anything has happened. Monitoring is ongoing: it asks what observable signal would tell the team the risk is trending toward or away from actually occurring, so the team is not caught relying purely on the original probability estimate as time passes. Management is reactive: it is the plan the team commits to in advance for the moment the risk does materialize, which matters because decisions made calmly ahead of time are typically better than decisions made under the pressure of the risk actually happening. Some teams formalize this further with individual risk information sheets — tracking a risk's id, date, probability, impact, and assigned owner in a structured record — precisely so that RMMM does not stay a one-time document exercise but an actively maintained part of the project [5].
+Mitigation, monitoring, and management address three genuinely different moments in a risk's life, which is why treating them as one undifferentiated "risk plan" tends to produce weaker outcomes than addressing each explicitly. Mitigation is proactive: it asks what the team can do now to make the risk less likely or less severe before anything has happened. Monitoring is ongoing: it asks what observable signal would tell the team the risk is trending toward or away from actually occurring, so the team is not caught relying purely on the original probability estimate as time passes. Management is reactive: it is the plan the team commits to in advance for the moment the risk does materialize, which matters because decisions made calmly ahead of time are typically better than decisions made under the pressure of the risk actually happening. Some teams formalize this further with individual risk information sheets — tracking a risk's id, date, probability, impact, and assigned owner in a structured record — precisely so that RMMM does not stay a one-time document exercise but an actively maintained part of the project [4].
 
 ## Conclusion
 
@@ -168,8 +168,7 @@ The thread running through every technique covered here — categorization, iden
 
 ## References
 
-1. R.L.A. College — [Software Engineering Risk Management](https://rlacollege.edu.in/pdf/computer/Software%20Engineering%20Risk-management.pdf)
-2. SlideShare — [Risk Management by Roger Pressman](https://www.slideshare.net/slideshow/risk-management-by-roger-pressman-presentation/786057)
-3. SlideShare — [Software Engineering (Risk Management)](https://www.slideshare.net/slideshow/software-engineering-risk-management/156359103)
-4. SlideShare — [Risk Management by Roger S. Pressman](https://www.slideshare.net/slideshow/risk-management-by-roger-s-pressman-presentation/792041)
-5. SlideServe — [Lecture 4: Risk Analysis and Management](https://www.slideserve.com/dooley/lecture-4-risk-analysis-and-management)
+1. SlideShare — [Risk Management by Roger Pressman](https://www.slideshare.net/slideshow/risk-management-by-roger-pressman-presentation/786057)
+2. SlideShare — [Software Engineering (Risk Management)](https://www.slideshare.net/slideshow/software-engineering-risk-management/156359103)
+3. SlideShare — [Risk Management by Roger S. Pressman](https://www.slideshare.net/slideshow/risk-management-by-roger-s-pressman-presentation/792041)
+4. SlideServe — [Lecture 4: Risk Analysis and Management](https://www.slideserve.com/dooley/lecture-4-risk-analysis-and-management)

@@ -78,7 +78,7 @@ Modern general-purpose and mobile OSes also include **middleware**—software fr
 
 For a deeper, structured treatment of these concepts, see:
 
-- Silberschatz, A., Galvin, P. B., and Gagne, G. (2018). *Operating System Concepts* (10th ed.). John Wiley and Sons. ISBN 81-265-0962-7. Available at: [Archive.org](https://archive.org/details/operating-system-concepts-10th).
+- Silberschatz, A., Galvin, P. B., and Gagne, G. (2018). *Operating System Concepts* (10th ed.). John Wiley and Sons. ISBN 81-265-0962-7.
 
 ## Conclusion
 
