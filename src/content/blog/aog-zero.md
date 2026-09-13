@@ -16,6 +16,8 @@ AOG Zero targets one of those components: the Auxiliary Power Unit (APU), the sm
 
 The project was an eight-person hackathon build completed between December 15 and 21, 2025. The constraint was not just catching failure early, but doing it across a whole fleet with a dashboard a maintenance manager could act on in time.
 
+![Fleet dashboard with each aircraft's APU health priority|large](/images/aog-zero-fleet.png)
+
 ## Approach
 
 We split the work into three layers: a synthetic but physically grounded sensor simulator, a rule engine that turns raw sensor values into a health score and maintenance priority, and a dashboard for fleet managers to act on it.
@@ -36,6 +38,8 @@ A flight-hours multiplier tightens the window for high-utilization airframes: ai
 
 The health score itself is computed per sensor by normalizing the recent mean reading between a healthy and critical threshold — for example, oil temperature: healthy = 80°C, critical = 140°C — then averaging across all six sensors on the APU (oil temperature, combustion temperature, ambient temperature, pressure, RPM, vibration). It is a straightforward, explainable rule-based calculation, which turned out to matter more than we expected (see Lessons).
 
+![Aircraft sensor readings with charts|medium](/images/aog-zero-sensors.png)
+
 ### 2. The trained model that never shipped
 
 In parallel, we built a genuine data-science pipeline in the `ai/` folder. A dataset generator produced synthetic APU sensor series, a preprocessing notebook extracted 15 statistical features per sensor (mean, standard deviation, RMS, kurtosis, skew, IQR, and more), and a training notebook fit a `LinearRegression` model predicting Remaining Useful Life (RUL) as a percentage. On held-out data the model scored R² = 0.970 with an MSE of 12.76%² — a strong result on a hackathon timeline — and it was saved as `linear_rul_model.pkl`, built from a 16,000-row engineered feature set.
@@ -53,6 +57,8 @@ My contributions were concentrated on the frontend, mostly in the aircraft list,
 - CSV import and Excel export (via `exceljs`) for sensor and log data.
 - Sensor-reading charts built with Shadcn.
 - A pass of button, hover-state, and sidebar styling cleanup.
+
+![Aircraft list with health-based filters and search|medium](/images/aog-zero-aircraft.png)
 
 ## Stack
 
@@ -72,12 +78,6 @@ The team took **3rd place** at the event, and I picked up **Best Frontend Develo
 - Seven seeded aircraft spanning Boeing 737-800 and 787-9 and Airbus A320 and A350 airframes, at fixed degradation levels from 5% to 90%, each with 1,000 synthetic readings per sensor.
 - An offline RUL model (Linear Regression on 15 statistical features per sensor) at R² = 0.970 on held-out data.
 - A fleet dashboard that surfaces the worst aircraft first, filters by health band, and exports sensor and log data.
-
-![Fleet dashboard with each aircraft's APU health priority|large](/images/aog-zero-fleet.png)
-
-![Aircraft sensor readings with charts|medium](/images/aog-zero-sensors.png)
-
-![Aircraft list with health-based filters and search|medium](/images/aog-zero-aircraft.png)
 
 ## Lessons
 
