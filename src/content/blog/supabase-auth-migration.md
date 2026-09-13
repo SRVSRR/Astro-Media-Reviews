@@ -100,6 +100,7 @@ Relevant migration:
 - Alembic reversible migrations
 - FastAPI authentication dependencies
 - `pytest` with async fixtures and isolated databases
+- **Repository:** [github.com/SRVSRR](https://github.com/SRVSRR)
 
 ## Results
 

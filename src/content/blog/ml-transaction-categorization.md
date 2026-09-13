@@ -73,6 +73,7 @@ The categorizer avoids exotic deployment machinery. Artifacts live in backend-co
 - NumPy and pandas
 - FastAPI endpoints for suggestion, correction logging, training, and model inspection
 - File-backed model, vectorizer, encoder, and metadata artifacts
+- **Repository:** [github.com/SRVSRR](https://github.com/SRVSRR)
 
 ## Results
 

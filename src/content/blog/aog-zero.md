@@ -67,6 +67,7 @@ My contributions were concentrated on the frontend, mostly in the aircraft list,
 - **Database:** PostgreSQL — `Company` → `Aircraft` → `AircraftPart` (APU) → `PartSensor` (six sensor types) → `SensorReading`, plus a separate `AircraftLog` table for cumulative flight hours.
 - **ML tooling:** scikit-learn, pandas, numpy, Jupyter — used offline for feature engineering and model training, not in the request path.
 - **Infra:** Docker, Azure DevOps for CI, mirrored to GitHub.
+- **Repository:** [github.com/SRVSRR/aog-zero](https://github.com/SRVSRR/aog-zero)
 
 Four core REST endpoints (`/aircrafts`, `/aircrafts/{id}`, `/aircrafts/{id}/flights`, `/health`), each duplicated under `/api/*`.
 

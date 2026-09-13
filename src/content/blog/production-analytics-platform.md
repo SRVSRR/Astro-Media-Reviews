@@ -119,6 +119,7 @@ Mobile devices cannot reach a development machine's `127.0.0.1`; the case-study 
 - Render deployment with health checks
 - OpenAPI, Swagger UI, and ReDoc
 - Supabase Auth and `@supabase/supabase-js` for clients
+- **Repository:** [github.com/SRVSRR](https://github.com/SRVSRR)
 
 ## Results
 

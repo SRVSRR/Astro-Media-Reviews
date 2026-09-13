@@ -34,7 +34,7 @@ Some of the business rules baked into the backend are the kind that are easy to 
 - A teacher can only be assigned to one class at a time.
 - Grading uses Fiji's secondary-school letter scale rather than a generic A–F curve — `getLetterGrade()` caps at A+ from 85% and floors at E below 40%, with letter colours to match in the UI.
 
-![Class management view with the enrolled students list|medium](/images/sas-classes.png)
+![Class management view with the enrolled students list|large](/images/sas-classes.png)
 
 ### 2. Authentication and reporting
 
@@ -42,7 +42,7 @@ Auth is JWT-based, issued by Spring Security on login and carrying the user's ro
 
 Report generation runs entirely in the browser: `pdfExport.ts` builds class marksheets and per-subject reports with jsPDF and jspdf-autotable, computing the weighted subject grade and overall grade client-side.
 
-![Assessment management with mark entry and weights|medium](/images/sas-assessments.png)
+![Assessment management with mark entry and weights|large](/images/sas-assessments.png)
 
 ## Stack
 
@@ -51,6 +51,7 @@ Report generation runs entirely in the browser: `pdfExport.ts` builds class mark
 - **Database:** PostgreSQL via JPA/Hibernate — `User` (single table for Student/Teacher/Admin), `ClassEntity` (many-to-many with `Subject` and `User` for enrollment), `ClassSubject` as the join entity that `Assessment` hangs off, and `Mark` tying a student, an assessment, and a score together.
 - **PDF export:** jsPDF + jspdf-autotable, generated client-side.
 - **Email:** Spring Mail for password-reset links.
+- **Repository:** [github.com/SRVSRR/student-administration-system](https://github.com/SRVSRR/student-administration-system)
 
 Seven controllers (`/api/assessments`, `/api/auth`, `/api/classes`, `/api/class-subjects`, `/api/marks`, `/api/subjects`, `/api/users`) covering roughly 30 REST endpoints in total.
 

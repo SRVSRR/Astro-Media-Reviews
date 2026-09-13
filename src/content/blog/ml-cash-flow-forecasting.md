@@ -89,6 +89,7 @@ Transaction, account, and recurring-rule mutations invalidate the affected user'
 - FastAPI forecast endpoints
 - PostgreSQL-backed prediction cache with TTL and invalidation
 - Pydantic response schemas with confidence-interval fields
+- **Repository:** [github.com/SRVSRR](https://github.com/SRVSRR)
 
 ## Results
 

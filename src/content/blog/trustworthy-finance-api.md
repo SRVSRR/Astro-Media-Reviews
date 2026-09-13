@@ -102,6 +102,7 @@ The cache behavior is tested directly, including:
 - PostgreSQL through Supabase for production
 - `pytest`, `pytest-asyncio`, and `httpx.ASGITransport`
 - JWT authentication backed by Supabase in production
+- **Repository:** [github.com/SRVSRR](https://github.com/SRVSRR)
 
 ## Results
 
