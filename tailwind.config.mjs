@@ -4,7 +4,7 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['"Space Grotesk"', 'Inter', 'system-ui', 'sans-serif'],
+				sans: ['"Space Grotesk Variable"', '"Inter Variable"', 'system-ui', 'sans-serif'],
 			},
 			colors: {
 				primary: '#0b1220',
