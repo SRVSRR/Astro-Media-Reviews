@@ -37,6 +37,10 @@ export default defineConfig({
       const lastmod = articleLastmod[url];
       if (lastmod) entry.lastmod = lastmod;
       return entry;
+    },
+    filter(page) {
+      const url = page.replace(/\/$/, '').replace(/^https?:\/\/[^/]+/, '');
+      return url !== '/articles/search' && url !== '/articles/tags';
     }
   })],
   output: 'static', // Pre-renders by default, keeps API dynamic
