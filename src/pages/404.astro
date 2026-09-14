@@ -26,7 +26,7 @@ const recentPosts: CollectionEntry<'blog'>[] = sortedPosts.slice(0, 4);
     </div>
     <div class="flex flex-wrap justify-center gap-3">
       <a href="/" class="inline-block bg-soft border border-soft text-white px-4 py-2 rounded-lg hover:border-accent hover:text-accent transition">Home</a>
-      <a href="/articles" class="inline-block bg-soft border border-soft text-white px-4 py-2 rounded-lg hover:border-accent hover:text-accent transition">All Articles</a>
+      <a href="/articles" class="inline-block bg-soft border border-soft text-white px-4 py-2 rounded-lg hover:border-accent hover:text-accent transition">Articles</a>
       <a href="/skills" class="inline-block bg-soft border border-soft text-white px-4 py-2 rounded-lg hover:border-accent hover:text-accent transition">Skills</a>
       {latestPost && (
         <a href={'/articles/' + latestPost.slug} class="inline-block bg-accent text-primary px-4 py-2 rounded-lg font-semibold hover:brightness-110 transition">Latest Post</a>

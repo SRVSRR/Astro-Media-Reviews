@@ -14,11 +14,11 @@ const currentPage: number = 1;
 const articlesForPage: CollectionEntry<'blog'>[] = allBlogArticles.slice(0, ARTICLES_PER_PAGE);
 ---
 <MainLayout
-  title="All Articles"
+  title="Articles"
   description="Browse all software engineering articles, tutorials, and project management guides."
 >
     <div class="flex items-center justify-between gap-3 pb-3">
-      <h1 class="text-3xl font-semibold text-white">All Articles</h1>
+      <h1 class="text-3xl font-semibold text-white">Articles</h1>
       <span class="text-sm text-muted">{allBlogArticles.length} posts</span>
     </div>
     <SearchForm />
