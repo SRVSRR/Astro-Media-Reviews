@@ -4,7 +4,6 @@ description: 'A CS310 Computer Networking assignment: hand-rolling a request/res
 pubDate: 2026-09-13
 author: 'Rohan Nandan'
 image: 'tcp-connection.webp'
-ogImage: 'tcp-connection-og.webp'
 tags: ['Networking', 'Backend Engineering']
 slug: tcp-file-transfer-protocol
 ---
