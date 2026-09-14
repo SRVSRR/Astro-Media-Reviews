@@ -38,4 +38,26 @@ function slugify(str: string): string {
         .replace(/^-+|-+$/g, '');
 }
 
-export { formatDate, formatShortDate, capitalize, calculateReadTime, slugify };
+// Escape text for safe insertion into HTML
+function escapeHtml(value: string): string {
+    return value
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
+// Wrap query terms in <mark>, longest term first to avoid partial matches
+function highlightTerms(value: string, terms: string[]): string {
+    const escaped = escapeHtml(value);
+    const patterns = terms
+        .map((term) => term.trim())
+        .filter(Boolean)
+        .sort((a, b) => b.length - a.length)
+        .map((term) => escapeHtml(term).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+    if (patterns.length === 0) return escaped;
+    return escaped.replace(new RegExp(`(${patterns.join('|')})`, 'gi'), '<mark>$1</mark>');
+}
+
+export { formatDate, formatShortDate, capitalize, calculateReadTime, slugify, escapeHtml, highlightTerms };

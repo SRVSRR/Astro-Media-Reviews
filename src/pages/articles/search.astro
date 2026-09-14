@@ -14,6 +14,7 @@ if (!rawQuery || rawQuery.trim().length === 0) {
 }
 
 const query: string = rawQuery.trim().toLowerCase();
+const terms: string[] = query.split(/\s+/).filter(Boolean);
 const pageTitle = `Search Results: ${rawQuery}`;
 const pageDescription = `Search results for "${rawQuery}" on ${Astro.site?.hostname ?? 'the site'}.`;
 
@@ -45,7 +46,8 @@ const searchResults  = allBlogArticles.filter(article => {
 
 <MainLayout title={pageTitle} description={pageDescription} noindex={true}>
     <SearchForm />
-    <h1 class="text-2xl pb-3 mt-6 text-white">Results for <strong>{rawQuery}</strong></h1>
+    <h1 class="text-2xl pb-1 mt-6 text-white">Results for <strong>{rawQuery}</strong></h1>
+    <p class="text-muted text-sm mb-4">{searchResults.length} {searchResults.length === 1 ? 'article' : 'articles'} matched{terms.length > 1 ? ` for "${rawQuery}"` : ''}</p>
 
     {searchResults.length === 0 ? (
         <div class="text-center py-12">
@@ -59,8 +61,16 @@ const searchResults  = allBlogArticles.filter(article => {
     ) : (
         <div class="flex flex-col gap-4">
             {searchResults.map(article => (
-                <ArticleCard article={article}/>
+                <ArticleCard article={article} terms={terms}/>
             ))}
         </div>
     )}
 </MainLayout>
+
+<style is:global>
+  mark {
+    background-color: transparent;
+    color: #f97316;
+    font-weight: 600;
+  }
+</style>

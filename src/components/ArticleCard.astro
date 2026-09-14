@@ -1,19 +1,29 @@
 ---
-import { formatDate, calculateReadTime } from "../utils";
+import { formatDate, calculateReadTime, highlightTerms } from "../utils";
 import type { CollectionEntry } from "astro:content";
 
-const { article } = Astro.props;
+const { article, terms } = Astro.props;
 
 interface Props {
   article: CollectionEntry<'blog'>;
+  terms?: string[];
 }
 
 const readTime = calculateReadTime(article.body);
+const renderTerms = (text: string): string => (terms && terms.length > 0 ? highlightTerms(text, terms) : "");
 ---
 <a href={'/articles/' + article.slug} class="block bg-secondary border border-soft rounded-xl p-5 transition-colors duration-200 hover:border-accent">
-  <h2 class="text-xl font-semibold leading-tight text-white">{article.data.title}</h2>
+  {terms && terms.length > 0 ? (
+    <h2 class="text-xl font-semibold leading-tight text-white" set:html={renderTerms(article.data.title)}></h2>
+  ) : (
+    <h2 class="text-xl font-semibold leading-tight text-white">{article.data.title}</h2>
+  )}
   {article.data.description && (
-    <p class="text-muted text-sm leading-relaxed mt-2">{article.data.description}</p>
+    terms && terms.length > 0 ? (
+      <p class="text-muted text-sm leading-relaxed mt-2" set:html={renderTerms(article.data.description)}></p>
+    ) : (
+      <p class="text-muted text-sm leading-relaxed mt-2">{article.data.description}</p>
+    )
   )}
   <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mt-3 text-xs">
     <span class="text-accent">{formatDate(article.data.pubDate)}</span>
