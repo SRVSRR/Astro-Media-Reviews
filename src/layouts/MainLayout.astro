@@ -86,6 +86,13 @@ const websiteJsonLd = {
       <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
     )}
     <meta name="google-site-verification" content="PSZNQJwIQqBeaCpv_Klld7nAnK0sNLNuSVnSkqhcALc" />
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-P6SN134KHY"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-P6SN134KHY');
+    </script>
     {ads && <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6251429948741629" crossorigin="anonymous"></script>}
     <script is:inline defer src="https://cloud.umami.is/script.js" data-website-id="be608fd6-4520-446c-b1ef-151f8620dd6a"></script>
     <title>{pageTitle}</title>
