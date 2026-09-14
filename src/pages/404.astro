@@ -1,13 +1,17 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
 import SearchForm from "../components/SearchForm.astro";
+import ArticleCard from "../components/ArticleCard.astro";
 import { Image } from 'astro:assets';
 import error from '../images/error-404.png'
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 
-const latestPost: CollectionEntry<'blog'> | undefined = (await getCollection('blog'))
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())[0];
+const sortedPosts: CollectionEntry<'blog'>[] = (await getCollection('blog'))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const latestPost: CollectionEntry<'blog'> | undefined = sortedPosts[0];
+const recentPosts: CollectionEntry<'blog'>[] = sortedPosts.slice(0, 4);
 ---
 
 <MainLayout title="404 - Page Not Found" noindex={true}>
@@ -29,4 +33,15 @@ const latestPost: CollectionEntry<'blog'> | undefined = (await getCollection('bl
       )}
     </div>
   </div>
+
+  {recentPosts.length > 0 && (
+    <section class="mt-14 pb-4">
+      <h2 class="text-2xl font-semibold text-white mb-4">Recent posts</h2>
+      <div class="flex flex-col gap-4">
+        {recentPosts.map(article => (
+          <ArticleCard article={article} />
+        ))}
+      </div>
+    </section>
+  )}
 </MainLayout>
