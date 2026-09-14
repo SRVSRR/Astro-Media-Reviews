@@ -3,7 +3,7 @@ title: 'Agile Development: Frameworks, Principles & Practices'
 description: 'How Agile teams deliver software iteratively, covering Scrum, XP, Kanban, and DevOps principles and practices.'
 pubDate: 2026-01-31
 author: 'Rohan Nandan'
-image: 'image5.webp'
+image: 'cover-agile-development-methodologies.webp'
 tags: ['Agile', 'Scrum']
 slug: agile-development-methodologies
 ---

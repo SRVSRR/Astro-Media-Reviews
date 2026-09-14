@@ -3,7 +3,7 @@ title: 'SDLC Principles: Process, Planning, Testing, and Deployment'
 description: 'Core SDLC principles for process, planning, modeling, construction, testing, and deployment.'
 pubDate: 2026-01-29
 author: 'Rohan Nandan'
-image: 'image3.webp'
+image: 'cover-sdlc-principles-guide.webp'
 tags: ['Software Engineering']
 slug: sdlc-principles-guide
 ---

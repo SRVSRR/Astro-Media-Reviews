@@ -3,7 +3,7 @@ title: 'Choosing a Process Model: Waterfall, Prototyping, Spiral, Unified Proces
 description: 'Compares prescriptive and agile models, their trade-offs, and how to select a process model based on project risk, scale, and change rate.'
 pubDate: 2026-01-30
 author: 'Rohan Nandan'
-image: 'image4.webp'
+image: 'cover-selecting-software-process-models-waterfall-to-agile.webp'
 tags: ['Agile', 'Software Engineering']
 slug: selecting-software-process-models-waterfall-to-agile
 ---

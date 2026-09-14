@@ -3,7 +3,7 @@ title: 'Shipping Analytics Safely: Caching, Budgets, Deployment, and Handoff'
 description: 'User-scoped caching with TTLs, mutation-driven invalidation, rule-based budgets, Render deployment with health checks, and unambiguous mobile handoff.'
 pubDate: 2026-09-12
 author: 'Rohan Nandan'
-image: 'image4.4.webp'
+image: 'cover-production-analytics-platform.webp'
 tags: ['Data Engineering', 'Platform Engineering']
 slug: production-analytics-platform
 series: "Expense Tracker Case Studies"

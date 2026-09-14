@@ -3,7 +3,7 @@ title: 'Risk Management in Software Engineering: Identification, Projection, and
 description: 'Covers software risk types, risk identification factors, assessment checklists, projection steps, risk exposure, and RMMM planning.'
 pubDate: 2026-04-24
 author: 'Rohan Nandan'
-image: 'image5.webp'
+image: 'cover-risk-management-identification-projection-and-exposure.webp'
 tags: ['Risk Management', 'Testing']
 slug: risk-management-identification-projection-and-exposure
 ---

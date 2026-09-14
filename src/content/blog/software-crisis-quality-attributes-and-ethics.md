@@ -3,7 +3,7 @@ title: 'The Software Crisis Revisited: Quality Attributes, Failure Patterns, and
 description: 'Explains software crisis symptoms, causes, quality attributes, and the ACM code of ethics as a practical framework for responsible engineering.'
 pubDate: 2026-04-21
 author: 'Rohan Nandan'
-image: 'image2.webp'
+image: 'cover-software-crisis-quality-attributes-and-ethics.webp'
 tags: ['Software Engineering', 'Ethics']
 slug: software-crisis-quality-attributes-and-ethics
 ---

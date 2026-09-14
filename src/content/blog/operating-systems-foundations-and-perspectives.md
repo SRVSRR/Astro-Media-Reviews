@@ -3,7 +3,7 @@ title: 'Operating Systems Foundations: Components, Perspectives, and the Kernel'
 description: 'Breaks down system components, user and OS viewpoints, kernel responsibilities, and the API vs system call model.'
 pubDate: 2026-05-30
 author: 'Rohan Nandan'
-image: 'image6.webp'
+image: 'cover-operating-systems-foundations-and-perspectives.webp'
 tags: ['Operating Systems']
 slug: operating-systems-foundations-and-perspectives
 ---

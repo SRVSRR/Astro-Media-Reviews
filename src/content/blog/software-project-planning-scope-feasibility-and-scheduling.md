@@ -3,7 +3,7 @@ title: 'Software Project Planning: Scope, Feasibility, and Scheduling Foundation
 description: 'Explains the five core planning activities, project task set, scope definition, feasibility checks, and schedule setup for reliable software delivery.'
 pubDate: 2026-04-24
 author: 'Rohan Nandan'
-image: 'image4.1.webp'
+image: 'cover-software-project-planning-scope-feasibility-and-scheduling.webp'
 tags: ['Project Management']
 slug: software-project-planning-scope-feasibility-and-scheduling
 ---

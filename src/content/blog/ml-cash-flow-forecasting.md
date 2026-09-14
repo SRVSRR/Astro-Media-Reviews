@@ -3,7 +3,7 @@ title: 'Forecasting Cash Flow with Uncertainty, Not Just Averages'
 description: 'Separate income/expense LightGBM regressors, time-aware features, walk-forward validation, and 80% confidence intervals make cash-flow projections actionable.'
 pubDate: 2026-09-11
 author: 'Rohan Nandan'
-image: 'image4.3.webp'
+image: 'cover-ml-cash-flow-forecasting.webp'
 tags: ['Machine Learning', 'Data Science']
 slug: ml-cash-flow-forecasting
 series: "Expense Tracker Case Studies"

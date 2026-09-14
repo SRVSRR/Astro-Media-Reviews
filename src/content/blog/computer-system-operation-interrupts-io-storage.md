@@ -3,7 +3,7 @@ title: 'Computer-System Operation: Interrupts, I/O, and Storage Hierarchy'
 description: 'Explains CPU and device concurrency, interrupts and traps, bootstrapping, I/O flow, and storage hierarchy basics.'
 pubDate: 2026-05-31
 author: 'Rohan Nandan'
-image: 'image4.4.webp'
+image: 'cover-computer-system-operation-interrupts-io-storage.webp'
 tags: ['Operating Systems']
 slug: computer-system-operation-interrupts-io-storage
 ---

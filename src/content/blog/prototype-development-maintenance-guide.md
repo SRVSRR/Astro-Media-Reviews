@@ -3,7 +3,7 @@ title: 'Prototype Development and Software Maintenance'
 description: 'The prototype development process from first prototype to release candidates, plus software maintenance types.'
 pubDate: 2026-02-01
 author: 'Rohan Nandan'
-image: 'image1.webp'
+image: 'cover-prototype-development-maintenance-guide.webp'
 tags: ['Prototyping', 'Maintenance']
 slug: prototype-development-maintenance-guide
 ---

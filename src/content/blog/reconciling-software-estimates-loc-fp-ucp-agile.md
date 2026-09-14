@@ -3,7 +3,7 @@ title: 'Reconciling Software Estimates: LOC, FP, UCP, and Agile Story-Based Meth
 description: 'Explains estimate reconciliation and compares LOC, FP, process-based, UCP, and agile estimation using standard formulas and examples.'
 pubDate: 2026-04-24
 author: 'Rohan Nandan'
-image: 'image4.2.webp'
+image: 'cover-reconciling-software-estimates-loc-fp-ucp-agile.webp'
 tags: ['Estimation', 'Agile']
 slug: reconciling-software-estimates-loc-fp-ucp-agile
 ---
