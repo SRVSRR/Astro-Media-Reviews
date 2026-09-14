@@ -33,6 +33,7 @@ const siteUrlString = siteUrl.toString().replace(/\/$/, '');
 const canonicalUrl = new URL(`${Astro.url.pathname}${Astro.url.search}`, siteUrl).toString();
 const imageUrl = image ? new URL(image, siteUrl).toString() : undefined;
 const pageTitle = `${SITE_TITLE} - ${title}`;
+const fontCssUrl = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap';
 const websiteJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
@@ -84,10 +85,10 @@ const websiteJsonLd = {
     <script is:inline defer src="https://cloud.umami.is/script.js" data-website-id="be608fd6-4520-446c-b1ef-151f8620dd6a"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" as="style" href={fontCssUrl} onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet" href={fontCssUrl} />
+    </noscript>
     <title>{pageTitle}</title>
   </head>
   <body class="bg-gradient-to-b from-primary via-soft to-primary text-slate-100 min-h-screen font-sans">
