@@ -8,7 +8,7 @@ const imagesDir = join(process.cwd(), 'public/images');
 const covers = readdirSync(blogDir)
   .filter((f) => f.endsWith('.md'))
   .map((f) => readFileSync(join(blogDir, f), 'utf8'))
-  .map((raw) => raw.match(/^image: *'([^']+)'/)?.[1])
+  .map((raw) => raw.match(/^image: *'([^']+)'/m)?.[1])
   .filter(Boolean);
 
 let generated = 0;
