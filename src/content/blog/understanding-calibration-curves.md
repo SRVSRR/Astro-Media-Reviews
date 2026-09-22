@@ -53,6 +53,8 @@ The shape of the deviation from the diagonal tells you how the model is wrong:
 - **Jagged, non-monotonic curve** — sometimes genuine miscalibration, but often a sample-size artifact. A bin with five points gives a noisy estimate of its true positive rate. Check the per-bin counts before concluding the model is broken.
 - **Diverges in the middle but converges at the extremes** — the model is decisive and roughly correct when very confident, but muddled on mid-range judgment calls.
 
+![Calibration curves comparing overconfident, underconfident, and well-calibrated models against the ideal diagonal|large](/images/calibration-curve-comparison.webp)
+
 ### A Quick Example
 
 Suppose an SVC's curve stays flat at 0 across predicted probabilities 0.0–0.4, jumps sharply to near 1.0, oscillates around the diagonal in the middle, then converges near the top. Reading it:
