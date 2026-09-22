@@ -19,6 +19,7 @@ const covers = [
   { slug: 'ml-transaction-categorization', kicker: 'Expense Tracker · Part 3', lines: ['ML Transaction', 'Categorization'] },
   { slug: 'ml-cash-flow-forecasting', kicker: 'Expense Tracker · Part 4', lines: ['Cash-Flow', 'Forecasting'] },
   { slug: 'production-analytics-platform', kicker: 'Expense Tracker · Part 5', lines: ['Production Analytics', 'Platform'] },
+  { slug: 'understanding-calibration-curves', kicker: 'Machine Learning · Study Note', lines: ['Calibration Curves'] },
 ];
 
 function svg({ kicker, lines }) {
