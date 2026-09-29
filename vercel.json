@@ -5,6 +5,17 @@
       "has": [
         {
           "type": "host",
+          "value": "www.srvsrr.dev"
+        }
+      ],
+      "destination": "https://srvsrr.dev/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
           "value": "srvsrr-blogs-kcs70phbh-rohan-nandans-projects.vercel.app"
         }
       ],
