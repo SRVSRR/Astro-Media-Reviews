@@ -40,7 +40,7 @@ export default defineConfig({
     },
     filter(page) {
       const url = page.replace(/\/$/, '').replace(/^https?:\/\/[^/]+/, '');
-      return url !== '/articles/search' && url !== '/articles/tags';
+      return url !== '/articles/search';
     }
   })],
   output: 'static', // Pre-renders by default, keeps API dynamic

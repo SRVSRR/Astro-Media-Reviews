@@ -51,6 +51,11 @@
       "source": "/articles/tag/intro-to-software-engineering",
       "destination": "/articles/browse",
       "permanent": true
+    },
+    {
+      "source": "/articles/tags",
+      "destination": "/articles/browse",
+      "permanent": true
     }
   ],
   "headers": [
