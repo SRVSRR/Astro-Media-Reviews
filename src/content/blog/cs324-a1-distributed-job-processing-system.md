@@ -6,6 +6,7 @@ author: 'Rohan Nandan'
 image: 'cover-cs324-a1-distributed-job-processing-system.webp'
 tags: ['Distributed Systems', 'Java']
 slug: cs324-a1-distributed-job-processing-system
+series: 'Distributed Job Processing'
 ---
 
 > Source: [github.com/SRVSRR/distributed-job-processing-system](https://github.com/SRVSRR/distributed-job-processing-system)
