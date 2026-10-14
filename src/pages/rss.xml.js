@@ -8,6 +8,7 @@ export async function GET(context) {
     title: 'SRVSRR — Data Scientist & Data Engineer',
     description: 'Full-stack ML, data engineering, and software engineering notes.',
     site: context.site,
+    trailingSlash: false,
     items: posts
       .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
       .map(post => ({
