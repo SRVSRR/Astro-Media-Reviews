@@ -1,5 +1,5 @@
 ---
-title: 'CS324 Assignment 2: Distributed Job Processing with gRPC Leader Election in Java'
+title: 'Building a Distributed Job System with gRPC: Leader Election, Progress Streaming, and Failure Recovery'
 description: 'A retrospective on rebuilding our RMI computing cluster with gRPC, a JAC-based flood election, live progress streaming, and failure recovery.'
 pubDate: 2026-10-12
 author: 'Rohan Nandan'
