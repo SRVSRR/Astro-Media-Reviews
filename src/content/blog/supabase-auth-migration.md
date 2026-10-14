@@ -6,7 +6,7 @@ author: 'Rohan Nandan'
 image: 'cover-supabase-auth-migration.webp'
 tags: ['Backend Engineering', 'Security']
 slug: supabase-auth-migration
-series: "Expense Tracker Case Studies"
+series: "Expense Tracker Engineering"
 ---
 
 > Source: [github.com/SRVSRR](https://github.com/SRVSRR)

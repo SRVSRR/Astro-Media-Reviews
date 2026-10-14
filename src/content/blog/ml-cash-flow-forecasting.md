@@ -6,7 +6,7 @@ author: 'Rohan Nandan'
 image: 'cover-ml-cash-flow-forecasting.webp'
 tags: ['Machine Learning', 'Data Science']
 slug: ml-cash-flow-forecasting
-series: "Expense Tracker Case Studies"
+series: "Expense Tracker Engineering"
 ---
 
 > Source: [github.com/SRVSRR](https://github.com/SRVSRR)

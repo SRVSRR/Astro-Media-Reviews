@@ -105,7 +105,7 @@ Frontmatter schema (all fields in `entry.data`):
   author: string;         // required
   image: string;          // required — filename only, e.g. 'image5.webp'
   tags: string[];         // required
-  series?: string;        // optional — groups connected posts (e.g. 'Expense Tracker Case Studies')
+  series?: string;        // optional — groups connected posts (e.g. 'Expense Tracker Engineering')
 }
 ```
 

@@ -6,7 +6,7 @@ author: 'Rohan Nandan'
 image: 'cover-trustworthy-finance-api.webp'
 tags: ['Backend Engineering', 'Data Engineering']
 slug: trustworthy-finance-api
-series: "Expense Tracker Case Studies"
+series: "Expense Tracker Engineering"
 ---
 
 > Source: [github.com/SRVSRR](https://github.com/SRVSRR)

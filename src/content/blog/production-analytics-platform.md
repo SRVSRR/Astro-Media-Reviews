@@ -6,7 +6,7 @@ author: 'Rohan Nandan'
 image: 'cover-production-analytics-platform.webp'
 tags: ['Data Engineering', 'Platform Engineering']
 slug: production-analytics-platform
-series: "Expense Tracker Case Studies"
+series: "Expense Tracker Engineering"
 ---
 
 > Source: [github.com/SRVSRR](https://github.com/SRVSRR)
