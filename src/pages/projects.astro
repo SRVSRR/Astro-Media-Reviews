@@ -1,7 +1,19 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 
-const projects = [
+interface Project {
+  name: string;
+  tagline: string;
+  description: string;
+  repo: string;
+  post?: string;
+  postLabel?: string;
+  post2?: string;
+  post2Label?: string;
+  badge: string;
+}
+
+const projects: Project[] = [
   {
     name: "AOG Zero",
     tagline: "AI-powered real-time aircraft APU health monitoring and AOG prevention system.",
@@ -28,6 +40,18 @@ const projects = [
     repo: "https://github.com/SRVSRR/CS310-Client-Server-TCP-File-Transfer",
     post: "/articles/tcp-file-transfer-protocol",
     badge: "CS310 · A",
+  },
+  {
+    name: "Distributed Job Processing System",
+    tagline: "Peer-to-peer distributed computing cluster in Java — built on RMI, then rebuilt with gRPC.",
+    description:
+      "Unstructured worker overlay with JAC-based flood leader election, five-job terms, and a Swing client. Built by a team of four for CS324.",
+    repo: "https://github.com/SRVSRR/distributed-job-processing-system",
+    post: "/articles/cs324-a1-distributed-job-processing-system",
+    postLabel: "Read part 1 (RMI) →",
+    post2: "/articles/cs324-assignment-2-distributed-job-processing-grpc",
+    post2Label: "Read part 2 (gRPC) →",
+    badge: "CS324 · Team of four",
   },
   {
     name: "Expense Tracker",
@@ -73,7 +97,12 @@ const projects = [
           </a>
           {project.post && (
             <a href={project.post} class="font-semibold text-accent hover:text-white transition-colors">
-              Read the case study →
+              {project.postLabel ?? 'Read the case study →'}
+            </a>
+          )}
+          {project.post2 && (
+            <a href={project.post2} class="font-semibold text-accent hover:text-white transition-colors">
+              {project.post2Label ?? 'Read the follow-up →'}
             </a>
           )}
         </div>
