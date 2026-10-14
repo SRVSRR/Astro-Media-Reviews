@@ -8,6 +8,8 @@ tags: ['Distributed Systems', 'Java']
 slug: cs324-a1-distributed-job-processing-system
 ---
 
+> Source: [github.com/SRVSRR/distributed-job-processing-system](https://github.com/SRVSRR/distributed-job-processing-system)
+
 For CS324 Assignment 1, our group of four built a Java 17 + Maven + Java RMI cluster that runs data-parallel jobs across an unstructured peer-to-peer worker overlay under an elected coordinator. Looking back, the project had a natural question order: workers had to find each other first, which forced us to justify the bootstrap, which raised the centralisation question, which left jobs needing a scheduler, which needed an election, which needed message suppression, which needed thread safety. This post follows that order, with the reasoning we used at each step.
 
 ## The Pieces
