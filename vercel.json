@@ -16,10 +16,10 @@
       "has": [
         {
           "type": "host",
-          "value": "srvsrr-blogs-kcs70phbh-rohan-nandans-projects.vercel.app"
+          "value": "srvsrr.vercel.app"
         }
       ],
-      "destination": "https://srvsrr.vercel.app/:path*",
+      "destination": "https://srvsrr.dev/:path*",
       "permanent": true
     },
     {
@@ -54,6 +54,24 @@
     }
   ],
   "headers": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": ".*\\.vercel\\.app"
+        }
+      ],
+      "missing": [
+        {
+          "type": "host",
+          "value": "srvsrr\\.vercel\\.app"
+        }
+      ],
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+      ]
+    },
     {
       "source": "/_astro/(.*)",
       "headers": [
