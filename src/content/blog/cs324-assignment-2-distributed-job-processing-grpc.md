@@ -9,6 +9,8 @@ slug: cs324-assignment-2-distributed-job-processing-grpc
 series: 'Distributed Job Processing'
 ---
 
+> Source: [github.com/SRVSRR/distributed-job-processing-system](https://github.com/SRVSRR/distributed-job-processing-system)
+
 We rebuilt our distributed computing cluster for CS324 Assignment 2, replacing every RMI call with gRPC and Protocol Buffers. Four of us designed the services, the election, the progress streaming, and the failure handling together.
 
 ## From RMI to gRPC: why we rewrote the transport

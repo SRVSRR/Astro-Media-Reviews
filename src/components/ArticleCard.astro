@@ -9,10 +9,10 @@ interface Props {
   terms?: string[];
 }
 
-const readTime = calculateReadTime(article.body);
+const readTime = calculateReadTime(article.body ?? '');
 const renderTerms = (text: string): string => (terms && terms.length > 0 ? highlightTerms(text, terms) : "");
 ---
-<a href={'/articles/' + article.slug} class="block bg-secondary border border-soft rounded-xl p-5 transition-colors duration-200 hover:border-accent">
+<a href={'/articles/' + article.id} class="block bg-secondary border border-soft rounded-xl p-5 transition-colors duration-200 hover:border-accent">
   {terms && terms.length > 0 ? (
     <h2 class="text-xl font-semibold leading-tight text-white" set:html={renderTerms(article.data.title)}></h2>
   ) : (

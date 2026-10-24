@@ -13,7 +13,7 @@ export async function GET(context) {
       .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
       .map(post => ({
         title: post.data.title,
-        link: `/articles/${post.slug}`,
+        link: `/articles/${post.id}`,
         pubDate: post.data.pubDate,
         author: post.data.author,
         content: post.body,

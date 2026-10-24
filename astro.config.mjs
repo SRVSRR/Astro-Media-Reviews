@@ -1,7 +1,8 @@
 import { defineConfig } from 'astro/config';
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from '@tailwindcss/vite';
 import vercel from "@astrojs/vercel";
 import sitemap from "@astrojs/sitemap";
+import { unified } from "@astrojs/markdown-remark";
 import remarkImageAttrs from "./src/image-attrs-rehype.mjs";
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
@@ -30,7 +31,7 @@ const articleLastmod = buildArticleLastmod();
 export default defineConfig({
   site: 'https://srvsrr.dev',
   trailingSlash: "never",
-  integrations: [tailwind(), sitemap({
+  integrations: [sitemap({
     lastmod: new Date(),
     serialize(entry) {
       const url = entry.url.replace(/\/$/, '').replace(/^https?:\/\/[^/]+/, '');
@@ -43,6 +44,9 @@ export default defineConfig({
       return url !== '/articles/search';
     }
   })],
+  vite: {
+    plugins: [tailwindcss()]
+  },
   output: 'static', // Pre-renders by default, keeps API dynamic
   adapter: vercel({
     webAnalytics: {
@@ -50,6 +54,8 @@ export default defineConfig({
     }
   }),
   markdown: {
-    remarkPlugins: [remarkImageAttrs]
+    processor: unified({
+      remarkPlugins: [remarkImageAttrs]
+    })
   }
 });

@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans: "Space Grotesk Variable", "Inter Variable", system-ui, sans-serif;
+
+    --color-primary: #0b1220;
+    --color-secondary: #121a2b;
+    --color-accent: #f97316;
+    --color-muted: #8b95a6;
+    --color-soft: #1f2a3d;
+
+    --shadow-glow: 0 20px 60px rgba(249, 115, 22, 0.25);
+}

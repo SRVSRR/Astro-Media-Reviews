@@ -4,7 +4,7 @@ import Tags from "../../components/Tags.astro";
 import RelatedPosts from "../../components/RelatedPosts.astro";
 import ShareButtons from "../../components/ShareButtons.astro";
 import TableOfContents from "../../components/TableOfContents.astro";
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import { formatDate, calculateReadTime, capitalize, slugify } from "../../utils";
 import { getImageDims } from "../../image-dims";
 import { ogImagePathFor } from "../../og-image";
@@ -13,7 +13,7 @@ import { SITE_TITLE } from "../../constants";
 export async function getStaticPaths() {
   const allBlogArticles = await getCollection('blog');
   return allBlogArticles.map(entry => ({
-    params: { slug: entry.slug },
+    params: { slug: entry.id },
     props: { entry, allEntries: allBlogArticles },
   }));
 }
@@ -24,7 +24,7 @@ if(entry === undefined) {
   return Astro.redirect('/404');
 }
 
-const { Content, headings } = await entry.render();
+const { Content, headings } = await render(entry);
 
 // Generate description from content if not provided
 const description = entry.data.description || `${entry.data.title} - Written by ${entry.data.author}. Learn about ${entry.data.tags.join(', ')}.`;
@@ -92,7 +92,7 @@ const articleJsonLd = {
 };
 
 // Calculate read time
-const readTime = calculateReadTime(entry.body);
+const readTime = calculateReadTime(entry.body ?? '');
 const coverDims = getImageDims(entry.data.image);
 ---
 

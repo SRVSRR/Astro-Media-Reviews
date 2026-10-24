@@ -44,3 +44,10 @@ Thumbs.db
 
 # editor backups
 *~
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
