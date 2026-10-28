@@ -34,9 +34,9 @@ const {
   ads = false,
 } = Astro.props;
 
-const siteUrl = Astro.site ?? new URL(Astro.url.origin);
+const siteUrl = Astro.site ?? new URL('https://srvsrr.dev');
 const siteUrlString = siteUrl.toString().replace(/\/$/, '');
-const canonicalUrl = new URL(Astro.url.pathname, siteUrl).toString().replace(/\/$/, '');
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).toString();
 const imageUrl = image ? new URL(image, siteUrl).toString() : undefined;
 const pageTitle = `${SITE_TITLE} - ${title}`;
 const websiteJsonLd = {

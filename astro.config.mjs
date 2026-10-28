@@ -41,7 +41,12 @@ export default defineConfig({
     },
     filter(page) {
       const url = page.replace(/\/$/, '').replace(/^https?:\/\/[^/]+/, '');
-      return url !== '/articles/search';
+      return !(
+        url === '/articles/browse' ||
+        url === '/articles/search' ||
+        url.startsWith('/articles/tag/') ||
+        url.startsWith('/articles/page/')
+      );
     }
   })],
   vite: {

@@ -50,8 +50,9 @@ const articlesForPage: CollectionEntry<'blog'>[] = allBlogArticles.slice(
 );
 ---
 <MainLayout
-  title="Articles"
+  title={`Articles - Page ${currentPage}`}
   description="Browse all software engineering articles, tutorials, and project management guides."
+  noindex={true}
 >
     <div class="flex items-center justify-between gap-3 pb-3">
       <h1 class="text-3xl font-semibold text-white">Articles</h1>

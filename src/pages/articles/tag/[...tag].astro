@@ -36,7 +36,7 @@ const pageTitle = `Tag: ${tagLabel}`;
 const pageDescription = `Articles tagged with ${tagLabel}.`;
 
 ---
-<MainLayout title={pageTitle} description={pageDescription}>
+<MainLayout title={pageTitle} description={pageDescription} noindex={true}>
     <div class="flex items-center justify-between pb-4">
       <h1 class="text-3xl font-semibold text-white">#{tagLabel}</h1>
     </div>

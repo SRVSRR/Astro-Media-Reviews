@@ -9,40 +9,22 @@ interface Props {
 
 const { currentEntry, allEntries } = Astro.props;
 
-const seriesName = currentEntry.data.series;
-
-let relatedPosts: CollectionEntry<'blog'>[] = [];
-
-if (seriesName) {
-  relatedPosts = allEntries
-    .filter(entry => entry.data.series === seriesName && entry.id !== currentEntry.id)
-    .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf())
-    .slice(0, 3);
-} else {
-  const currentTags = new Set(currentEntry.data.tags);
-
-  relatedPosts = allEntries
-    .filter(entry => entry.id !== currentEntry.id)
-    .map(entry => {
-      const sharedTags = entry.data.tags.filter(tag => currentTags.has(tag)).length;
-      return { entry, sharedTags };
-    })
-    .filter(({ sharedTags }) => sharedTags > 0)
-    .sort((a, b) => b.sharedTags - a.sharedTags)
-    .slice(0, 3)
-    .map(({ entry }) => entry);
-}
+const currentTags = new Set(currentEntry.data.tags);
+const relatedPosts = allEntries
+  .filter(entry => entry.id !== currentEntry.id)
+  .map(entry => ({
+    entry,
+    sharedTags: entry.data.tags.filter(tag => currentTags.has(tag)).length,
+  }))
+  .filter(({ sharedTags }) => sharedTags > 0)
+  .sort((a, b) => b.sharedTags - a.sharedTags || b.entry.data.pubDate.valueOf() - a.entry.data.pubDate.valueOf())
+  .slice(0, 3)
+  .map(({ entry }) => entry);
 ---
 
 {relatedPosts.length > 0 && (
   <section class="mt-16 pt-8 border-t border-soft">
-    <h2 class="text-2xl font-semibold text-white mb-6">
-      {seriesName ? (
-        <>Part of the <span class="text-accent">"{seriesName}"</span> series</>
-      ) : (
-        "Related Posts"
-      )}
-    </h2>
+    <h2 class="text-2xl font-semibold text-white mb-6">Related articles</h2>
     <div class="flex flex-col gap-4 sm:gap-5">
       {relatedPosts.map(post => (
         <a href={'/articles/' + post.id} class="block bg-secondary border border-soft rounded-xl p-5 sm:p-6 transition-colors duration-200 hover:border-accent">

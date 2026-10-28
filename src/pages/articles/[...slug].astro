@@ -77,9 +77,11 @@ const articleJsonLd = {
   description,
   image: [imageUrl],
   datePublished: publishedTime,
+  dateModified: publishedTime,
   author: {
     '@type': 'Person',
-    name: entry.data.author,
+    name: 'Rohan Nandan',
+    url: 'https://srvsrr.dev',
   },
   publisher: {
     '@type': 'Organization',

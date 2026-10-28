@@ -41,6 +41,19 @@ const socials = [
   },
 ];
 
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Rohan Nandan',
+  url: 'https://srvsrr.dev',
+  jobTitle: 'Data Scientist / Data Engineer',
+  sameAs: [
+    'https://github.com/SRVSRR',
+    'https://www.linkedin.com/in/rohan-nandan2004/',
+    'https://www.reddit.com/user/SRVSRR/',
+  ],
+};
+
 // Work Experience
 const experience = [
   {
@@ -101,6 +114,7 @@ const repositories = [
 <MainLayout
   title="About"
   description="About Rohan Nandan: software engineering student sharing tutorials, project breakdowns, and lessons learned."
+  jsonLd={personJsonLd}
 >
   <!-- Hero About Section -->
   <div class="mb-16">

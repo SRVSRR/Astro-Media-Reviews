@@ -14,7 +14,10 @@ const latestPost: CollectionEntry<'blog'> | undefined = sortedPosts[0];
 const recentPosts: CollectionEntry<'blog'>[] = sortedPosts.slice(0, 4);
 ---
 
-<MainLayout title="404 - Page Not Found" noindex={true}>
+<MainLayout
+  title="404 - Page Not Found"
+  description="The page you requested could not be found on srvsrr.dev."
+>
   <div class="flex flex-col items-center justify-items-center gap-7 text-center">
     <Image src={error} alt="404" height={250} width={250} class="mt-10" format="webp" />
     <h1 class="text-5xl font-bold text-white">Page Not Found</h1>
